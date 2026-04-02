@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="A student-built wearable translation system that converts Romanian sign language gestures into readable text."
+  >
+  <meta name="theme-color" content="#12343b">
+  <title>Sign Translation Glove</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;700&family=Sora:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header" id="top">
+    <div class="container header-shell">
+      <a class="brand" href="#top" aria-label="Sign Translation Glove home">
+        <span class="brand-mark" aria-hidden="true">
+          <img src="assets/site/signtranslate-logo.jpeg" alt="">
+        </span>
+        <span class="brand-copy">
+          <strong>Sign Translation Glove</strong>
+          <small>Wearable gesture-to-text prototype</small>
+        </span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-nav"
+      >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span class="sr-only">Toggle navigation</span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+        <a href="#story">Why</a>
+        <a href="#prototype">Prototype</a>
+        <a href="#build">Build</a>
+        <a href="#market">Market</a>
+        <a href="#results">Results</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero section">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Student-built accessibility hardware from Suceava, Romania</p>
+          <h1>A wearable translator for Romanian sign language.</h1>
+          <p class="hero-lead">
+            This project captures hand movement through a glove-based sensing system and converts
+            signed expression into readable text, aiming to reduce communication barriers in social,
+            educational, medical, and legal contexts.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="#prototype">Explore the prototype</a>
+            <a class="button button-secondary" href="#results">See the results</a>
+          </div>
+
+          <p class="team-note">
+            Developed by David Covalschi and Radu Cristian Fediuc under the coordination of
+            Anca Greculeac at Colegiul National Petru Rares Suceava.
+          </p>
+
+          <div class="stat-row">
+            <article class="stat-card">
+              <p class="stat-value">87%</p>
+              <p class="stat-label">average experimental accuracy</p>
+            </article>
+            <article class="stat-card">
+              <p class="stat-value">5</p>
+              <p class="stat-label">encoder channels used to read finger motion</p>
+            </article>
+            <article class="stat-card">
+              <p class="stat-value">4</p>
+              <p class="stat-label">core development tools listed in the technical dossier</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal">
+          <figure class="floating-card hero-main">
+            <img
+              src="assets/site/glove-prototype.png"
+              alt="Prototype sign translation gloves with attached electronics boards"
+            >
+            <figcaption>Prototype hardware photographed during development.</figcaption>
+          </figure>
+
+          <figure class="floating-card hero-secondary hero-secondary-a">
+            <img
+              src="assets/site/schematic.jpg"
+              alt="Electronic schematic for the sign translation glove"
+            >
+            <figcaption>Custom schematic built around the XIAO RP2040.</figcaption>
+          </figure>
+
+          <figure class="floating-card hero-secondary hero-secondary-b">
+            <img
+              src="assets/site/cad-ring.png"
+              alt="3D-designed ring support for the wearable system"
+            >
+            <figcaption>3D support geometry for the wearable form factor.</figcaption>
+          </figure>
+
+          <div class="hero-badge">
+            Wearable sensing avoids the lighting, framing, and privacy issues that often limit
+            camera-based systems.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section story-section" id="story">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Why this matters</p>
+          <h2>Communication should not depend on who can hear.</h2>
+          <p>
+            The technical dossier starts from a simple idea: communication is a fundamental human
+            need, yet many systems still revolve around spoken language. For people who rely on
+            sign language, that often means reduced access to information, services, and
+            opportunities.
+          </p>
+        </div>
+
+        <div class="story-layout">
+          <article class="story-panel reveal">
+            <h3>The project goal</h3>
+            <p>
+              The glove was conceived as an assistive system that translates Romanian sign language
+              expressions into written Romanian, displayed digitally so the signed message can be
+              understood more easily in real time.
+            </p>
+            <p>
+              The prototype focuses on practical accessibility: capture motion directly from the
+              hand, interpret it in software, and keep improving the system through experimental
+              testing and hardware refinement.
+            </p>
+          </article>
+
+          <div class="objective-grid">
+            <article class="objective-card reveal">
+              <span class="objective-index">01</span>
+              <h3>Record</h3>
+              <p>Capture gesture data from a hand-worn prototype used by a sign language speaker.</p>
+            </article>
+
+            <article class="objective-card reveal">
+              <span class="objective-index">02</span>
+              <h3>Decode</h3>
+              <p>Transform the recorded motion data into text that can be displayed clearly.</p>
+            </article>
+
+            <article class="objective-card reveal">
+              <span class="objective-index">03</span>
+              <h3>Validate</h3>
+              <p>Verify the prototype experimentally and continue optimizing the device over time.</p>
+            </article>
+
+            <article class="objective-card reveal">
+              <span class="objective-index">04</span>
+              <h3>Position</h3>
+              <p>Study the device's place in the market for assistive and educational technologies.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section flow-section" id="prototype">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Prototype logic</p>
+          <h2>From finger motion to readable text.</h2>
+          <p>
+            The project is built as a complete pipeline: a wearable input layer, custom electronics,
+            embedded code, interpretation software, and experimental validation.
+          </p>
+        </div>
+
+        <div class="flow-grid">
+          <article class="flow-card reveal">
+            <span class="flow-index">Sense</span>
+            <h3>Wearable capture</h3>
+            <p>
+              Encoder channels mounted on the glove register finger movement directly at hand level.
+            </p>
+          </article>
+
+          <article class="flow-card reveal">
+            <span class="flow-index">Route</span>
+            <h3>Embedded electronics</h3>
+            <p>
+              A custom board and microcontroller organize the input signals into a usable data stream.
+            </p>
+          </article>
+
+          <article class="flow-card reveal">
+            <span class="flow-index">Interpret</span>
+            <h3>Software translation</h3>
+            <p>
+              Arduino and Node.js code decode the captured values and map them to readable output.
+            </p>
+          </article>
+
+          <article class="flow-card reveal">
+            <span class="flow-index">Improve</span>
+            <h3>Experimental feedback</h3>
+            <p>
+              Results feed back into the design so the glove becomes more stable, precise, and useful.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section build-section" id="build">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Engineering the glove</p>
+          <h2>Designed like a product, validated like a prototype.</h2>
+          <p>
+            The dossier combines electronics, mechanical design, and software into one coherent
+            wearable system rather than treating translation as a single algorithm problem.
+          </p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card reveal">
+            <div class="feature-media feature-media-split">
+              <img
+                src="assets/site/schematic.jpg"
+                alt="Circuit schematic for the sign translation glove"
+                loading="lazy"
+              >
+              <img
+                src="assets/site/pcb.jpg"
+                alt="PCB routing for the sign translation glove"
+                loading="lazy"
+              >
+            </div>
+            <div class="feature-copy">
+              <p class="feature-label">Electronics</p>
+              <h3>Schematic and PCB design in KiCad</h3>
+              <p>
+                The board was developed in KiCad, with component definition, routing optimization,
+                and validation through ERC and DRC checks before the final PCB was produced.
+              </p>
+            </div>
+          </article>
+
+          <article class="feature-card reveal">
+            <div class="feature-media feature-media-split">
+              <img
+                src="assets/site/cad-frame.png"
+                alt="3D frame design for the wearable glove system"
+                loading="lazy"
+              >
+              <img
+                src="assets/site/cad-plate.png"
+                alt="3D plate component for the wearable glove system"
+                loading="lazy"
+              >
+            </div>
+            <div class="feature-copy">
+              <p class="feature-label">Mechanical design</p>
+              <h3>Parametric modeling in Fusion 360</h3>
+              <p>
+                The wearable structure was modeled in Fusion 360 and then fabricated on a Bambu P1S
+                3D printer, allowing the team to validate fit and construction decisions in physical form.
+              </p>
+            </div>
+          </article>
+
+          <article class="feature-card reveal">
+            <div class="feature-media feature-media-split">
+              <img
+                src="assets/site/arduino-code.png"
+                alt="Arduino code used to read encoder data"
+                loading="lazy"
+              >
+              <img
+                src="assets/site/node-code.jpg"
+                alt="Node.js code used to interpret gesture data"
+                loading="lazy"
+              >
+            </div>
+            <div class="feature-copy">
+              <p class="feature-label">Software</p>
+              <h3>Arduino plus Node.js interpretation</h3>
+              <p>
+                The embedded layer reads encoder values, while a separate JavaScript pipeline interprets
+                the data and transforms it into text output for the user.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section market-section" id="market">
+      <div class="container market-layout">
+        <div class="market-copy">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Why a wearable approach</p>
+            <h2>Built to work where camera-only systems struggle.</h2>
+            <p>
+              The dossier notes that many sign translation systems rely on visual recognition and
+              artificial intelligence. Those approaches can be promising in controlled conditions,
+              but they often depend on lighting, background complexity, camera placement, and more
+              expensive processing hardware.
+            </p>
+          </div>
+
+          <article class="comparison-card reveal">
+            <h3>What the glove changes</h3>
+            <ul class="comparison-list">
+              <li>Captures movement directly at the hand instead of relying on room setup.</li>
+              <li>Reduces dependence on camera framing and visual background conditions.</li>
+              <li>Supports a more private interaction model than always-on visual tracking.</li>
+              <li>Targets the gap between expensive proprietary products and academic prototypes.</li>
+            </ul>
+
+            <div class="tag-list" aria-label="Projects mentioned in the technical dossier">
+              <span>SignAloud</span>
+              <span>BrightSign</span>
+              <span>Glovatrix</span>
+              <span>Signvrse</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="market-media">
+          <figure class="visual-card reveal">
+            <img
+              src="assets/site/camera-system.png"
+              alt="Example of a camera-based sign language translation system"
+              loading="lazy"
+            >
+            <figcaption>
+              Example of the camera-based systems that inspired the comparison in the technical study.
+            </figcaption>
+          </figure>
+
+          <figure class="visual-card reveal">
+            <img
+              src="assets/site/market-publications.png"
+              alt="Chart showing growth in publications related to sign language translation"
+              loading="lazy"
+            >
+            <figcaption>
+              Research interest in sign-language translation continues to grow, reinforcing the need
+              for practical and affordable hardware solutions.
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section results-section" id="results">
+      <div class="container">
+        <div class="results-panel reveal">
+          <div class="results-copy">
+            <p class="eyebrow">Experimental data</p>
+            <h2>87% average accuracy, with a clear path past 90%.</h2>
+            <p>
+              The current prototype demonstrates solid gesture detection performance, with an average
+              accuracy of 87% across the documented tests. The next major improvement identified in
+              the dossier is the use of higher-resolution encoders to reduce reading errors and make
+              finger tracking more stable.
+            </p>
+
+            <ul class="results-list">
+              <li>The existing prototype already demonstrates correct end-to-end gesture detection.</li>
+              <li>Higher-resolution sensing is the strongest next upgrade suggested by the data.</li>
+              <li>The system becomes more viable for educational and research use as precision improves.</li>
+            </ul>
+          </div>
+
+          <figure class="results-media">
+            <img
+              src="assets/site/results-table.png"
+              alt="Experimental results table showing recognition accuracy"
+              loading="lazy"
+            >
+            <figcaption>
+              Excerpt from the experimental results used to evaluate the current prototype.
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section closing-section">
+      <div class="container">
+        <div class="closing-panel reveal">
+          <p class="eyebrow">Project outlook</p>
+          <h2>A strong foundation for a more accessible communication tool.</h2>
+          <p>
+            This website presents the current sign translation glove as a serious student-built
+            prototype: technically grounded, visually documented, and clearly positioned for further
+            refinement. The next step is continued testing, sensor upgrades, and broader real-world use.
+          </p>
+          <a class="button button-primary" href="#top">Back to top</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-shell">
+      <p>Built from the project technical dossier for the Sign Translation Glove.</p>
+      <p>Tools referenced in the dossier: Fusion 360, KiCad, Arduino IDE, Visual Studio Code, and Node.js.</p>
+    </div>
+  </footer>
+</body>
+</html>
