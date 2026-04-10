@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://david8986.github.io/Project-site/sitemap.xml

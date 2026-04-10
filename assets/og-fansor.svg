@@ -1,0 +1,29 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" rx="24" fill="url(#paint0_linear_1_2)"/>
+  <g opacity="0.35">
+    <path d="M131 155C245.75 211.721 361.082 231.975 477 215.763C650.877 191.435 753.313 63.3818 935 96.3448C1020.55 111.865 1095.55 155.083 1160 226" stroke="#C57B47" stroke-width="6" stroke-linecap="round"/>
+    <path d="M90 503C228 413 353.333 366.833 466 364.5C578.667 362.167 704.333 398.667 843 474" stroke="#F5F2EC" stroke-width="6" stroke-linecap="round"/>
+    <path d="M202 153C168.667 276.333 171.333 381 210 467" stroke="#8DA1AA" stroke-width="5" stroke-linecap="round"/>
+    <path d="M669 126C633.667 247.333 626.333 349.333 647 432" stroke="#F5F2EC" stroke-width="5" stroke-linecap="round"/>
+    <path d="M935 96C911 187.333 901 284.667 905 388" stroke="#8DA1AA" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <rect x="72" y="80" width="92" height="92" rx="24" fill="#112235"/>
+  <path d="M90 118H123" stroke="white" stroke-width="8" stroke-linecap="round"/>
+  <path d="M90 137H107" stroke="white" stroke-width="8" stroke-linecap="round"/>
+  <path d="M83 190C100 170.667 120 160.667 143 160C166 159.333 191 169.333 218 190" stroke="#C57B47" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="104" cy="202" r="14" fill="#F5F2EC"/>
+  <circle cx="178" cy="202" r="14" fill="#F5F2EC"/>
+  <circle cx="104" cy="202" r="6" fill="#C57B47"/>
+  <circle cx="178" cy="202" r="6" fill="#C57B47"/>
+  <text x="72" y="268" fill="#C57B47" font-family="Manrope, Segoe UI, sans-serif" font-size="18" font-weight="800" letter-spacing="0.22em">SUCEAVA • ROMANIA</text>
+  <text x="72" y="352" fill="#FFFDF9" font-family="Fraunces, Georgia, serif" font-size="72" font-weight="700">FANSOR</text>
+  <text x="72" y="430" fill="#FFFDF9" font-family="Fraunces, Georgia, serif" font-size="72" font-weight="700">SPEDITION</text>
+  <text x="72" y="500" fill="#D8DEE4" font-family="Manrope, Segoe UI, sans-serif" font-size="30" font-weight="600">Road freight transport for B2B shipments in Romania and the EU</text>
+  <text x="72" y="552" fill="#D8DEE4" font-family="Manrope, Segoe UI, sans-serif" font-size="24" font-weight="500">FTL • LTL • Express • Domestic • International</text>
+  <defs>
+    <linearGradient id="paint0_linear_1_2" x1="78.5" y1="38" x2="1091" y2="630" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#18293F"/>
+      <stop offset="1" stop-color="#09111B"/>
+    </linearGradient>
+  </defs>
+</svg>
