@@ -774,6 +774,66 @@ main > .section:nth-of-type(odd):not(.hero-home):not(.page-hero) .kicker {
   padding: 1.7rem;
 }
 
+.highlight-panel,
+.panel,
+.faq-panel,
+.timeline-step,
+.contact-card,
+.privacy-panel,
+.quote-aside,
+.form-shell,
+.map-placeholder,
+.service-block,
+.feature-block,
+.coverage-block,
+.story-panel,
+.process-card,
+.fleet-panel,
+.service-card,
+.sector-card,
+.promise-card,
+.guide-card,
+.photo-placeholder,
+.spec-card,
+.coverage-lane,
+.faq-item,
+.route-card,
+.contact-mini,
+.info-card,
+.route-row,
+.stat-box {
+  color: var(--ink);
+}
+
+.highlight-panel h2,
+.panel h2,
+.faq-panel h2,
+.timeline-step h2,
+.contact-card h2,
+.privacy-panel h2,
+.quote-aside h2,
+.form-shell h2,
+.map-placeholder h2,
+.service-block h2,
+.feature-block h2,
+.coverage-block h2,
+.story-panel h2,
+.process-card h2,
+.fleet-panel h2,
+.service-card h3,
+.sector-card h3,
+.promise-card h3,
+.guide-card h3,
+.photo-placeholder strong,
+.spec-card h3,
+.coverage-lane h3,
+.route-card h3,
+.contact-mini h3,
+.info-card h3,
+.route-row strong {
+  color: var(--ink);
+}
+
 .stat-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
