@@ -159,6 +159,49 @@ button {
   padding-top: 4rem;
 }
 
+main > .section {
+  position: relative;
+}
+
+main > .section:nth-of-type(odd):not(.hero-home):not(.page-hero) {
+  background:
+    radial-gradient(circle at top left, rgba(197, 123, 71, 0.18), transparent 18%),
+    radial-gradient(circle at bottom right, rgba(141, 161, 170, 0.12), transparent 20%),
+    linear-gradient(145deg, rgba(24, 41, 63, 0.98), rgba(7, 17, 29, 1));
+  color: #fff;
+}
+
+main > .section:nth-of-type(odd):not(.hero-home):not(.page-hero)::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 88px 88px;
+  opacity: 0.22;
+  pointer-events: none;
+}
+
+main > .section:nth-of-type(odd):not(.hero-home):not(.page-hero) > .container {
+  position: relative;
+  z-index: 1;
+}
+
+main > .section:nth-of-type(odd):not(.hero-home):not(.page-hero) .section-heading h2,
+main > .section:nth-of-type(odd):not(.hero-home):not(.page-hero) .lead-block h2 {
+  color: #fff;
+}
+
+main > .section:nth-of-type(odd):not(.hero-home):not(.page-hero) .section-heading p,
+main > .section:nth-of-type(odd):not(.hero-home):not(.page-hero) .lead-block p {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+main > .section:nth-of-type(odd):not(.hero-home):not(.page-hero) .kicker {
+  color: #e2a16f;
+}
+
 .kicker {
   display: inline-flex;
   align-items: center;
