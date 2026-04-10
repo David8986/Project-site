@@ -834,6 +834,72 @@ main > .section:nth-of-type(odd):not(.hero-home):not(.page-hero) .kicker {
   color: var(--ink);
 }
 
+:where(
+  .highlight-panel,
+  .panel,
+  .faq-panel,
+  .timeline-step,
+  .contact-card,
+  .privacy-panel,
+  .quote-aside,
+  .form-shell,
+  .map-placeholder,
+  .service-block,
+  .feature-block,
+  .coverage-block,
+  .story-panel,
+  .process-card,
+  .fleet-panel,
+  .service-card,
+  .sector-card,
+  .promise-card,
+  .guide-card,
+  .photo-placeholder,
+  .spec-card,
+  .coverage-lane,
+  .faq-item,
+  .route-card,
+  .contact-mini,
+  .info-card,
+  .route-row,
+  .stat-box
+) :where(h1, h2, h3, h4, strong, summary, label, legend) {
+  color: var(--ink);
+}
+
+:where(
+  .highlight-panel,
+  .panel,
+  .faq-panel,
+  .timeline-step,
+  .contact-card,
+  .privacy-panel,
+  .quote-aside,
+  .form-shell,
+  .map-placeholder,
+  .service-block,
+  .feature-block,
+  .coverage-block,
+  .story-panel,
+  .process-card,
+  .fleet-panel,
+  .service-card,
+  .sector-card,
+  .promise-card,
+  .guide-card,
+  .photo-placeholder,
+  .spec-card,
+  .coverage-lane,
+  .faq-item,
+  .route-card,
+  .contact-mini,
+  .info-card,
+  .route-row,
+  .stat-box
+) :where(p, li, dd, dt) {
+  color: var(--ink-soft);
+}
+
 .stat-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
