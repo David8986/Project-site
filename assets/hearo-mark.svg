@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-labelledby="title desc">
+  <title id="title">Hearo mark</title>
+  <desc id="desc">A rounded speech loop forming the letter H with signal nodes.</desc>
+  <rect width="96" height="96" rx="18" fill="#07151f"/>
+  <path d="M26 68V29c0-6 4-10 10-10h24c6 0 10 4 10 10v24c0 6-4 10-10 10H47L32 76c-3 3-6 1-6-3v-5z" fill="#2cc9bd"/>
+  <path d="M38 33v20M58 33v20M38 43h20" fill="none" stroke="#07151f" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="72" cy="25" r="5" fill="#f6c453"/>
+  <circle cx="76" cy="63" r="4" fill="#f26f56"/>
+</svg>

@@ -1,28 +1,319 @@
 <!DOCTYPE html>
-<html lang="ro">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FANSOR SPEDITION</title>
+  <title>Hearo | Smart Glove for Gesture Translation</title>
   <meta
     name="description"
-    content="FANSOR SPEDITION ofera transport rutier de marfa pentru companii in Romania si Uniunea Europeana."
+    content="Hearo is a smart glove that turns sign-language gestures into readable text for schools, hospitals, public institutions, and live demonstrations."
   >
-  <meta name="theme-color" content="#0f1d2f">
-  <link rel="icon" href="./assets/fansor-mark.svg" type="image/svg+xml">
-  <link rel="canonical" href="https://david8986.github.io/Project-site/ro/index.html">
-  <link rel="alternate" hreflang="ro" href="https://david8986.github.io/Project-site/ro/index.html">
-  <link rel="alternate" hreflang="en" href="https://david8986.github.io/Project-site/en/index.html">
-  <link rel="alternate" hreflang="x-default" href="https://david8986.github.io/Project-site/ro/index.html">
-  <meta http-equiv="refresh" content="0; url=./ro/index.html">
-  <script>
-    window.location.replace("./ro/index.html" + window.location.search + window.location.hash);
-  </script>
+  <meta name="theme-color" content="#07151f">
+  <meta property="og:title" content="Hearo | A gesture becomes a word">
+  <meta
+    property="og:description"
+    content="A wearable sign translation glove with an estimated 87% prototype accuracy and a target price below camera-based alternatives."
+  >
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="./assets/site/glove-prototype.png">
+  <link rel="icon" href="./assets/hearo-mark.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://david8986.github.io/Project-site/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lexend:wght@500;600;700;800&family=Manrope:wght@400;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./script.js" defer></script>
 </head>
 <body>
-  <main>
-    <p>Se redirectioneaza catre <a href="./ro/index.html">versiunea in romana</a>.</p>
-    <p>English version: <a href="./en/index.html">English</a>.</p>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" data-header>
+    <a class="brand" href="#top" aria-label="Hearo home">
+      <img src="./assets/hearo-mark.svg" alt="" width="38" height="38">
+      <span>Hearo</span>
+    </a>
+
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav" data-menu-button>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span class="sr-only">Open navigation</span>
+    </button>
+
+    <nav class="site-nav" id="site-nav" data-nav>
+      <a href="#product">Product</a>
+      <a href="#proof">Proof</a>
+      <a href="#market">Market</a>
+      <a href="#rollout">Rollout</a>
+      <a class="nav-cta" href="#demo">Book a demo</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-media" aria-hidden="true"></div>
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="hero-content">
+        <h1 id="hero-title">Hearo</h1>
+        <p class="hero-lede">A smart glove that turns gestures into readable text, so communication can move faster in schools, hospitals, airports, and public institutions.</p>
+        <div class="hero-actions" aria-label="Primary actions">
+          <a class="button button-primary" href="#product">See how it works</a>
+          <a class="button button-secondary" href="#rollout">View rollout plan</a>
+        </div>
+        <dl class="hero-stats" aria-label="Prototype highlights">
+          <div>
+            <dt>Estimated accuracy</dt>
+            <dd>87%</dd>
+          </div>
+          <div>
+            <dt>Target price</dt>
+            <dd>1875 lei</dd>
+          </div>
+          <div>
+            <dt>Validation</dt>
+            <dd>1st place</dd>
+          </div>
+        </dl>
+      </div>
+      <a class="scroll-cue" href="#problem" aria-label="Scroll to the problem section">Scroll</a>
+    </section>
+
+    <section class="section problem-section" id="problem" aria-labelledby="problem-title">
+      <div class="section-inner split-layout">
+        <div class="section-copy reveal">
+          <p class="section-label">The problem</p>
+          <h2 id="problem-title">Many conversations still depend on the right person being in the room.</h2>
+          <p>For people with hearing deficiencies, everyday communication can become limited in public services, education, healthcare, and social settings. When an interpreter is unavailable, access becomes slower and more unequal.</p>
+        </div>
+        <div class="problem-map reveal" aria-label="Where communication barriers appear">
+          <div class="map-node large">schools</div>
+          <div class="map-node">hospitals</div>
+          <div class="map-node">institutions</div>
+          <div class="map-node accent">social life</div>
+          <p>Hearo is built for the places where a quick text translation can reduce friction immediately.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section product-section" id="product" aria-labelledby="product-title">
+      <div class="section-inner">
+        <div class="section-heading reveal">
+          <p class="section-label">The product</p>
+          <h2 id="product-title">Gesture, sensors, processing, text.</h2>
+          <p>The glove reads finger movement through wearable sensors, processes the signal, and displays the interpreted result as text. It avoids the lighting and camera-position limits of video-only systems.</p>
+        </div>
+
+        <div class="product-grid">
+          <figure class="artifact-frame reveal">
+            <img src="./assets/site/glove-prototype.png" alt="Hearo smart glove prototype with sensors and controller boards">
+            <figcaption>Working prototype with integrated electronics and wearable glove structure.</figcaption>
+          </figure>
+
+          <div class="flow-panel reveal" aria-label="Hearo translation flow">
+            <ol class="flow-list">
+              <li><span>01</span>Gesture</li>
+              <li><span>02</span>Sensors</li>
+              <li><span>03</span>Processing</li>
+              <li><span>04</span>Text displayed</li>
+            </ol>
+            <div class="product-callout">
+              <strong>Camera-free by design.</strong>
+              <p>Stable in more environments, portable between rooms, and easier to demo at events.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section proof-section" id="proof" aria-labelledby="proof-title">
+      <div class="section-inner proof-layout">
+        <div class="proof-main reveal">
+          <p class="section-label">Validation</p>
+          <h2 id="proof-title">Presented internationally. Awarded first place.</h2>
+          <p>The project was presented at the Abu Dhabi International Invention Exhibition, where it won 1st place. That validation supports the product's innovation, practical utility, and global potential.</p>
+        </div>
+
+        <div class="award-orbit reveal" aria-label="Award result">
+          <span>1st</span>
+          <strong>Abu Dhabi International Invention Exhibition</strong>
+        </div>
+
+        <div class="toolchain reveal">
+          <h3>Built with a real engineering workflow</h3>
+          <ul>
+            <li>Fusion 360 for wearable structure and 3D-printed casing.</li>
+            <li>KiCad for schematic and PCB design.</li>
+            <li>Arduino IDE, Node.js, Python, and JavaScript for signal processing.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section lab-section" aria-labelledby="lab-title">
+      <div class="section-inner">
+        <div class="section-heading reveal">
+          <p class="section-label">Prototype lab</p>
+          <h2 id="lab-title">From circuit to casing to field demo.</h2>
+        </div>
+        <div class="lab-strip" aria-label="Prototype development artifacts">
+          <figure class="reveal">
+            <img src="./assets/site/pcb.jpg" alt="Hearo PCB prototype">
+            <figcaption>PCB</figcaption>
+          </figure>
+          <figure class="reveal">
+            <img src="./assets/site/cad-frame.png" alt="Hearo CAD casing design">
+            <figcaption>3D frame</figcaption>
+          </figure>
+          <figure class="reveal">
+            <img src="./assets/site/schematic.jpg" alt="Hearo electronic schematic">
+            <figcaption>Schematic</figcaption>
+          </figure>
+          <figure class="reveal">
+            <img src="./assets/site/arduino-code.png" alt="Hearo Arduino code screenshot">
+            <figcaption>Firmware</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section market-section" id="market" aria-labelledby="market-title">
+      <div class="section-inner">
+        <div class="section-heading reveal">
+          <p class="section-label">Market edge</p>
+          <h2 id="market-title">A lower price point for institutions that need access now.</h2>
+          <p>Camera and AI systems can be sensitive to lighting, background complexity, and camera position. Commercial glove systems validate the category, but price remains a barrier for many schools and public institutions.</p>
+        </div>
+
+        <div class="market-board reveal">
+          <div class="price-row hearo">
+            <span>Hearo target price</span>
+            <strong>1875 lei</strong>
+            <i style="--bar: 75%"></i>
+          </div>
+          <div class="price-row competitor">
+            <span>BrightSign reference price</span>
+            <strong>2500 lei</strong>
+            <i style="--bar: 100%"></i>
+          </div>
+          <div class="market-notes">
+            <div>
+              <span>25%</span>
+              <p>lower target price than the reference competitor.</p>
+            </div>
+            <div>
+              <span>1100 lei</span>
+              <p>estimated production cost per unit.</p>
+            </div>
+            <div>
+              <span>775 lei</span>
+              <p>estimated gross profit per unit.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section rollout-section" id="rollout" aria-labelledby="rollout-title">
+      <div class="section-inner rollout-layout">
+        <div class="section-copy reveal">
+          <p class="section-label">Rollout</p>
+          <h2 id="rollout-title">Local trust first, then national visibility.</h2>
+          <p>The fastest path is demonstration-heavy: show the glove in places where communication pressure is real, collect feedback, and improve after each event cycle.</p>
+        </div>
+
+        <div class="rollout-columns">
+          <article class="reveal">
+            <h3>Partnerships</h3>
+            <p>Associations for people with hearing deficiencies, USV, schools, and airports.</p>
+          </article>
+          <article class="reveal">
+            <h3>Workshops</h3>
+            <p>Local resources in Suceava, student demos, classroom pilots, and hands-on sessions.</p>
+          </article>
+          <article class="reveal">
+            <h3>Promotion</h3>
+            <p>Events with city hall, open days, school fairs, live presentations, website, and social media.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section lifecycle-section" aria-labelledby="lifecycle-title">
+      <div class="section-inner">
+        <div class="section-heading reveal">
+          <p class="section-label">Product lifecycle</p>
+          <h2 id="lifecycle-title">A practical path from prototype to a better second version.</h2>
+        </div>
+        <ol class="timeline reveal">
+          <li>
+            <span>Year 0</span>
+            <strong>Prototype demos</strong>
+            <p>Short live sequences at fairs, expos, concerts, and school events show the glove's weight, response, and real use.</p>
+          </li>
+          <li>
+            <span>Year 1</span>
+            <strong>Growth after fairs and expos</strong>
+            <p>Collect feedback from associations, students, teachers, and public institutions; improve onboarding and presentation materials.</p>
+          </li>
+          <li>
+            <span>Year 2</span>
+            <strong>Growth after improvement</strong>
+            <p>Reduce cost under 1500 lei, raise accuracy toward 95%, and prepare for international competitions and pilots.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section demo-section" id="demo" aria-labelledby="demo-title">
+      <div class="section-inner demo-layout">
+        <div class="demo-copy reveal">
+          <p class="section-label">Demo</p>
+          <h2 id="demo-title">Bring Hearo to the room where it can help.</h2>
+          <p>Hearo is looking for demo settings, school pilots, association feedback, and public events where a gesture-to-text glove can be tested with real users.</p>
+        </div>
+
+        <form class="demo-form reveal" data-demo-form data-success-message="Thanks. Your demo request is saved in this browser preview.">
+          <label>
+            Name
+            <input type="text" name="name" autocomplete="name" required>
+          </label>
+          <label>
+            Organization
+            <input type="text" name="organization" autocomplete="organization">
+          </label>
+          <label>
+            Demo context
+            <select name="context" required>
+              <option value="">Choose one</option>
+              <option>School or university</option>
+              <option>Association</option>
+              <option>Airport or public institution</option>
+              <option>Competition or fair</option>
+            </select>
+          </label>
+          <label>
+            Message
+            <textarea name="message" rows="4" placeholder="Tell us what kind of demo you want to organize."></textarea>
+          </label>
+          <button class="button button-primary" type="submit">Request demo</button>
+          <p class="form-status" hidden data-form-status></p>
+        </form>
+      </div>
+    </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="section-inner footer-inner">
+      <a class="brand" href="#top" aria-label="Hearo home">
+        <img src="./assets/hearo-mark.svg" alt="" width="34" height="34">
+        <span>Hearo</span>
+      </a>
+      <p>Communication becomes accessible. A gesture becomes a word.</p>
+      <a href="#top">Back to top</a>
+    </div>
+  </footer>
 </body>
 </html>
