@@ -1,0 +1,196 @@
+SpectraLeaf
+Sistem optic multispectral bazat pe NIR pentru detecția timpurie a stresului vegetal
+Variantă editată și reorganizată
+Figura 1. Exemplu de răspuns spectral al vegetației în domeniul vizibil, red-edge și NIR.
+Documentul descrie principiile fizice, sistemul construit, modul de obținere a datelor și validarea experimentală prin comparație cu un spectrometru de referință.
+Cuprins
+I. Scopul proiectului
+II. Principii fizice ale proiectului
+III. Obiectivele proiectului
+IV. Problema identificată și stadiul actual în domeniu
+V. Metode folosite și sisteme utilizate
+VI. Modul de obținere și validare a datelor experimentale
+VII. Aplicația software și prelucrarea datelor
+VIII. Date experimentale obținute
+IX. Concluzii
+X. Bibliografie
+I. Scopul proiectului
+Scopul proiectului SpectraLeaf este dezvoltarea unui sistem multispectral accesibil, cu cost redus, capabil să contribuie la identificarea timpurie a stresului vegetal prin analizarea modului în care frunzele reflectă lumina în domeniul vizibil, red-edge și în apropierea infraroșului, în special în zona NIR.
+Proiectul pornește de la ideea că multe probleme ale plantelor, precum stresul hidric, carențele nutritive sau anumite forme incipiente de degradare fiziologică, pot produce modificări ale răspunsului spectral înainte ca simptomele să devină clar vizibile cu ochiul liber.
+Prin realizarea acestui sistem se urmărește obținerea unei alternative mai accesibile față de soluțiile comerciale multispectrale existente, care sunt de multe ori costisitoare și greu de utilizat în contexte educaționale sau de cercetare la scară mică. Proiectul îmbină elemente de optică, electronică, achiziție de imagini și analiză digitală, având ca obiectiv final construirea unei aplicații experimentale capabile să evidențieze diferențe relevante între frunze sănătoase și frunze aflate sub stres.
+II. Principii fizice ale proiectului
+1. Răspunsul spectral al frunzelor
+Frunza nu reflectă aceeași cantitate de lumină la toate lungimile de undă. În domeniul vizibil, pigmenții fotosintetici, în special clorofilele, absorb puternic în zona albastră și roșie, în timp ce reflectanța în zona verde este mai ridicată. Din acest motiv, multe frunze sunt percepute de ochiul uman ca fiind verzi.
+După zona roșie, în apropierea pragului red-edge, reflectanța vegetației crește rapid. În domeniul NIR, aproximativ după 700 nm, lumina este absorbită mai puțin de pigmenți și este influențată mai mult de structura internă a țesutului frunzei. De aceea, domeniul NIR este foarte util pentru observarea diferențelor dintre frunze sănătoase și frunze afectate de stres.
+Figura 2. Reflectanța tipică a unei frunze: absorbție în vizibil și creștere a reflectanței în NIR.
+Figura 3. Domenii de absorbție ale clorofilei și relația cu lungimile de undă folosite.
+2. Indici de vegetație utilizați
+Indice
+Formulă
+Utilitate
+NDVI
+(NIR - Red) / (NIR + Red)
+indice standard pentru evaluarea vigorii vegetației, util în comparația dintre zona roșie și zona NIR.
+NDRE
+(NIR - RedEdge) / (NIR + RedEdge)
+indice sensibil la zona red-edge, util pentru variații ale conținutului de clorofilă.
+GNDVI
+(NIR - Green) / (NIR + Green)
+indice bazat pe verde, folosit pentru monitorizarea activității fotosintetice și a stării de nutriție.
+CIre
+(NIR / RedEdge) - 1
+indice de clorofilă bazat pe red-edge, util pentru estimarea conținutului de clorofilă.
+NDWI
+(NIR - SWIR) / (NIR + SWIR)
+indice de umiditate a vegetației. În forma actuală a prototipului, nu este calculat complet deoarece ar necesita o bandă SWIR dedicată.
+III. Obiectivele proiectului
+Obiectivul general al proiectului este dezvoltarea și fundamentarea unui sistem multispectral cu cost redus, capabil să contribuie la monitorizarea stării de sănătate a plantelor prin analiza modului în care acestea reflectă radiația electromagnetică în diferite benzi spectrale.
+Studierea diferențelor de reflectanță dintre frunze sănătoase și frunze aflate sub stres, cu accent pe domeniul red-edge și NIR.
+Validarea practică a conceptului prin folosirea unei camere modificate și a unei camere dedicate, pentru a demonstra că diferențele spectrale pot fi observate cu resurse accesibile.
+Proiectarea unui sistem optic de achiziție bazat pe un mecanism rotativ cu filtre spectrale, astfel încât aceeași scenă să fie captată în mai multe benzi de lungime de undă.
+Compararea măsurătorilor obținute cu camera și filtrele optice cu măsurători realizate cu un spectrometru, folosit ca referință experimentală.
+Construirea unei baze tehnice pentru dezvoltarea ulterioară a aplicației software, a algoritmilor de aliniere și a clasificării automate asistate de modele de învățare automată.
+IV. Problema identificată și stadiul actual în domeniu
+Problema principală de la care pornește proiectul este faptul că stresul vegetal este adesea detectat prea târziu atunci când evaluarea se bazează doar pe observația vizuală directă. Plantele pot suferi modificări fiziologice înainte ca frunzele să își schimbe clar culoarea sau înainte ca suprafața lor să prezinte semne evidente de degradare.
+În agricultură, horticultură și monitorizarea mediului, identificarea timpurie a stresului este importantă deoarece permite o reacție mai rapidă și mai bine direcționată. O plantă aflată sub stres hidric, nutritiv sau termic poate manifesta modificări subtile ale reflectanței sale spectrale cu mult înainte ca acestea să fie evidente într-o fotografie RGB obișnuită.
+Sistemele comerciale multispectrale pot realiza astfel de analize cu precizie ridicată, dar sunt de multe ori costisitoare pentru elevi, laboratoare mici sau activități educaționale. SpectraLeaf răspunde acestei probleme printr-o soluție experimentală low-cost, care păstrează principiile optice esențiale, dar le aplică într-o formă mai accesibilă.
+V. Metode folosite și sisteme utilizate
+1. Sistemul optic propus
+Sistemul proiectat pentru obținerea imaginilor este un ansamblu optic bazat pe un mecanism rotativ cu filtre spectrale. Principiul de funcționare constă în poziționarea succesivă a fiecărui filtru în fața lentilei, astfel încât aceeași frunză să fie înregistrată în mai multe benzi de lungime de undă.
+Avantajul major al acestei soluții este faptul că permite realizarea imagisticii multispectrale folosind un singur senzor, reducând costul și complexitatea în comparație cu sistemele bazate pe mai multe camere. În același timp, metoda necesită atenție la alinierea imaginilor, stabilitatea scenei și pierderile de lumină produse de filtre.
+Figura 4. Model 3D al mecanismului rotativ cu filtre spectrale.
+2. Camerele utilizate
+Pentru obținerea imaginilor au fost utilizate două soluții experimentale: o cameră OV9281 Global Shutter Camera Module, folosită pentru proiectarea carcasei cu filtre, și o cameră de telefon modificată, folosită în experimentele preliminare. În cazul camerei de telefon a fost înlăturat filtrul IR-cut, deoarece acesta blochează o parte importantă din radiația infraroșie apropiată.
+Senzor cu filtru IR-cut
+Senzor după înlăturarea filtrului IR-cut
+Figura 5. Modificarea camerei de telefon prin îndepărtarea filtrului IR-cut.
+VI. Modul de obținere și validare a datelor experimentale
+1. Procedura de achiziție
+Mai întâi, frunza a fost analizată cu un spectrometru Ocean Optics USB2000+XR1-ES, folosit ca instrument de referință. Măsurarea a fost realizată într-o cutie neagră cu o deschidere în partea superioară, pentru a reduce influența luminii externe și pentru a păstra condițiile de iluminare cât mai stabile.
+Spectrometrul a generat o curbă continuă a intensității luminii reflectate de frunză în funcție de lungimea de undă, în intervalul λ = 200-1025 nm. În graficele experimentale este reprezentată în principal zona 300-1025 nm, deoarece aceasta include domeniul vizibil, trecerea red-edge și domeniul infraroșu apropiat, relevante pentru evaluarea stării frunzei.
+După măsurarea cu spectrometrul, aceeași frunză a fost analizată cu sistemul SpectraLeaf, bazat pe o cameră montată în cutie și pe șase filtre optice. Filtrele permit trecerea luminii pentru lungimile de undă λ = 532 nm, 556 nm, 680 nm, 725 nm, 850 nm și 940 nm. Camera produce astfel o serie de puncte discrete, care pot fi unite pentru a aproxima forma spectrului reflectat.
+Spectrometrul a fost considerat standardul de comparație, iar sistemul cu cameră a fost evaluat în funcție de cât de bine urmărește forma curbei spectrale și diferențele dintre frunzele sănătoase și cele nesănătoase.
+2. Specificații relevante ale spectrometrului de referință
+Parametru
+Valoare / descriere
+Model
+Ocean Optics USB2000+XR1-ES
+Tip
+spectrometru modular, portabil, pentru aplicații UV-NIR
+Interval de lungimi de undă
+200-1025 nm
+Rezoluție spectrală
+1,7-2,1 nm
+Timp de integrare
+1 ms - 65 s
+Detector
+Sony ILX511B, matrice CCD liniară de siliciu
+Număr de pixeli
+2048 pixeli
+Conector optic
+SMA 905
+Interfață
+USB 2.0
+Dimensiuni și masă
+89,1 mm × 63,3 mm × 34,4 mm; aproximativ 190 g
+Tabelul 1. Specificații relevante pentru spectrometrul Ocean Optics USB2000+XR1-ES, folosit ca referință experimentală.
+3. Graficele utilizate în validare
+Pentru validare au fost folosite toate cele trei grupe de grafice obținute experimental. Primul grafic compară direct curbele spectrometrului cu punctele/curbele sistemului bazat pe cameră. Al doilea și al treilea grafic prezintă separat două seturi de frunze, fiecare cu comparația spectrometru-cameră și sănătos-nesănătos.
+Grafic
+Rol în analiză
+Rezultate urmărite
+Figura 6
+Validarea globală cameră-spectrometru
+r albastru = 0,982; r portocaliu = 0,967; diferențe medii de 7,166% și 5,403%
+Figura 7
+Setul 1: comparație sănătos vs nesănătos
+frunza nesănătoasă este mai joasă în NIR cu 10,7% la spectrometru și 12,6% la cameră
+Figura 8
+Setul 2: comparație sănătos vs nesănătos
+frunza nesănătoasă este mai ridicată în NIR cu 11,1% la spectrometru și 1,4% la cameră
+Tabelul 2. Rolul celor trei grafice în analiza comparativă.
+Figura 6. Comparația globală dintre spectrometru și sistemul bazat pe cameră. Liniile continue reprezintă spectrometrul, iar liniile întrerupte reprezintă camera.
+În Figura 6, curbele albastre reprezintă frunza nesănătoasă, iar curbele portocalii reprezintă frunza sănătoasă. Coeficientul de corelație r = 0,982 pentru albastru și r = 0,967 pentru portocaliu arată o asemănare foarte puternică între metoda de referință și sistemul cu cameră. Diferențele medii, de 7,166% pentru curbele albastre și 5,403% pentru curbele portocalii, sunt acceptabile pentru un sistem experimental low-cost.
+4. Compararea statistică dintre spectrometru și cameră
+Comparație
+Coeficient r
+Diferență medie
+Interpretare
+Curbe albastre: frunză nesănătoasă, cameră vs spectrometru
+0,982
+7,166%
+Corelație foarte puternică; forma curbei camerei urmărește bine curba spectrometrului.
+Curbe portocalii: frunză sănătoasă, cameră vs spectrometru
+0,967
+5,403%
+Corelație foarte puternică; diferența medie este mică pentru un prototip low-cost.
+Concordanță medie a formei curbelor
+0,975
+-
+Aproximativ 97,5% concordanță statistică între forma curbelor analizate.
+Tabelul 3. Rezultatele comparației statistice dintre camera multispectrală și spectrometru.
+5. Compararea frunzelor sănătoase și nesănătoase
+După validarea formei curbelor camerei față de spectrometru, au fost comparate între ele graficele reflectanței pentru frunzele sănătoase și pentru cele nesănătoase. Comparația se face atât pe curba continuă a spectrometrului, cât și pe punctele discrete obținute cu filtrele camerei.
+Figura 7. Setul experimental 1: comparația dintre frunza sănătoasă și frunza nesănătoasă, măsurată cu spectrometrul și cu sistemul bazat pe cameră.
+În setul 1, rezultatul este clar: frunza nesănătoasă are o intensitate medie mai mică în domeniul NIR, peste 700 nm. Spectrometrul indică o medie de 689,7 pentru frunza sănătoasă și 615,8 pentru frunza nesănătoasă, adică o scădere de 10,7%. Camera indică o medie de 655,9 pentru frunza sănătoasă și 573,0 pentru frunza nesănătoasă, adică o scădere de 12,6%. Diferența dintre cele două estimări este de numai 1,9 puncte procentuale.
+Figura 8. Setul experimental 2: comparația dintre frunza sănătoasă și frunza nesănătoasă, măsurată cu spectrometrul și cu sistemul bazat pe cameră.
+În setul 2, diferența este detectată de ambele metode, dar sensul este diferit față de primul set. Spectrometrul indică o medie NIR de 595,1 pentru frunza sănătoasă și 661,1 pentru frunza nesănătoasă, deci frunza nesănătoasă este cu 11,1% mai ridicată. Camera indică 583,6 pentru frunza sănătoasă și 591,6 pentru frunza nesănătoasă, deci o creștere de 1,4%. Camera detectează același sens general al diferenței, dar comprimă amplitudinea acesteia.
+Set analizat
+Metodă
+Medie frunză sănătoasă, 700+ nm
+Medie frunză nesănătoasă, 700+ nm
+Diferență observată
+Set 1
+Spectrometru
+689,7
+615,8
+frunza nesănătoasă este cu 10,7% mai joasă
+Set 1
+Cameră + filtre
+655,9
+573,0
+frunza nesănătoasă este cu 12,6% mai joasă
+Set 2
+Spectrometru
+595,1
+661,1
+frunza nesănătoasă este cu 11,1% mai ridicată
+Set 2
+Cameră + filtre
+583,6
+591,6
+frunza nesănătoasă este cu 1,4% mai ridicată
+Tabelul 4. Diferențele măsurate în domeniul NIR pentru cele două seturi experimentale.
+6. Interpretarea rezultatelor
+În primul set experimental, se observă în mod clar faptul că valoarea absolută a reflectanței frunzei nesănătoase scade în domeniul IR/NIR cu 10,7% la spectrometru și cu 12,6% la cameră, rezultând o scădere medie de aproximativ 11,65%. Acesta este cazul cel mai important pentru validarea practică a sistemului, deoarece camera reproduce foarte bine diferența observată cu spectrometrul.
+În al doilea set, frunza nesănătoasă nu are reflectanța NIR mai mică, ci mai mare. Această situație nu anulează rezultatul, ci arată că eticheta „nesănătos” nu produce întotdeauna același tip de răspuns spectral. Stresul hidric, degradarea mecanică, uscarea, textura, umiditatea și poziționarea frunzei pot modifica sensul diferenței spectrale.
+Prin urmare, concluzia corectă este că sistemul SpectraLeaf poate detecta diferențe relevante în domeniul NIR și poate urmări forma generală a spectrului măsurat cu spectrometrul. Pentru setul de validare analizat, sistemul construit de tip cameră multispectrală poate fi prezentat cu o concordanță statistică de aproximativ 97,5% față de spectrometru în urmărirea formei curbelor. Această valoare nu reprezintă o rată finală universală de diagnostic, ci o rată de concordanță între metoda low-cost și metoda de referință pe datele analizate.
+Au fost analizate patru frunze în cele două seturi prezentate: două frunze sănătoase și două frunze nesănătoase. Rezultatele principale sunt: în setul 1, sistemul a confirmat o scădere NIR a frunzei nesănătoase, apropiată de cea măsurată cu spectrometrul; în setul 2, sistemul a detectat aceeași direcție generală a diferenței ca spectrometrul, dar cu amplitudine mai mică. Rezultatele confirmă fezabilitatea proiectului, însă arată și necesitatea testării pe un număr mai mare de frunze și a calibrării cu referințe alb/negru pentru concluzii statistice finale.
+VII. Aplicația software și prelucrarea datelor
+Pentru prelucrarea datelor a fost construit un program care analizează automat imaginile capturate în benzi diferite. Programul identifică suprafața cu vegetație, construiește o mască a frunzei, calculează luminozitatea medie a pixelilor din zona de interes și apoi estimează indici precum NDVI, NDRE, GNDVI și CIre.
+Un avantaj important al aplicației este faptul că poate alinia imaginile capturate succesiv, reducând erorile produse de mici deplasări ale camerei sau ale frunzei. În plus, aplicația poate genera grafice, histograme și suprapuneri vizuale care evidențiază zonele cu risc scăzut, mediu sau ridicat.
+Figura 9. Interfața aplicației de analiză a imaginilor multispectrale.
+Figura 10. Exemplu de hartă vizuală/overlay generată de aplicație pentru evidențierea zonelor de risc.
+Figura 11. Exemplu de reprezentare grafică a valorilor obținute în benzile spectrale.
+VIII. Date experimentale obținute
+Folosind interfața programului, pot fi analizate imaginile aceleiași frunze în lungimi de undă diferite. Tabelul de mai jos prezintă exemple de imagini înregistrate în cele șapte benzi folosite în dezvoltarea inițială a sistemului: 532 nm, 556 nm, 650 nm, 680 nm, 725 nm, 850 nm și 940 nm.
+532 nm
+556 nm
+650 nm
+680 nm
+725 nm
+850 nm
+940 nm
+Figura 12. Exemple de imagini ale frunzei în benzi spectrale diferite.
+Pe lângă identificarea zonei de vegetație, programul folosește un algoritm care observă variațiile puternice de intensitate și le marchează ca zone potențial suspecte. În unele cazuri pot apărea alarme false, mai ales dacă masca include o parte din fundal, dar acestea pot fi identificate prin verificarea vizuală a suprapunerii.
+Figura 13. Exemplu de grafic generat automat în aplicație.
+IX. Concluzii
+Proiectul SpectraLeaf demonstrează că un sistem multispectral low-cost, bazat pe cameră și filtre optice, poate evidenția diferențe relevante între frunze sănătoase și frunze afectate. Compararea cu spectrometrul Ocean Optics USB2000+XR1-ES a arătat o concordanță foarte bună a formei curbelor pentru setul de validare, cu valori ale coeficientului de corelație r de 0,982 pentru curbele albastre și 0,967 pentru curbele portocalii.
+În domeniul NIR, primul set experimental a arătat o scădere a semnalului frunzei nesănătoase cu 10,7% la spectrometru și cu 12,6% la cameră. Al doilea set a indicat o diferență în sens invers, dar tot detectabilă de ambele metode. Din acest motiv, rezultatele trebuie interpretate ca o validare a principiului de funcționare, nu ca o acuratețe finală de diagnostic pentru toate tipurile de plante și stres.
+Rata de concordanță statistică a formei curbelor cameră-spectrometru, calculată ca medie a coeficienților de corelație din setul de validare, este de aproximativ 97,5%. Această valoare susține faptul că sistemul SpectraLeaf poate fi utilizat ca platformă experimentală promițătoare pentru determinarea stării de sănătate a plantelor, cu condiția extinderii bazei de date și a calibrării suplimentare.
+În forma actuală, sistemul oferă o metodă accesibilă de investigare a răspunsului spectral al frunzelor, iar aplicația software adaugă un nivel suplimentar de interpretare prin mascarea zonei vegetale, calcularea indicilor și reprezentarea vizuală a zonelor de risc. Direcțiile viitoare includ testarea pe un număr mai mare de frunze, controlul strict al iluminării, calibrarea cu referințe alb/negru și antrenarea unor modele de clasificare asistată de inteligență artificială.
+X. Bibliografie
+[1] GoPhotonics, „USB2000+XR1-ES - Ocean Optics | Spectrometer”, fișă de specificații pentru modelul USB2000+XR1-ES, accesat la 29.05.2026.
+[2] Ocean Optics, „Legacy Spectrometers Support”, arhivă de documentație pentru spectrometrele Ocean Optics, accesată la 29.05.2026.
+[3] Date experimentale SpectraLeaf: grafice spectrometru/cameră, imagini în benzi spectrale și capturi din aplicația de prelucrare.
+[4] Literatura generală privind indicii de vegetație NDVI, NDRE, GNDVI, CIre și interpretarea răspunsului spectral al vegetației în domeniul NIR.

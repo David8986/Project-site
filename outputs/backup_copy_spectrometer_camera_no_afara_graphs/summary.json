@@ -1,0 +1,74 @@
+{
+  "mode": "indoor_only_no_afara",
+  "data_root": "C:\\Users\\david\\OneDrive\\Desktop\\data analisys BACKUP 2026-05-22 - Copy\\in cutie",
+  "output_dir": "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\backup_copy_spectrometer_camera_no_afara_graphs",
+  "desktop_copy": "C:\\Users\\david\\OneDrive\\Desktop\\backup_copy_spectrometer_camera_graphs_no_afara",
+  "spectrometer_txt_files_used": 46,
+  "binned_rows_10nm": 3956,
+  "camera_spectrometer_pairs": 30,
+  "sample_correlations": [
+    {
+      "sample_id": "in cutie\\Set frunze 1\\frunza nesanatoasa",
+      "condition": "unhealthy",
+      "matched_filter_count": 6,
+      "pearson_r_camera_vs_spectrometer_shape": 0.687296,
+      "mean_absolute_shape_difference": 0.238506,
+      "missing_filters": ""
+    },
+    {
+      "sample_id": "in cutie\\Set frunze 1\\frunza verde",
+      "condition": "healthy",
+      "matched_filter_count": 6,
+      "pearson_r_camera_vs_spectrometer_shape": 0.608543,
+      "mean_absolute_shape_difference": 0.329864,
+      "missing_filters": ""
+    },
+    {
+      "sample_id": "in cutie\\Set frunze 2\\nesanatoasa",
+      "condition": "unhealthy",
+      "matched_filter_count": 6,
+      "pearson_r_camera_vs_spectrometer_shape": 0.253917,
+      "mean_absolute_shape_difference": 0.394018,
+      "missing_filters": ""
+    },
+    {
+      "sample_id": "in cutie\\Set frunze 2\\sanatoasa",
+      "condition": "healthy",
+      "matched_filter_count": 6,
+      "pearson_r_camera_vs_spectrometer_shape": 0.562241,
+      "mean_absolute_shape_difference": 0.229382,
+      "missing_filters": ""
+    },
+    {
+      "sample_id": "in cutie\\frunza sanatoasa dar galbena",
+      "condition": "healthy_yellow",
+      "matched_filter_count": 6,
+      "pearson_r_camera_vs_spectrometer_shape": 0.295586,
+      "mean_absolute_shape_difference": 0.345004,
+      "missing_filters": ""
+    }
+  ],
+  "graphs": {
+    "comparison": [
+      "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\backup_copy_spectrometer_camera_no_afara_graphs\\graphs\\camera_vs_spectrometer_composite_by_sample.png",
+      "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\backup_copy_spectrometer_camera_no_afara_graphs\\graphs\\camera_vs_spectrometer_scatter_shape.png",
+      "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\backup_copy_spectrometer_camera_no_afara_graphs\\graphs\\camera_vs_spectrometer_difference_heatmap.png"
+    ],
+    "spectrometer_per_set": [
+      "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\backup_copy_spectrometer_camera_no_afara_graphs\\graphs\\spectrometru_10nm_in_cutie.png",
+      "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\backup_copy_spectrometer_camera_no_afara_graphs\\graphs\\spectrometru_10nm_in_cutie_Referinta_alba.png",
+      "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\backup_copy_spectrometer_camera_no_afara_graphs\\graphs\\spectrometru_10nm_in_cutie_Refirinta_neagra.png",
+      "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\backup_copy_spectrometer_camera_no_afara_graphs\\graphs\\spectrometru_10nm_in_cutie_Set_frunze_1_frunza_nesanatoasa.png",
+      "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\backup_copy_spectrometer_camera_no_afara_graphs\\graphs\\spectrometru_10nm_in_cutie_Set_frunze_1_frunza_verde.png",
+      "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\backup_copy_spectrometer_camera_no_afara_graphs\\graphs\\spectrometru_10nm_in_cutie_Set_frunze_2_nesanatoasa.png",
+      "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\backup_copy_spectrometer_camera_no_afara_graphs\\graphs\\spectrometru_10nm_in_cutie_Set_frunze_2_sanatoasa.png",
+      "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\backup_copy_spectrometer_camera_no_afara_graphs\\graphs\\spectrometru_10nm_in_cutie_frunza_sanatoasa_dar_galbena.png"
+    ],
+    "gallery": "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\backup_copy_spectrometer_camera_no_afara_graphs\\graph_gallery.jpg"
+  },
+  "csv_files": {
+    "spectrometer_10nm": "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\backup_copy_spectrometer_camera_no_afara_graphs\\spectrometer_10nm_binned_indoor_only.csv",
+    "camera_spectrometer_comparison": "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\backup_copy_spectrometer_camera_no_afara_graphs\\camera_spectrometer_comparison_indoor_only.csv",
+    "correlations": "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\backup_copy_spectrometer_camera_no_afara_graphs\\camera_spectrometer_correlations_indoor_only.csv"
+  }
+}

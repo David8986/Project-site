@@ -1,0 +1,20 @@
+file,title,path
+01_full_spectrum_raw_all.png,"Raw full spectra, all samples",C:\Users\david\OneDrive\Desktop\Archive\Projects\CodeX\outputs\camera_validation_report\graphs\01_full_spectrum_raw_all.png
+02_full_spectrum_normalized_by_condition.png,Smoothed normalized full spectra by condition,C:\Users\david\OneDrive\Desktop\Archive\Projects\CodeX\outputs\camera_validation_report\graphs\02_full_spectrum_normalized_by_condition.png
+03_condition_mean_full_spectrum.png,Condition mean full-spectrum curves,C:\Users\david\OneDrive\Desktop\Archive\Projects\CodeX\outputs\camera_validation_report\graphs\03_condition_mean_full_spectrum.png
+04_healthy_minus_unhealthy_difference.png,Healthy minus unhealthy full-spectrum difference,C:\Users\david\OneDrive\Desktop\Archive\Projects\CodeX\outputs\camera_validation_report\graphs\04_healthy_minus_unhealthy_difference.png
+05_full_spectrum_pca.png,Full-spectrum PCA score plot,C:\Users\david\OneDrive\Desktop\Archive\Projects\CodeX\outputs\camera_validation_report\graphs\05_full_spectrum_pca.png
+06_camera_vs_spectrometer_full_area.png,Camera brightness vs full-spectrum area,C:\Users\david\OneDrive\Desktop\Archive\Projects\CodeX\outputs\camera_validation_report\graphs\06_camera_vs_spectrometer_full_area.png
+07_camera_vs_spectrometer_normalized.png,Within-sample normalized camera vs spectrometer response,C:\Users\david\OneDrive\Desktop\Archive\Projects\CodeX\outputs\camera_validation_report\graphs\07_camera_vs_spectrometer_normalized.png
+08_camera_reflectance_proxy_vs_spectrometer.png,White-referenced camera proxy vs spectrometer response,C:\Users\david\OneDrive\Desktop\Archive\Projects\CodeX\outputs\camera_validation_report\graphs\08_camera_reflectance_proxy_vs_spectrometer.png
+09_per_sample_correlation_bars.png,Per-sample camera/spectrometer fingerprint correlations,C:\Users\david\OneDrive\Desktop\Archive\Projects\CodeX\outputs\camera_validation_report\graphs\09_per_sample_correlation_bars.png
+10_fingerprint_overlays_by_sample.png,Camera and spectrometer response fingerprints by sample,C:\Users\david\OneDrive\Desktop\Archive\Projects\CodeX\outputs\camera_validation_report\graphs\10_fingerprint_overlays_by_sample.png
+11_camera_feature_heatmap.png,Camera feature heatmap,C:\Users\david\OneDrive\Desktop\Archive\Projects\CodeX\outputs\camera_validation_report\graphs\11_camera_feature_heatmap.png
+12_spectrometer_feature_heatmap.png,Spectrometer feature heatmap,C:\Users\david\OneDrive\Desktop\Archive\Projects\CodeX\outputs\camera_validation_report\graphs\12_spectrometer_feature_heatmap.png
+13_reference_spectra.png,White/dark/source reference spectra,C:\Users\david\OneDrive\Desktop\Archive\Projects\CodeX\outputs\camera_validation_report\graphs\13_reference_spectra.png
+14_peak_and_centroid_by_filter.png,Peak and centroid by filter,C:\Users\david\OneDrive\Desktop\Archive\Projects\CodeX\outputs\camera_validation_report\graphs\14_peak_and_centroid_by_filter.png
+15_classifier_confusion_matrix.png,Full-spectrum nearest-centroid classifier confusion matrix,C:\Users\david\OneDrive\Desktop\Archive\Projects\CodeX\outputs\camera_validation_report\graphs\15_classifier_confusion_matrix.png
+16_condition_camera_separation.png,Camera feature separation by condition,C:\Users\david\OneDrive\Desktop\Archive\Projects\CodeX\outputs\camera_validation_report\graphs\16_condition_camera_separation.png
+17_spectrum_area_by_condition_filter.png,Full-spectrum area by condition and filter,C:\Users\david\OneDrive\Desktop\Archive\Projects\CodeX\outputs\camera_validation_report\graphs\17_spectrum_area_by_condition_filter.png
+18_full_spectrum_similarity_heatmap.png,Full-spectrum similarity heatmap,C:\Users\david\OneDrive\Desktop\Archive\Projects\CodeX\outputs\camera_validation_report\graphs\18_full_spectrum_similarity_heatmap.png
+19_camera_contact_sheet.png,Camera contact sheet,C:\Users\david\OneDrive\Desktop\Archive\Projects\CodeX\outputs\camera_validation_report\graphs\19_camera_contact_sheet.png

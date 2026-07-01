@@ -1,0 +1,1 @@
+"""Dedicated hyperspectral viewer app."""

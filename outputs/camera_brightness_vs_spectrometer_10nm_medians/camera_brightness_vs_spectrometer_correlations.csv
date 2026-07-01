@@ -1,0 +1,6 @@
+﻿sample_id,condition,matched_filter_count,pearson_raw_camera_shape_vs_spectrometer,pearson_white_normalized_camera_shape_vs_spectrometer,rmse_white_normalized_shape,mean_abs_difference_white_normalized_shape,missing_spectrometer_filters
+in cutie\Set frunze 1\frunza nesanatoasa,unhealthy,6,0.550278,0.419707,0.265024,0.250203,
+in cutie\Set frunze 1\frunza verde,healthy,6,0.408035,0.323473,0.358354,0.321089,
+in cutie\Set frunze 2\nesanatoasa,unhealthy,6,0.067575,-0.103703,0.394557,0.338949,
+in cutie\Set frunze 2\sanatoasa,healthy,6,0.593555,0.494224,0.358259,0.326553,
+in cutie\frunza sanatoasa dar galbena,healthy_yellow,6,0.30499,0.191718,0.315366,0.286237,

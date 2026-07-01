@@ -1,0 +1,36 @@
+{
+  "paired_measurements": 28,
+  "per_sample_correlations": 5,
+  "overall_raw_camera_vs_spectrometer_area_pearson_r": 0.12100512944715325,
+  "overall_raw_camera_vs_spectrometer_area_p": 0.5396337547703438,
+  "overall_within_sample_normalized_pearson_r": 0.24650974757765567,
+  "overall_within_sample_normalized_p": 0.20602932789416692,
+  "overall_camera_reflectance_proxy_normalized_pearson_r": 0.042852875436236414,
+  "overall_camera_reflectance_proxy_normalized_p": 0.8285847962091528,
+  "median_per_sample_normalized_correlation": 0.603096,
+  "mean_per_sample_normalized_correlation": 0.2643694,
+  "median_per_sample_camera_reflectance_proxy_correlation": 0.039428,
+  "mean_per_sample_camera_reflectance_proxy_correlation": 0.04608719999999998,
+  "full_spectrum_classifier": {
+    "accuracy": 0.4166666666666667,
+    "labels": [
+      "healthy",
+      "unhealthy"
+    ],
+    "confusion_matrix": [
+      [
+        7,
+        11
+      ],
+      [
+        10,
+        8
+      ]
+    ],
+    "n": 36
+  },
+  "pca": {
+    "pc1_explained_variance": 0.42733938879923095,
+    "pc2_explained_variance": 0.18273946383718526
+  }
+}

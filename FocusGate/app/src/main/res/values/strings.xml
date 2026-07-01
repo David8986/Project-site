@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FocusGate</string>
+    <string name="accessibility_service_label">FocusGate blocker</string>
+    <string name="accessibility_service_summary">Blocks reels, shorts, and TikTok until you complete a focus task.</string>
+    <string name="accessibility_service_description">FocusGate watches supported apps locally on this device. When it detects short-form video, it opens a challenge screen before allowing a short unlock window.</string>
+    <string name="device_admin_label">FocusGate uninstall friction</string>
+    <string name="device_admin_description">Adds an extra settings step before FocusGate can be removed.</string>
+</resources>

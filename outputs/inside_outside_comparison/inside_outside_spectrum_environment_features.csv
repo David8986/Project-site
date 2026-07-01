@@ -1,0 +1,50 @@
+environment,sample_id,condition,filter_label,relative_path,full_area,full_peak,spectral_centroid_nm,noise_index_residual_over_mean,roughness_index_mean_abs_diff
+afara,afara/fr1/nesan,unhealthy,532,afara\fr1\nesan\532.txt,12983935.571579,20013.229897,650.2263,0.079947,0.006745
+afara,afara/fr1/nesan,unhealthy,556,afara\fr1\nesan\556.txt,11617962.336902,17997.821792,652.704069,0.049262,0.005946
+afara,afara/fr1/nesan,unhealthy,680,afara\fr1\nesan\680.txt,13485079.884473,37844.722428,654.969693,0.081596,0.006894
+afara,afara/fr1/nesan,unhealthy,725,afara\fr1\nesan\725.txt,13205208.115165,30786.118372,655.686494,0.108089,0.006293
+afara,afara/fr1/nesan,unhealthy,850,afara\fr1\nesan\850.txt,12591859.118153,21481.622158,655.515204,0.064059,0.004994
+afara,afara/fr1/nesan,unhealthy,940,afara\fr1\nesan\940.txt,12763006.610111,22074.878239,653.768319,0.162273,0.007083
+afara,afara/fr1/nesan,unhealthy,none,afara\fr1\nesan\fara.txt,6557632.451745,36913.251886,603.689435,0.029405,0.004494
+afara,afara/fr1/san,healthy,532,afara\fr1\san\532.txt,13142842.545196,23728.465262,647.53336,0.075955,0.008929
+afara,afara/fr1/san,healthy,556,afara\fr1\san\556.txt,6503644.119903,48487.989773,627.097309,0.030323,0.007086
+afara,afara/fr1/san,healthy,680,afara\fr1\san\680.txt,12949330.115092,26064.565514,654.785706,0.063905,0.006106
+afara,afara/fr1/san,healthy,725,afara\fr1\san\725.txt,14522985.245244,74328.834585,662.359022,0.14884,0.007404
+afara,afara/fr1/san,healthy,850,afara\fr1\san\850.txt,13348947.267492,32247.262126,661.129739,0.068684,0.005868
+afara,afara/fr1/san,healthy,940,afara\fr1\san\940.txt,12948814.614083,22164.268106,654.357694,0.105207,0.005181
+afara,afara/fr1/san,healthy,none,afara\fr1\san\fara.txt,13143063.177237,48977.682453,683.441189,0.050035,0.008438
+in cutie,in cutie/frunza sanatoasa dar galbena,healthy_yellow,532,in cutie\frunza sanatoasa dar galbena\spectru\532.txt,89871.728169,183.118611,609.151343,0.124662,0.058159
+in cutie,in cutie/frunza sanatoasa dar galbena,healthy_yellow,556,in cutie\frunza sanatoasa dar galbena\spectru\556.txt,94926.675732,220.204939,603.157027,0.129726,0.057999
+in cutie,in cutie/frunza sanatoasa dar galbena,healthy_yellow,680,in cutie\frunza sanatoasa dar galbena\spectru\680.txt,85641.84025,182.879562,613.427411,0.123111,0.062127
+in cutie,in cutie/frunza sanatoasa dar galbena,healthy_yellow,725,in cutie\frunza sanatoasa dar galbena\spectru\725.txt,92804.257763,282.715448,618.876938,0.127411,0.055204
+in cutie,in cutie/frunza sanatoasa dar galbena,healthy_yellow,850,in cutie\frunza sanatoasa dar galbena\spectru\850.txt,78535.407432,239.878318,622.859894,0.121901,0.063524
+in cutie,in cutie/frunza sanatoasa dar galbena,healthy_yellow,940,in cutie\frunza sanatoasa dar galbena\spectru\940.txt,95119.978308,228.281352,619.658494,0.129152,0.052835
+in cutie,in cutie/frunza sanatoasa dar galbena,healthy_yellow,none,in cutie\frunza sanatoasa dar galbena\spectru\fara.txt,85128.201487,266.842972,697.986011,0.100587,0.047768
+in cutie,in cutie/Set frunze 1/frunza nesanatoasa,unhealthy,532,in cutie\Set frunze 1\frunza nesanatoasa\spectru\532.txt,89659.998541,190.917051,606.542789,0.128166,0.057072
+in cutie,in cutie/Set frunze 1/frunza nesanatoasa,unhealthy,556,in cutie\Set frunze 1\frunza nesanatoasa\spectru\556.txt,92654.599612,189.27325,607.896499,0.12176,0.057449
+in cutie,in cutie/Set frunze 1/frunza nesanatoasa,unhealthy,680,in cutie\Set frunze 1\frunza nesanatoasa\spectru\680.txt,82852.935223,191.733129,611.16319,0.131202,0.059232
+in cutie,in cutie/Set frunze 1/frunza nesanatoasa,unhealthy,725,in cutie\Set frunze 1\frunza nesanatoasa\spectru\725.txt,99760.325506,302.493941,622.20568,0.121653,0.05324
+in cutie,in cutie/Set frunze 1/frunza nesanatoasa,unhealthy,850,in cutie\Set frunze 1\frunza nesanatoasa\spectru\850.txt,94708.717995,276.685821,634.603367,0.121539,0.049364
+in cutie,in cutie/Set frunze 1/frunza nesanatoasa,unhealthy,950,in cutie\Set frunze 1\frunza nesanatoasa\spectru\950.txt,92650.650037,215.193248,618.398423,0.125565,0.055555
+in cutie,in cutie/Set frunze 1/frunza nesanatoasa,unhealthy,none,in cutie\Set frunze 1\frunza nesanatoasa\spectru\fara filtru.txt,102501.998511,317.4186,692.361371,0.100809,0.041093
+in cutie,in cutie/Set frunze 1/frunza verde,healthy,532,in cutie\Set frunze 1\frunza verde\spectru\532.txt,93278.931738,207.357281,609.516937,0.128743,0.057592
+in cutie,in cutie/Set frunze 1/frunza verde,healthy,556,in cutie\Set frunze 1\frunza verde\spectru\556.txt,91653.416311,192.040297,603.832507,0.120169,0.057497
+in cutie,in cutie/Set frunze 1/frunza verde,healthy,680,in cutie\Set frunze 1\frunza verde\spectru\680.txt,93534.683654,194.287792,611.381733,0.131622,0.0593
+in cutie,in cutie/Set frunze 1/frunza verde,healthy,725,in cutie\Set frunze 1\frunza verde\spectru\725.txt,99343.087421,314.137196,620.771772,0.122561,0.050482
+in cutie,in cutie/Set frunze 1/frunza verde,healthy,850,in cutie\Set frunze 1\frunza verde\spectru\850.txt,98324.534627,280.237491,626.443964,0.119226,0.046561
+in cutie,in cutie/Set frunze 1/frunza verde,healthy,940,in cutie\Set frunze 1\frunza verde\spectru\940.txt,89498.036342,220.476535,617.061301,0.127952,0.055363
+in cutie,in cutie/Set frunze 1/frunza verde,healthy,none,in cutie\Set frunze 1\frunza verde\spectru\fara filtru.txt,118363.830782,410.750632,696.197448,0.101634,0.033112
+in cutie,in cutie/Set frunze 2/nesanatoasa,unhealthy,532,in cutie\Set frunze 2\nesanatoasa\spectru\532.txt,105489.624308,212.929511,606.936446,0.12554,0.054762
+in cutie,in cutie/Set frunze 2/nesanatoasa,unhealthy,556,in cutie\Set frunze 2\nesanatoasa\spectru\556.txt,97161.357821,214.170797,610.597089,0.127283,0.058087
+in cutie,in cutie/Set frunze 2/nesanatoasa,unhealthy,580,in cutie\Set frunze 2\nesanatoasa\spectru\580.txt,90416.308027,295.25519,629.830345,0.126776,0.047982
+in cutie,in cutie/Set frunze 2/nesanatoasa,unhealthy,680,in cutie\Set frunze 2\nesanatoasa\spectru\680.txt,101321.070037,278.267278,620.073537,0.124201,0.053594
+in cutie,in cutie/Set frunze 2/nesanatoasa,unhealthy,725,in cutie\Set frunze 2\nesanatoasa\spectru\725.txt,92803.268359,279.879824,621.484503,0.125474,0.053091
+in cutie,in cutie/Set frunze 2/nesanatoasa,unhealthy,940,in cutie\Set frunze 2\nesanatoasa\spectru\940.txt,83571.525265,196.394424,615.999139,0.131866,0.053339
+in cutie,in cutie/Set frunze 2/nesanatoasa,unhealthy,none,in cutie\Set frunze 2\nesanatoasa\spectru\fara filtru.txt,88571.751339,281.161225,708.801218,0.089041,0.03949
+in cutie,in cutie/Set frunze 2/sanatoasa,healthy,532,in cutie\Set frunze 2\sanatoasa\spectru\532.txt,94189.64227,203.079844,609.585589,0.125722,0.053037
+in cutie,in cutie/Set frunze 2/sanatoasa,healthy,556,in cutie\Set frunze 2\sanatoasa\spectru\556.txt,90401.958464,199.592157,609.873719,0.122939,0.057148
+in cutie,in cutie/Set frunze 2/sanatoasa,healthy,680,in cutie\Set frunze 2\sanatoasa\spectru\680.txt,88554.997109,197.753649,611.97272,0.126554,0.055826
+in cutie,in cutie/Set frunze 2/sanatoasa,healthy,725,in cutie\Set frunze 2\sanatoasa\spectru\725.txt,91939.22153,258.647506,612.974972,0.127908,0.054749
+in cutie,in cutie/Set frunze 2/sanatoasa,healthy,850,in cutie\Set frunze 2\sanatoasa\spectru\850.txt,94123.415738,287.731445,623.008495,0.128115,0.049585
+in cutie,in cutie/Set frunze 2/sanatoasa,healthy,940,in cutie\Set frunze 2\sanatoasa\spectru\940.txt,90498.538574,228.111139,618.503471,0.121534,0.052341
+in cutie,in cutie/Set frunze 2/sanatoasa,healthy,none,in cutie\Set frunze 2\sanatoasa\spectru\fara filtru.txt,122852.831835,357.970951,682.184099,0.106992,0.036024

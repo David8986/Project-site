@@ -1,0 +1,4481 @@
+{
+  "available_wavelengths": [
+    532.0,
+    556.0,
+    680.0,
+    725.0,
+    850.0,
+    940.0
+  ],
+  "average_spectrum": {
+    "532": 0.9774632880885004,
+    "556": 0.07395992487460033,
+    "680": 0.17538153059589454,
+    "725": 0.23331751699012385,
+    "850": 0.21642134496148335,
+    "940": 0.14535253019774294
+  },
+  "band_roles": {
+    "BLUE": {
+      "band_key": "532",
+      "reason": "",
+      "status": "available",
+      "wavelength_nm": 532.0
+    },
+    "GREEN": {
+      "band_key": "556",
+      "reason": "",
+      "status": "available",
+      "wavelength_nm": 556.0
+    },
+    "NIR": {
+      "band_key": "850",
+      "reason": "",
+      "status": "available",
+      "wavelength_nm": 850.0
+    },
+    "RED": {
+      "band_key": "680",
+      "reason": "",
+      "status": "available",
+      "wavelength_nm": 680.0
+    },
+    "RED_EDGE": {
+      "band_key": "725",
+      "reason": "",
+      "status": "available",
+      "wavelength_nm": 725.0
+    },
+    "WATER_BAND": {
+      "band_key": "940",
+      "reason": "",
+      "status": "available",
+      "wavelength_nm": 940.0
+    }
+  },
+  "camera_calibration": {
+    "best_spectrometer_estimates": {
+      "532": {
+        "leave_one_leaf_out_rmse": 26.719837,
+        "model": "multiband_ridge",
+        "training_samples": 5,
+        "value": 398.20179
+      },
+      "556": {
+        "leave_one_leaf_out_rmse": 25.569466,
+        "model": "multiband_ridge",
+        "training_samples": 5,
+        "value": 471.483804
+      },
+      "680": {
+        "leave_one_leaf_out_rmse": 77.575575,
+        "model": "multiband_ridge",
+        "training_samples": 5,
+        "value": 6.697246
+      },
+      "725": {
+        "leave_one_leaf_out_rmse": 30.82571,
+        "model": "single_band_training_mean",
+        "training_samples": 5,
+        "value": 530.644
+      },
+      "850": {
+        "leave_one_leaf_out_rmse": 15.444441,
+        "model": "single_band_training_mean",
+        "training_samples": 4,
+        "value": 447.6
+      },
+      "940": {
+        "leave_one_leaf_out_rmse": null,
+        "model": "excluded_low_confidence_spectrometer_target",
+        "reason": "940 nm is treated as low-confidence for spectrometer-derived calibration because the measured box-source curve is weak there: after dark subtraction, the 940 nm source signal is about 21% of the 850 nm signal, so curve compensation would multiply noise by about 4.7x. The Ocean Optics USB2000+XR1-ES nominal range includes 940 nm, but this setup gives a low-SNR 940 nm reference. The camera band remains available as a raw/white-normalized exploratory measurement, but it is excluded from spectrometer-equivalent calibration targets and water-index conclusions.",
+        "training_samples": 4,
+        "value": null
+      }
+    },
+    "calibrated_indices": {
+      "from_best_spectrometer_window_intensity": {
+        "CI_RE": -0.156497,
+        "GNDVI": -0.025987,
+        "NDRE": -0.084891,
+        "NDVI": 0.970516,
+        "NDWI_850_940": null,
+        "SR_RE": 0.843503,
+        "SR_RED": 66.833442
+      },
+      "from_dark_white_proxy": {
+        "CI_RE": null,
+        "GNDVI": null,
+        "NDRE": null,
+        "NDVI": null,
+        "NDWI_850_940": null,
+        "SR_RE": null,
+        "SR_RED": null
+      },
+      "from_white_normalized_camera": {
+        "CI_RE": 0.016743,
+        "GNDVI": 0.339517,
+        "NDRE": 0.008302,
+        "NDVI": 0.227234,
+        "NDWI_850_940": null,
+        "SR_RE": 1.016743,
+        "SR_RED": 1.588104
+      }
+    },
+    "calibration_applied": true,
+    "corrected_bands": {
+      "532": {
+        "best_spectrometer_model": "multiband_ridge",
+        "best_spectrometer_window_intensity": 398.20179,
+        "dark_reference_brightness": 0.699978,
+        "dark_white_correction_used": false,
+        "dark_white_reflectance_proxy": null,
+        "dark_white_status": "paired leaf brightness is mostly below the dark reference, so subtracting this dark frame would create non-physical negative reflectance",
+        "median_abs_raw_intensity_error_after_factor": null,
+        "median_relative_raw_intensity_error_after_factor": null,
+        "normalized_spectrometer_shape_estimate": 1.0,
+        "raw_camera_value": 0.977463,
+        "single_band_leave_one_leaf_out_rmse": 29.840095,
+        "single_band_model_used": "linear",
+        "single_band_spectrometer_window_intensity": 166.547632,
+        "single_band_training_mean_rmse": 34.86492,
+        "source_curve_compensated_camera": 0.530203,
+        "source_curve_compensation_multiplier_vs_850": 0.421782,
+        "source_curve_relative_to_850": 2.370891,
+        "source_curve_reliability_weight": 1.0,
+        "source_curve_status": "usable",
+        "source_curve_warning": "",
+        "spectrometer_equivalent_raw_intensity_at_filter": 166.547632,
+        "spectrometer_equivalent_reflectance_at_filter": null,
+        "spectrometer_equivalent_window_intensity": 166.547632,
+        "spectrometer_target_reliability": "normal",
+        "spectrometer_target_reliability_reason": "",
+        "wavelength_nm": 532,
+        "white_normalized_camera": 1.257055,
+        "white_reference_brightness": 0.777582
+      },
+      "556": {
+        "best_spectrometer_model": "multiband_ridge",
+        "best_spectrometer_window_intensity": 471.483804,
+        "dark_reference_brightness": 0.699978,
+        "dark_white_correction_used": false,
+        "dark_white_reflectance_proxy": null,
+        "dark_white_status": "dark/white denominator is not positive enough for this filter (camera auto-exposure or missing per-filter dark frame)",
+        "median_abs_raw_intensity_error_after_factor": null,
+        "median_relative_raw_intensity_error_after_factor": null,
+        "normalized_spectrometer_shape_estimate": 0.0,
+        "raw_camera_value": 0.07396,
+        "single_band_leave_one_leaf_out_rmse": 30.926715,
+        "single_band_model_used": "linear",
+        "single_band_spectrometer_window_intensity": 502.505692,
+        "single_band_training_mean_rmse": 41.426612,
+        "source_curve_compensated_camera": 0.063057,
+        "source_curve_compensation_multiplier_vs_850": 0.352692,
+        "source_curve_relative_to_850": 2.835339,
+        "source_curve_reliability_weight": 1.0,
+        "source_curve_status": "usable",
+        "source_curve_warning": "",
+        "spectrometer_equivalent_raw_intensity_at_filter": 502.505692,
+        "spectrometer_equivalent_reflectance_at_filter": null,
+        "spectrometer_equivalent_window_intensity": 502.505692,
+        "spectrometer_target_reliability": "normal",
+        "spectrometer_target_reliability_reason": "",
+        "wavelength_nm": 556,
+        "white_normalized_camera": 0.178787,
+        "white_reference_brightness": 0.413677
+      },
+      "680": {
+        "best_spectrometer_model": "multiband_ridge",
+        "best_spectrometer_window_intensity": 6.697246,
+        "dark_reference_brightness": 0.699978,
+        "dark_white_correction_used": false,
+        "dark_white_reflectance_proxy": null,
+        "dark_white_status": "paired leaf brightness is mostly below the dark reference, so subtracting this dark frame would create non-physical negative reflectance",
+        "median_abs_raw_intensity_error_after_factor": null,
+        "median_relative_raw_intensity_error_after_factor": null,
+        "normalized_spectrometer_shape_estimate": 0.037201,
+        "raw_camera_value": 0.175382,
+        "single_band_leave_one_leaf_out_rmse": 73.039606,
+        "single_band_model_used": "linear",
+        "single_band_spectrometer_window_intensity": 282.221279,
+        "single_band_training_mean_rmse": 98.739496,
+        "source_curve_compensated_camera": 0.075253,
+        "source_curve_compensation_multiplier_vs_850": 0.329594,
+        "source_curve_relative_to_850": 3.034038,
+        "source_curve_reliability_weight": 1.0,
+        "source_curve_status": "usable",
+        "source_curve_warning": "",
+        "spectrometer_equivalent_raw_intensity_at_filter": 282.221279,
+        "spectrometer_equivalent_reflectance_at_filter": null,
+        "spectrometer_equivalent_window_intensity": 282.221279,
+        "spectrometer_target_reliability": "normal",
+        "spectrometer_target_reliability_reason": "",
+        "wavelength_nm": 680,
+        "white_normalized_camera": 0.22832,
+        "white_reference_brightness": 0.768138
+      },
+      "725": {
+        "best_spectrometer_model": "single_band_training_mean",
+        "best_spectrometer_window_intensity": 530.644,
+        "dark_reference_brightness": 0.699978,
+        "dark_white_correction_used": false,
+        "dark_white_reflectance_proxy": null,
+        "dark_white_status": "dark/white denominator is not positive enough for this filter (camera auto-exposure or missing per-filter dark frame)",
+        "median_abs_raw_intensity_error_after_factor": null,
+        "median_relative_raw_intensity_error_after_factor": null,
+        "normalized_spectrometer_shape_estimate": 0.199218,
+        "raw_camera_value": 0.233318,
+        "single_band_leave_one_leaf_out_rmse": 30.82571,
+        "single_band_model_used": "training_mean",
+        "single_band_spectrometer_window_intensity": 530.644,
+        "single_band_training_mean_rmse": 30.82571,
+        "source_curve_compensated_camera": 0.138987,
+        "source_curve_compensation_multiplier_vs_850": 0.389727,
+        "source_curve_relative_to_850": 2.565898,
+        "source_curve_reliability_weight": 1.0,
+        "source_curve_status": "usable",
+        "source_curve_warning": "",
+        "spectrometer_equivalent_raw_intensity_at_filter": 530.644,
+        "spectrometer_equivalent_reflectance_at_filter": null,
+        "spectrometer_equivalent_window_intensity": 530.644,
+        "spectrometer_target_reliability": "normal",
+        "spectrometer_target_reliability_reason": "",
+        "wavelength_nm": 725,
+        "white_normalized_camera": 0.356625,
+        "white_reference_brightness": 0.654237
+      },
+      "850": {
+        "best_spectrometer_model": "single_band_training_mean",
+        "best_spectrometer_window_intensity": 447.6,
+        "dark_reference_brightness": 0.699978,
+        "dark_white_correction_used": false,
+        "dark_white_reflectance_proxy": null,
+        "dark_white_status": "dark/white denominator is not positive enough for this filter (camera auto-exposure or missing per-filter dark frame)",
+        "median_abs_raw_intensity_error_after_factor": null,
+        "median_relative_raw_intensity_error_after_factor": null,
+        "normalized_spectrometer_shape_estimate": 0.136183,
+        "raw_camera_value": 0.216421,
+        "single_band_leave_one_leaf_out_rmse": 15.444441,
+        "single_band_model_used": "training_mean",
+        "single_band_spectrometer_window_intensity": 447.6,
+        "single_band_training_mean_rmse": 15.444441,
+        "source_curve_compensated_camera": 0.362596,
+        "source_curve_compensation_multiplier_vs_850": 1.0,
+        "source_curve_relative_to_850": 1.0,
+        "source_curve_reliability_weight": 1.0,
+        "source_curve_status": "usable",
+        "source_curve_warning": "",
+        "spectrometer_equivalent_raw_intensity_at_filter": 447.6,
+        "spectrometer_equivalent_reflectance_at_filter": null,
+        "spectrometer_equivalent_window_intensity": 447.6,
+        "spectrometer_target_reliability": "normal",
+        "spectrometer_target_reliability_reason": "",
+        "wavelength_nm": 850,
+        "white_normalized_camera": 0.362596,
+        "white_reference_brightness": 0.596867
+      },
+      "940": {
+        "best_spectrometer_model": "excluded_low_confidence_spectrometer_target",
+        "best_spectrometer_reliability_reason": "940 nm is treated as low-confidence for spectrometer-derived calibration because the measured box-source curve is weak there: after dark subtraction, the 940 nm source signal is about 21% of the 850 nm signal, so curve compensation would multiply noise by about 4.7x. The Ocean Optics USB2000+XR1-ES nominal range includes 940 nm, but this setup gives a low-SNR 940 nm reference. The camera band remains available as a raw/white-normalized exploratory measurement, but it is excluded from spectrometer-equivalent calibration targets and water-index conclusions.",
+        "best_spectrometer_window_intensity": null,
+        "dark_reference_brightness": 0.699978,
+        "dark_white_correction_used": false,
+        "dark_white_reflectance_proxy": null,
+        "dark_white_status": "dark/white denominator is not positive enough for this filter (camera auto-exposure or missing per-filter dark frame)",
+        "median_abs_raw_intensity_error_after_factor": null,
+        "median_relative_raw_intensity_error_after_factor": null,
+        "normalized_spectrometer_shape_estimate": 0.011381,
+        "raw_camera_value": 0.145353,
+        "single_band_leave_one_leaf_out_rmse": null,
+        "single_band_model_used": "excluded_low_confidence_spectrometer_target",
+        "single_band_spectrometer_window_intensity": null,
+        "single_band_training_mean_rmse": null,
+        "source_curve_compensated_camera": 1.027078,
+        "source_curve_compensation_multiplier_vs_850": 4.715249,
+        "source_curve_relative_to_850": 0.212078,
+        "source_curve_reliability_weight": 0.212078,
+        "source_curve_status": "weak_source_amplifies_noise",
+        "source_curve_warning": "Source curve compensation is possible, but this band is weak and the multiplier would amplify noise.",
+        "spectrometer_equivalent_raw_intensity_at_filter": null,
+        "spectrometer_equivalent_reflectance_at_filter": null,
+        "spectrometer_equivalent_window_intensity": null,
+        "spectrometer_target_reliability": "low_confidence_excluded",
+        "spectrometer_target_reliability_reason": "940 nm is treated as low-confidence for spectrometer-derived calibration because the measured box-source curve is weak there: after dark subtraction, the 940 nm source signal is about 21% of the 850 nm signal, so curve compensation would multiply noise by about 4.7x. The Ocean Optics USB2000+XR1-ES nominal range includes 940 nm, but this setup gives a low-SNR 940 nm reference. The camera band remains available as a raw/white-normalized exploratory measurement, but it is excluded from spectrometer-equivalent calibration targets and water-index conclusions.",
+        "wavelength_nm": 940,
+        "white_normalized_camera": 0.217821,
+        "white_reference_brightness": 0.667304
+      }
+    },
+    "dark_reference_policy": {
+      "dark_reference_available": true,
+      "dark_reference_brightness": 0.699978,
+      "note": "Only a no-filter camera dark reference was available. The app records it, but it applies dark subtraction only if a filter passes physical validity checks.",
+      "status": "guarded"
+    },
+    "excluded_calibrated_indices": {
+      "NDWI_850_940": "NDWI_850_940 depends on 940 nm. The 940 nm spectrometer target is marked low-confidence, so this calibrated water proxy is not used for conclusions."
+    },
+    "input_eligible_for_camera_calibration": true,
+    "limitations": [
+      "The correction applies to filter-named camera JPGs, not arbitrary RGB photos.",
+      "The white-reference correction compensates filter and light-source strength inside the box.",
+      "Dark subtraction is disabled for filters where the no-filter dark frame is brighter than the leaf data.",
+      "No outside camera JPG calibration was available; outside comparison remains spectrometer-only.",
+      "The regression is guarded by leave-one-leaf-out validation because the current dataset has few leaves.",
+      "940 nm can be source-curve compensated, but the compensation multiplier is high because the source signal is weak there; it remains excluded from calibrated conclusions."
+    ],
+    "low_confidence_spectrometer_targets": {
+      "940": {
+        "affected_outputs": [
+          "best_spectrometer_window_intensity",
+          "from_best_spectrometer_window_intensity.NDWI_850_940",
+          "water proxy interpretation"
+        ],
+        "reason": "940 nm is treated as low-confidence for spectrometer-derived calibration because the measured box-source curve is weak there: after dark subtraction, the 940 nm source signal is about 21% of the 850 nm signal, so curve compensation would multiply noise by about 4.7x. The Ocean Optics USB2000+XR1-ES nominal range includes 940 nm, but this setup gives a low-SNR 940 nm reference. The camera band remains available as a raw/white-normalized exploratory measurement, but it is excluded from spectrometer-equivalent calibration targets and water-index conclusions.",
+        "status": "excluded_from_spectrometer_calibration",
+        "wavelength_nm": 940
+      }
+    },
+    "method": "The calibration is trained on the same values produced by the app: max-channel filter JPG bands averaged over the app vegetation mask, divided by the matching white-reference brightness. Spectrometer targets are robust median intensities inside +/-10 nm windows. The measured source-minus-dark curve is also stored as a compensation/confidence curve, so weak wavelengths can be corrected without being over-trusted.",
+    "primary_corrected_camera_field": "white_normalized_camera",
+    "primary_spectrometer_estimate_field": "best_spectrometer_window_intensity",
+    "profile_id": "spectraleaf_camera_calibration_2026_05_ridge_v2",
+    "regression_calibration": {
+      "estimates": {
+        "532": {
+          "baseline_training_mean_rmse": 34.86492,
+          "leave_one_leaf_out_rmse": 26.719837,
+          "model": "multiband_ridge",
+          "predicted_spectrometer_window_intensity": 398.20179,
+          "training_samples": 5,
+          "validation_improvement_fraction": 0.233618
+        },
+        "556": {
+          "baseline_training_mean_rmse": 41.426612,
+          "leave_one_leaf_out_rmse": 25.569466,
+          "model": "multiband_ridge",
+          "predicted_spectrometer_window_intensity": 471.483804,
+          "training_samples": 5,
+          "validation_improvement_fraction": 0.382777
+        },
+        "680": {
+          "baseline_training_mean_rmse": 98.739496,
+          "leave_one_leaf_out_rmse": 77.575575,
+          "model": "multiband_ridge",
+          "predicted_spectrometer_window_intensity": 6.697246,
+          "training_samples": 5,
+          "validation_improvement_fraction": 0.214341
+        }
+      },
+      "imputed_features": [],
+      "minimum_observed_features": 4,
+      "model_type": "per-target ridge regression",
+      "observed_feature_count": 6,
+      "observed_features": [
+        "532",
+        "556",
+        "680",
+        "725",
+        "850",
+        "940"
+      ],
+      "selection_policy": "A ridge model is used only for target wavelengths where leave-one-leaf-out RMSE beats the training-mean baseline; other wavelengths fall back to the selected single-band model.",
+      "skipped_targets": {
+        "725": "leave-one-leaf-out validation did not beat the baseline",
+        "850": "leave-one-leaf-out validation did not beat the baseline"
+      },
+      "spectrometer_window_half_width_nm": 10.0,
+      "target_field": "spectrometer_window_median",
+      "used": true
+    },
+    "source_response_compensation": {
+      "available": true,
+      "bands": {
+        "532": {
+          "compensation_multiplier_vs_850": 0.421782,
+          "dark_window_median_intensity": 362.33,
+          "net_source_window_intensity": 29143.54,
+          "relative_to_850_net_source": 2.370891,
+          "relative_to_peak_net_source": 0.781431,
+          "reliability_weight": 1.0,
+          "source_window_median_intensity": 29505.87,
+          "status": "usable",
+          "warning": "",
+          "wavelength_nm": 532
+        },
+        "556": {
+          "compensation_multiplier_vs_850": 0.352692,
+          "dark_window_median_intensity": 372.42,
+          "net_source_window_intensity": 34852.64,
+          "relative_to_850_net_source": 2.835339,
+          "relative_to_peak_net_source": 0.93451,
+          "reliability_weight": 1.0,
+          "source_window_median_intensity": 35225.06,
+          "status": "usable",
+          "warning": "",
+          "wavelength_nm": 556
+        },
+        "680": {
+          "compensation_multiplier_vs_850": 0.329594,
+          "dark_window_median_intensity": 359.81,
+          "net_source_window_intensity": 37295.09,
+          "relative_to_850_net_source": 3.034038,
+          "relative_to_peak_net_source": 1.0,
+          "reliability_weight": 1.0,
+          "source_window_median_intensity": 37654.9,
+          "status": "usable",
+          "warning": "",
+          "wavelength_nm": 680
+        },
+        "725": {
+          "compensation_multiplier_vs_850": 0.389727,
+          "dark_window_median_intensity": 350.99,
+          "net_source_window_intensity": 31540.61,
+          "relative_to_850_net_source": 2.565898,
+          "relative_to_peak_net_source": 0.845704,
+          "reliability_weight": 1.0,
+          "source_window_median_intensity": 31891.6,
+          "status": "usable",
+          "warning": "",
+          "wavelength_nm": 725
+        },
+        "850": {
+          "compensation_multiplier_vs_850": 1.0,
+          "dark_window_median_intensity": 327.04,
+          "net_source_window_intensity": 12292.23,
+          "relative_to_850_net_source": 1.0,
+          "relative_to_peak_net_source": 0.329594,
+          "reliability_weight": 1.0,
+          "source_window_median_intensity": 12619.27,
+          "status": "usable",
+          "warning": "",
+          "wavelength_nm": 850
+        },
+        "940": {
+          "compensation_multiplier_vs_850": 4.715249,
+          "dark_window_median_intensity": 318.22,
+          "net_source_window_intensity": 2606.91,
+          "relative_to_850_net_source": 0.212078,
+          "relative_to_peak_net_source": 0.0699,
+          "reliability_weight": 0.212078,
+          "source_window_median_intensity": 2925.13,
+          "status": "weak_source_amplifies_noise",
+          "warning": "Source curve compensation is possible, but this band is weak and the multiplier would amplify noise.",
+          "wavelength_nm": 940
+        }
+      },
+      "dark_file": "C:\\Users\\david\\OneDrive\\Desktop\\data analisys\\in cutie\\Refirinta neagra\\referinta neagra fara .txt",
+      "formula": "camera_source_compensated(lambda) = white_normalized_camera(lambda) * net_source(850 nm) / net_source(lambda); reliability_weight(lambda) = min(1, net_source(lambda) / net_source(850 nm))",
+      "low_relative_threshold": 0.3,
+      "method": "source_minus_dark_relative_curve",
+      "reference_wavelength_nm": 850,
+      "source_file": "C:\\Users\\david\\OneDrive\\Desktop\\data analisys\\in cutie\\spectru sursa.txt"
+    },
+    "title": "Validated camera calibration from app band averages and spectrometer windows",
+    "warnings": [
+      "Referinta neagra a fost verificata, dar nu a fost scazuta deoarece nu este fizic valida pentru aceste filtre.",
+      "940 nm este marcat low-confidence pentru calibrarea cu spectrometrul; banda camera ramane vizibila si poate fi compensata dupa curba sursei, dar nu este folosita pentru concluzii calibrate.",
+      "Compensarea curbei sursei pentru 940 nm ar inmulti semnalul cu aproximativ 4.72x; valoarea compensata este raportata, dar are greutate de incredere mica."
+    ]
+  },
+  "interpretation": {
+    "caution": "Acestea sunt interpretari relative deterministe ale unor masurari de aproape. Nu reprezinta un diagnostic de boala, seceta sau deficienta de nutrienti.",
+    "conclusion": "Esantionul arata un semnal vegetal moderat spre util. Semnalul sensibil la red-edge este modest si trebuie interpretat comparativ. Aceste rezultate pot reflecta variatie normala intre esantioane sau diferente fiziologice subtile si ar trebui comparate intre probe.",
+    "lines": [
+      {
+        "interpretation": "NDVI = 0.10 sugereaza un semnal vegetal general slab sau o structura foliara activa limitata.",
+        "label": "NDVI",
+        "level": "low",
+        "value": 0.104746
+      },
+      {
+        "interpretation": "GNDVI = 0.49 sugereaza un raspuns verde-NIR mai puternic si un semnal activ de frunza in raport cu aceasta configuratie de masurare.",
+        "label": "GNDVI",
+        "level": "high",
+        "value": 0.490601
+      },
+      {
+        "interpretation": "NDRE = -0.04 indica un raspuns red-edge foarte slab, care poate reflecta un semnal red-edge limitat. Acest rezultat trebuie interpretat comparativ, nu ca un diagnostic de sine statator.",
+        "label": "NDRE",
+        "level": "very_low",
+        "value": -0.037569
+      },
+      {
+        "interpretation": "CI_RE = -0.07 sugereaza un semnal red-edge legat de clorofila foarte redus. Este cel mai util pentru comparatie relativa intre esantioane.",
+        "label": "CI_RE",
+        "level": "very_low",
+        "value": -0.072417
+      },
+      {
+        "interpretation": "Proxy de apa nu este disponibil pentru acest esantion.",
+        "label": "Proxy de apa",
+        "level": "unavailable",
+        "reason": "NDWI_850_940 depends on 940 nm. The 940 nm spectrometer target is marked low-confidence, so this calibrated water proxy is not used for conclusions.",
+        "value": null
+      }
+    ],
+    "overall_status": "Semnal vegetal general moderat spre puternic.",
+    "summary_title": "Interpretare"
+  },
+  "mapping": {
+    "532": {
+      "distance_nm": 0.0,
+      "note": "Exact or near-exact source match at 532 nm.",
+      "source_indices": [
+        0
+      ],
+      "source_wavelengths": [
+        532.0
+      ],
+      "status": "exact",
+      "target_wavelength": 532.0,
+      "weights": [
+        1.0
+      ]
+    },
+    "556": {
+      "distance_nm": 0.0,
+      "note": "Exact or near-exact source match at 556 nm.",
+      "source_indices": [
+        1
+      ],
+      "source_wavelengths": [
+        556.0
+      ],
+      "status": "exact",
+      "target_wavelength": 556.0,
+      "weights": [
+        1.0
+      ]
+    },
+    "650": {
+      "distance_nm": null,
+      "note": "No exact, nearest, or interpolatable source band was available within the configured tolerances for 650 nm.",
+      "source_indices": [],
+      "source_wavelengths": [],
+      "status": "missing",
+      "target_wavelength": 650.0,
+      "weights": []
+    },
+    "680": {
+      "distance_nm": 0.0,
+      "note": "Exact or near-exact source match at 680 nm.",
+      "source_indices": [
+        2
+      ],
+      "source_wavelengths": [
+        680.0
+      ],
+      "status": "exact",
+      "target_wavelength": 680.0,
+      "weights": [
+        1.0
+      ]
+    },
+    "725": {
+      "distance_nm": 0.0,
+      "note": "Exact or near-exact source match at 725 nm.",
+      "source_indices": [
+        3
+      ],
+      "source_wavelengths": [
+        725.0
+      ],
+      "status": "exact",
+      "target_wavelength": 725.0,
+      "weights": [
+        1.0
+      ]
+    },
+    "850": {
+      "distance_nm": 0.0,
+      "note": "Exact or near-exact source match at 850 nm.",
+      "source_indices": [
+        4
+      ],
+      "source_wavelengths": [
+        850.0
+      ],
+      "status": "exact",
+      "target_wavelength": 850.0,
+      "weights": [
+        1.0
+      ]
+    },
+    "940": {
+      "distance_nm": 0.0,
+      "note": "Exact or near-exact source match at 940 nm.",
+      "source_indices": [
+        5
+      ],
+      "source_wavelengths": [
+        940.0
+      ],
+      "status": "exact",
+      "target_wavelength": 940.0,
+      "weights": [
+        1.0
+      ]
+    }
+  },
+  "metadata": {
+    "adapter_used": "mixed_image_bundle_loader",
+    "alignment": {
+      "mode": "resize_only",
+      "reference": "band_850",
+      "reference_image_id": "band_850",
+      "reference_shape": [
+        1080,
+        1920
+      ],
+      "resample": "bilinear",
+      "status": "resized",
+      "transform_model": "affine",
+      "transforms": [
+        {
+          "applied_model": "resize_only",
+          "bands": [
+            "BLUE_532"
+          ],
+          "confidence": 0.25,
+          "image_id": "band_532",
+          "inverse_map": false,
+          "is_reference": false,
+          "matrix": [
+            [
+              20.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              11.25,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "message": "Resized moving image to reference shape.",
+          "mode": "resize_only",
+          "moving_shape": [
+            96,
+            96
+          ],
+          "output_shape": [
+            1080,
+            1920
+          ],
+          "overlap_fraction": null,
+          "pre_resize": true,
+          "quality_after": null,
+          "quality_before": null,
+          "reference_shape": [
+            1080,
+            1920
+          ],
+          "requested_mode": "resize_only",
+          "stages": [],
+          "status": "resized",
+          "success": true,
+          "transform_model": "affine",
+          "warning": "resize-only alignment is low confidence; no image-content registration was performed"
+        },
+        {
+          "applied_model": "resize_only",
+          "bands": [
+            "GREEN_556"
+          ],
+          "confidence": 1.0,
+          "image_id": "band_556",
+          "inverse_map": false,
+          "is_reference": false,
+          "matrix": [
+            [
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "message": "Shapes already match.",
+          "mode": "resize_only",
+          "moving_shape": [
+            1080,
+            1920
+          ],
+          "output_shape": [
+            1080,
+            1920
+          ],
+          "overlap_fraction": null,
+          "pre_resize": false,
+          "quality_after": null,
+          "quality_before": null,
+          "reference_shape": [
+            1080,
+            1920
+          ],
+          "requested_mode": "resize_only",
+          "stages": [],
+          "status": "not_required",
+          "success": true,
+          "transform_model": "affine",
+          "warning": ""
+        },
+        {
+          "applied_model": "resize_only",
+          "bands": [
+            "RED_680"
+          ],
+          "confidence": 1.0,
+          "image_id": "band_680",
+          "inverse_map": false,
+          "is_reference": false,
+          "matrix": [
+            [
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "message": "Shapes already match.",
+          "mode": "resize_only",
+          "moving_shape": [
+            1080,
+            1920
+          ],
+          "output_shape": [
+            1080,
+            1920
+          ],
+          "overlap_fraction": null,
+          "pre_resize": false,
+          "quality_after": null,
+          "quality_before": null,
+          "reference_shape": [
+            1080,
+            1920
+          ],
+          "requested_mode": "resize_only",
+          "stages": [],
+          "status": "not_required",
+          "success": true,
+          "transform_model": "affine",
+          "warning": ""
+        },
+        {
+          "applied_model": "resize_only",
+          "bands": [
+            "RED_EDGE_725"
+          ],
+          "confidence": 1.0,
+          "image_id": "band_725",
+          "inverse_map": false,
+          "is_reference": false,
+          "matrix": [
+            [
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "message": "Shapes already match.",
+          "mode": "resize_only",
+          "moving_shape": [
+            1080,
+            1920
+          ],
+          "output_shape": [
+            1080,
+            1920
+          ],
+          "overlap_fraction": null,
+          "pre_resize": false,
+          "quality_after": null,
+          "quality_before": null,
+          "reference_shape": [
+            1080,
+            1920
+          ],
+          "requested_mode": "resize_only",
+          "stages": [],
+          "status": "not_required",
+          "success": true,
+          "transform_model": "affine",
+          "warning": ""
+        },
+        {
+          "applied_model": "identity",
+          "bands": [
+            "NIR_850"
+          ],
+          "confidence": null,
+          "image_id": "band_850",
+          "inverse_map": false,
+          "is_reference": true,
+          "matrix": [
+            [
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "message": "Reference image; no moving transform applied.",
+          "mode": "reference",
+          "moving_shape": [
+            1080,
+            1920
+          ],
+          "output_shape": [
+            1080,
+            1920
+          ],
+          "overlap_fraction": null,
+          "pre_resize": false,
+          "quality_after": null,
+          "quality_before": null,
+          "reference_shape": [
+            1080,
+            1920
+          ],
+          "requested_mode": "resize_only",
+          "stages": [],
+          "status": "reference",
+          "success": true,
+          "transform_model": "affine",
+          "warning": ""
+        },
+        {
+          "applied_model": "resize_only",
+          "bands": [
+            "WATER_BAND_940"
+          ],
+          "confidence": 1.0,
+          "image_id": "band_940",
+          "inverse_map": false,
+          "is_reference": false,
+          "matrix": [
+            [
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "message": "Shapes already match.",
+          "mode": "resize_only",
+          "moving_shape": [
+            1080,
+            1920
+          ],
+          "output_shape": [
+            1080,
+            1920
+          ],
+          "overlap_fraction": null,
+          "pre_resize": false,
+          "quality_after": null,
+          "quality_before": null,
+          "reference_shape": [
+            1080,
+            1920
+          ],
+          "requested_mode": "resize_only",
+          "stages": [],
+          "status": "not_required",
+          "success": true,
+          "transform_model": "affine",
+          "warning": ""
+        }
+      ],
+      "warning": "resize-only alignment is low confidence; no image-content registration was performed; resize-only alignment is low confidence; no automatic registration was performed"
+    },
+    "alignment_status": "resized",
+    "analysis_data_kind": "mixed_image_intensity",
+    "band_profile": "profile_7band_default",
+    "bands": [
+      {
+        "aligned_shape": [
+          1080,
+          1920
+        ],
+        "image_id": "band_532",
+        "index": 0,
+        "input_path": "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\spectraleaf_desktop_sessions\\offline_smoke_20260613_164829\\532.png",
+        "label": "BLUE_532",
+        "original_shape": [
+          96,
+          96
+        ],
+        "path": "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\spectraleaf_desktop_sessions\\offline_smoke_20260613_164829\\532.png",
+        "role": "BLUE",
+        "source_channel": null,
+        "source_channel_index": null,
+        "wavelength_nm": 532.0
+      },
+      {
+        "aligned_shape": [
+          1080,
+          1920
+        ],
+        "image_id": "band_556",
+        "index": 1,
+        "input_path": "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\spectraleaf_desktop_sessions\\offline_smoke_20260613_164829\\556.png",
+        "label": "GREEN_556",
+        "original_shape": [
+          1080,
+          1920
+        ],
+        "path": "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\spectraleaf_desktop_sessions\\offline_smoke_20260613_164829\\556.png",
+        "role": "GREEN",
+        "source_channel": null,
+        "source_channel_index": null,
+        "wavelength_nm": 556.0
+      },
+      {
+        "aligned_shape": [
+          1080,
+          1920
+        ],
+        "image_id": "band_680",
+        "index": 2,
+        "input_path": "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\spectraleaf_desktop_sessions\\offline_smoke_20260613_164829\\680.png",
+        "label": "RED_680",
+        "original_shape": [
+          1080,
+          1920
+        ],
+        "path": "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\spectraleaf_desktop_sessions\\offline_smoke_20260613_164829\\680.png",
+        "role": "RED",
+        "source_channel": null,
+        "source_channel_index": null,
+        "wavelength_nm": 680.0
+      },
+      {
+        "aligned_shape": [
+          1080,
+          1920
+        ],
+        "image_id": "band_725",
+        "index": 3,
+        "input_path": "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\spectraleaf_desktop_sessions\\offline_smoke_20260613_164829\\725.png",
+        "label": "RED_EDGE_725",
+        "original_shape": [
+          1080,
+          1920
+        ],
+        "path": "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\spectraleaf_desktop_sessions\\offline_smoke_20260613_164829\\725.png",
+        "role": "RED_EDGE",
+        "source_channel": null,
+        "source_channel_index": null,
+        "wavelength_nm": 725.0
+      },
+      {
+        "aligned_shape": [
+          1080,
+          1920
+        ],
+        "image_id": "band_850",
+        "index": 4,
+        "input_path": "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\spectraleaf_desktop_sessions\\offline_smoke_20260613_164829\\850.png",
+        "label": "NIR_850",
+        "original_shape": [
+          1080,
+          1920
+        ],
+        "path": "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\spectraleaf_desktop_sessions\\offline_smoke_20260613_164829\\850.png",
+        "role": "NIR",
+        "source_channel": null,
+        "source_channel_index": null,
+        "wavelength_nm": 850.0
+      },
+      {
+        "aligned_shape": [
+          1080,
+          1920
+        ],
+        "image_id": "band_940",
+        "index": 5,
+        "input_path": "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\spectraleaf_desktop_sessions\\offline_smoke_20260613_164829\\940.png",
+        "label": "WATER_BAND_940",
+        "original_shape": [
+          1080,
+          1920
+        ],
+        "path": "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\spectraleaf_desktop_sessions\\offline_smoke_20260613_164829\\940.png",
+        "role": "WATER_BAND",
+        "source_channel": null,
+        "source_channel_index": null,
+        "wavelength_nm": 940.0
+      }
+    ],
+    "calibration_applied": false,
+    "channel_role_labels": [
+      "BLUE_532",
+      "GREEN_556",
+      "RED_680",
+      "RED_EDGE_725",
+      "NIR_850",
+      "WATER_BAND_940"
+    ],
+    "channel_wavelength_labels_nm": {
+      "BLUE_532": 532.0,
+      "GREEN_556": 556.0,
+      "NIR_850": 850.0,
+      "RED_680": 680.0,
+      "RED_EDGE_725": 725.0,
+      "WATER_BAND_940": 940.0
+    },
+    "cli": {
+      "archive_sample": null,
+      "input": "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\spectraleaf_desktop_sessions\\offline_smoke_20260613_164829\\mixed_import_spec.json",
+      "output": "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\spectraleaf_desktop_sessions\\offline_smoke_20260613_164829\\analysis",
+      "prefer_interpolation": false,
+      "wavelengths": null
+    },
+    "dimensions": {
+      "bands": 6,
+      "height": 1080,
+      "shape": [
+        1080,
+        1920,
+        6
+      ],
+      "width": 1920
+    },
+    "imported_files": [
+      {
+        "bands": [
+          "BLUE_532"
+        ],
+        "entry_index": 0,
+        "image_id": "band_532",
+        "image_mode": "L",
+        "image_size": [
+          96,
+          96
+        ],
+        "input_path": "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\spectraleaf_desktop_sessions\\offline_smoke_20260613_164829\\532.png",
+        "path": "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\spectraleaf_desktop_sessions\\offline_smoke_20260613_164829\\532.png",
+        "type": "grayscale"
+      },
+      {
+        "bands": [
+          "GREEN_556"
+        ],
+        "entry_index": 1,
+        "image_id": "band_556",
+        "image_mode": "L",
+        "image_size": [
+          1920,
+          1080
+        ],
+        "input_path": "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\spectraleaf_desktop_sessions\\offline_smoke_20260613_164829\\556.png",
+        "path": "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\spectraleaf_desktop_sessions\\offline_smoke_20260613_164829\\556.png",
+        "type": "grayscale"
+      },
+      {
+        "bands": [
+          "RED_680"
+        ],
+        "entry_index": 2,
+        "image_id": "band_680",
+        "image_mode": "L",
+        "image_size": [
+          1920,
+          1080
+        ],
+        "input_path": "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\spectraleaf_desktop_sessions\\offline_smoke_20260613_164829\\680.png",
+        "path": "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\spectraleaf_desktop_sessions\\offline_smoke_20260613_164829\\680.png",
+        "type": "grayscale"
+      },
+      {
+        "bands": [
+          "RED_EDGE_725"
+        ],
+        "entry_index": 3,
+        "image_id": "band_725",
+        "image_mode": "L",
+        "image_size": [
+          1920,
+          1080
+        ],
+        "input_path": "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\spectraleaf_desktop_sessions\\offline_smoke_20260613_164829\\725.png",
+        "path": "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\spectraleaf_desktop_sessions\\offline_smoke_20260613_164829\\725.png",
+        "type": "grayscale"
+      },
+      {
+        "bands": [
+          "NIR_850"
+        ],
+        "entry_index": 4,
+        "image_id": "band_850",
+        "image_mode": "L",
+        "image_size": [
+          1920,
+          1080
+        ],
+        "input_path": "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\spectraleaf_desktop_sessions\\offline_smoke_20260613_164829\\850.png",
+        "path": "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\spectraleaf_desktop_sessions\\offline_smoke_20260613_164829\\850.png",
+        "type": "grayscale"
+      },
+      {
+        "bands": [
+          "WATER_BAND_940"
+        ],
+        "entry_index": 5,
+        "image_id": "band_940",
+        "image_mode": "L",
+        "image_size": [
+          1920,
+          1080
+        ],
+        "input_path": "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\spectraleaf_desktop_sessions\\offline_smoke_20260613_164829\\940.png",
+        "path": "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\spectraleaf_desktop_sessions\\offline_smoke_20260613_164829\\940.png",
+        "type": "grayscale"
+      }
+    ],
+    "input_path": "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\spectraleaf_desktop_sessions\\offline_smoke_20260613_164829\\mixed_import_spec.json",
+    "is_reflectance": false,
+    "loader_notes": [
+      "Loaded mixed image bundle spec: mixed_import_spec.json",
+      "RGB channels use approximate display-channel wavelength labels."
+    ],
+    "mapping_summary": {
+      "mapped_targets": 6,
+      "missing_targets": [
+        "650"
+      ],
+      "per_target": {
+        "532": {
+          "distance_nm": 0.0,
+          "note": "Exact or near-exact source match at 532 nm.",
+          "source_indices": [
+            0
+          ],
+          "source_wavelengths": [
+            532.0
+          ],
+          "status": "exact",
+          "target_wavelength": 532.0,
+          "weights": [
+            1.0
+          ]
+        },
+        "556": {
+          "distance_nm": 0.0,
+          "note": "Exact or near-exact source match at 556 nm.",
+          "source_indices": [
+            1
+          ],
+          "source_wavelengths": [
+            556.0
+          ],
+          "status": "exact",
+          "target_wavelength": 556.0,
+          "weights": [
+            1.0
+          ]
+        },
+        "650": {
+          "distance_nm": null,
+          "note": "No exact, nearest, or interpolatable source band was available within the configured tolerances for 650 nm.",
+          "source_indices": [],
+          "source_wavelengths": [],
+          "status": "missing",
+          "target_wavelength": 650.0,
+          "weights": []
+        },
+        "680": {
+          "distance_nm": 0.0,
+          "note": "Exact or near-exact source match at 680 nm.",
+          "source_indices": [
+            2
+          ],
+          "source_wavelengths": [
+            680.0
+          ],
+          "status": "exact",
+          "target_wavelength": 680.0,
+          "weights": [
+            1.0
+          ]
+        },
+        "725": {
+          "distance_nm": 0.0,
+          "note": "Exact or near-exact source match at 725 nm.",
+          "source_indices": [
+            3
+          ],
+          "source_wavelengths": [
+            725.0
+          ],
+          "status": "exact",
+          "target_wavelength": 725.0,
+          "weights": [
+            1.0
+          ]
+        },
+        "850": {
+          "distance_nm": 0.0,
+          "note": "Exact or near-exact source match at 850 nm.",
+          "source_indices": [
+            4
+          ],
+          "source_wavelengths": [
+            850.0
+          ],
+          "status": "exact",
+          "target_wavelength": 850.0,
+          "weights": [
+            1.0
+          ]
+        },
+        "940": {
+          "distance_nm": 0.0,
+          "note": "Exact or near-exact source match at 940 nm.",
+          "source_indices": [
+            5
+          ],
+          "source_wavelengths": [
+            940.0
+          ],
+          "status": "exact",
+          "target_wavelength": 940.0,
+          "weights": [
+            1.0
+          ]
+        }
+      },
+      "status_counts": {
+        "exact": 6,
+        "interpolated": 0,
+        "missing": 1,
+        "nearest": 0
+      },
+      "total_targets": 7
+    },
+    "mixed_bundle_spec_path": "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\spectraleaf_desktop_sessions\\offline_smoke_20260613_164829\\mixed_import_spec.json",
+    "mock_flag": false,
+    "roles": {
+      "BLUE_532": "BLUE",
+      "GREEN_556": "GREEN",
+      "NIR_850": "NIR",
+      "RED_680": "RED",
+      "RED_EDGE_725": "RED_EDGE",
+      "WATER_BAND_940": "WATER_BAND"
+    },
+    "sample_id": "mixed_import_spec",
+    "source_data_kind": "mixed_image_data",
+    "source_type": "mixed_image_bundle",
+    "spectrum_metadata": {
+      "mask_shape": [
+        1080,
+        1920
+      ],
+      "mask_strategy": "vegetation_only_for_matching_2d_bands",
+      "mask_used": true,
+      "per_band": {
+        "532": {
+          "reason": "vegetation_pixels_only",
+          "used_mask": true
+        },
+        "556": {
+          "reason": "vegetation_pixels_only",
+          "used_mask": true
+        },
+        "680": {
+          "reason": "vegetation_pixels_only",
+          "used_mask": true
+        },
+        "725": {
+          "reason": "vegetation_pixels_only",
+          "used_mask": true
+        },
+        "850": {
+          "reason": "vegetation_pixels_only",
+          "used_mask": true
+        },
+        "940": {
+          "reason": "vegetation_pixels_only",
+          "used_mask": true
+        }
+      },
+      "source_type": "mixed_image_bundle",
+      "vegetation_pixel_count": 103723
+    },
+    "spot_detection": {
+      "available_anomaly_maps": [
+        "low_gndvi",
+        "low_ndre",
+        "low_ndvi",
+        "low_nir_red_diff",
+        "low_nir_water_diff",
+        "low_rededge_red_diff",
+        "texture_680",
+        "texture_725",
+        "texture_850"
+      ],
+      "available_maps": [
+        "GNDVI",
+        "NDRE",
+        "NDVI",
+        "NDWI_850_940",
+        "NIR_RED_DIFF",
+        "NIR_RE_DIFF",
+        "NIR_WATER_DIFF",
+        "RE_RED_DIFF"
+      ],
+      "parameters": {
+        "min_area_px": 20,
+        "morphology_iterations": 1,
+        "score_threshold": 0.55,
+        "texture_window": 5,
+        "weights": {
+          "low_gndvi": 0.8,
+          "low_green_blue_diff": 0.4,
+          "low_green_red_diff": 0.6,
+          "low_ndre": 1.0,
+          "low_ndvi": 1.0,
+          "low_nir_red_diff": 0.7,
+          "low_nir_water_diff": 0.4,
+          "low_rededge_red_diff": 0.7,
+          "low_rgb_excess_green": 0.8,
+          "texture_680": 0.5,
+          "texture_725": 0.5,
+          "texture_850": 0.4
+        }
+      },
+      "reason": "",
+      "roles": {
+        "BLUE": {
+          "band_key": "532",
+          "reason": "",
+          "role": "BLUE",
+          "status": "available",
+          "wavelength_nm": 532.0
+        },
+        "GREEN": {
+          "band_key": "556",
+          "reason": "",
+          "role": "GREEN",
+          "status": "available",
+          "wavelength_nm": 556.0
+        },
+        "NIR": {
+          "band_key": "850",
+          "reason": "",
+          "role": "NIR",
+          "status": "available",
+          "wavelength_nm": 850.0
+        },
+        "RED": {
+          "band_key": "680",
+          "reason": "",
+          "role": "RED",
+          "status": "available",
+          "wavelength_nm": 680.0
+        },
+        "RED_EDGE": {
+          "band_key": "725",
+          "reason": "",
+          "role": "RED_EDGE",
+          "status": "available",
+          "wavelength_nm": 725.0
+        },
+        "WATER_BAND": {
+          "band_key": "940",
+          "reason": "",
+          "role": "WATER_BAND",
+          "status": "available",
+          "wavelength_nm": 940.0
+        }
+      },
+      "spot_count": 2,
+      "spots": [
+        {
+          "area_px": 49,
+          "bbox": [
+            1117,
+            783,
+            1125,
+            788
+          ],
+          "centroid": [
+            1121.204081632653,
+            785.7551020408164
+          ],
+          "delta_from_leaf_average": {
+            "band_532": 0.01773143289013923,
+            "band_556": 0.17742063395431795,
+            "band_650": null,
+            "band_680": 0.28488258228049157,
+            "band_725": 0.4462343228383674,
+            "band_850": -0.0065774034724388475,
+            "band_940": 0.39150222896504305
+          },
+          "delta_from_nearby_background": {
+            "band_532": 7.68118761114156e-05,
+            "band_556": -0.020841671433722175,
+            "band_650": null,
+            "band_680": 0.046175509353343636,
+            "band_725": 0.06909430592700283,
+            "band_850": -0.09169927635318115,
+            "band_940": 0.03716338508025385
+          },
+          "delta_indices_from_nearby_background": {
+            "GNDVI": -0.12707639717176372,
+            "NDRE": -0.1693275880578738,
+            "NDVI": -0.17328873578343007,
+            "NDWI_850_940": -0.210891522746727,
+            "NIR_RED_DIFF": -0.13787478570652478,
+            "NIR_RE_DIFF": -0.16079358228018403,
+            "NIR_WATER_DIFF": -0.12886266143343506,
+            "RE_RED_DIFF": 0.022918796573659278
+          },
+          "label": 1,
+          "max_suspiciousness_score": 0.7191205118901163,
+          "mean_indices": {
+            "GNDVI": -0.0845798946933481,
+            "NDRE": -0.5282644562858766,
+            "NDVI": -0.37441984001514117,
+            "NDWI_850_940": -0.4254569644042053,
+            "NIR_RED_DIFF": -0.2504201713873416,
+            "NIR_RE_DIFF": -0.4697078983394467,
+            "NIR_WATER_DIFF": -0.32701081767374157,
+            "RE_RED_DIFF": 0.21928772695210516
+          },
+          "mean_reflectance": {
+            "band_532": 0.9951947209786396,
+            "band_556": 0.2513805588289183,
+            "band_650": null,
+            "band_680": 0.4602641128763861,
+            "band_725": 0.6795518398284912,
+            "band_850": 0.2098439414890445,
+            "band_940": 0.536854759162786
+          },
+          "mean_suspiciousness_score": 0.6049786864642245,
+          "nearby_background_mean_indices": {
+            "GNDVI": 0.04249650247841562,
+            "NDRE": -0.3589368682280028,
+            "NDVI": -0.2011311042317111,
+            "NDWI_850_940": -0.21456544165747826,
+            "NIR_RED_DIFF": -0.11254538568081679,
+            "NIR_RE_DIFF": -0.3089143160592627,
+            "NIR_WATER_DIFF": -0.19814815624030652,
+            "RE_RED_DIFF": 0.19636893037844588
+          },
+          "scalar_indices_from_spot_mean_bands": {
+            "CI_RE": {
+              "bands_used": {
+                "NIR": 850,
+                "RED_EDGE": 725
+              },
+              "components": {
+                "NIR": 0.209844,
+                "RED_EDGE": 0.679552,
+                "denominator": 0.679552,
+                "numerator": 0.209844
+              },
+              "formula": "(NIR / RED_EDGE) - 1",
+              "value": -0.691202
+            },
+            "GNDVI": {
+              "bands_used": {
+                "GREEN": 556,
+                "NIR": 850
+              },
+              "components": {
+                "GREEN": 0.251381,
+                "NIR": 0.209844,
+                "NIR_minus_GREEN": -0.041537,
+                "NIR_plus_GREEN": 0.461225,
+                "denominator": 0.461225,
+                "numerator": -0.041537
+              },
+              "formula": "(NIR - GREEN) / (NIR + GREEN)",
+              "value": -0.090057
+            },
+            "GRI": {
+              "bands_used": {
+                "GREEN": 556,
+                "NIR": 850
+              },
+              "components": {
+                "GREEN": 0.251381,
+                "NIR": 0.209844,
+                "denominator": 0.251381,
+                "numerator": 0.209844
+              },
+              "formula": "NIR / GREEN",
+              "value": 0.834766
+            },
+            "GRND": {
+              "bands_used": {
+                "GREEN": 556,
+                "RED": 680
+              },
+              "components": {
+                "GREEN": 0.251381,
+                "GREEN_minus_RED": -0.208884,
+                "GREEN_plus_RED": 0.711645,
+                "RED": 0.460264,
+                "denominator": 0.711645,
+                "numerator": -0.208884
+              },
+              "formula": "(GREEN - RED) / (GREEN + RED)",
+              "value": -0.293522
+            },
+            "NDRE": {
+              "bands_used": {
+                "NIR": 850,
+                "RED_EDGE": 725
+              },
+              "components": {
+                "NIR": 0.209844,
+                "NIR_minus_RED_EDGE": -0.469708,
+                "NIR_plus_RED_EDGE": 0.889396,
+                "RED_EDGE": 0.679552,
+                "denominator": 0.889396,
+                "numerator": -0.469708
+              },
+              "formula": "(NIR - RED_EDGE) / (NIR + RED_EDGE)",
+              "value": -0.52812
+            },
+            "NDVI": {
+              "bands_used": {
+                "NIR": 850,
+                "RED": 680
+              },
+              "components": {
+                "NIR": 0.209844,
+                "NIR_minus_RED": -0.25042,
+                "NIR_plus_RED": 0.670108,
+                "RED": 0.460264,
+                "denominator": 0.670108,
+                "numerator": -0.25042
+              },
+              "formula": "(NIR - RED) / (NIR + RED)",
+              "value": -0.373701
+            },
+            "NDWI_850_940": {
+              "bands_used": {
+                "NIR": 850,
+                "WATER_BAND": 940
+              },
+              "components": {
+                "NIR": 0.209844,
+                "NIR_minus_WATER_BAND": -0.327011,
+                "NIR_plus_WATER_BAND": 0.746699,
+                "WATER_BAND": 0.536855,
+                "denominator": 0.746699,
+                "numerator": -0.327011
+              },
+              "formula": "(NIR - WATER_BAND) / (NIR + WATER_BAND)",
+              "value": -0.437942
+            },
+            "NIR_RED_DIFF": {
+              "bands_used": {
+                "NIR": 850,
+                "RED": 680
+              },
+              "components": {
+                "NIR": 0.209844,
+                "NIR_minus_RED": -0.25042,
+                "RED": 0.460264
+              },
+              "formula": "NIR - RED",
+              "value": -0.25042
+            },
+            "NIR_RED_SUM": {
+              "bands_used": {
+                "NIR": 850,
+                "RED": 680
+              },
+              "components": {
+                "NIR": 0.209844,
+                "NIR_plus_RED": 0.670108,
+                "RED": 0.460264
+              },
+              "formula": "NIR + RED",
+              "value": 0.670108
+            },
+            "NIR_RE_DIFF": {
+              "bands_used": {
+                "NIR": 850,
+                "RED_EDGE": 725
+              },
+              "components": {
+                "NIR": 0.209844,
+                "NIR_minus_RED_EDGE": -0.469708,
+                "RED_EDGE": 0.679552
+              },
+              "formula": "NIR - RED_EDGE",
+              "value": -0.469708
+            },
+            "NIR_RE_SUM": {
+              "bands_used": {
+                "NIR": 850,
+                "RED_EDGE": 725
+              },
+              "components": {
+                "NIR": 0.209844,
+                "NIR_plus_RED_EDGE": 0.889396,
+                "RED_EDGE": 0.679552
+              },
+              "formula": "NIR + RED_EDGE",
+              "value": 0.889396
+            },
+            "RED_GREEN_RATIO": {
+              "bands_used": {
+                "GREEN": 556,
+                "RED": 680
+              },
+              "components": {
+                "GREEN": 0.251381,
+                "RED": 0.460264,
+                "denominator": 0.251381,
+                "numerator": 0.460264
+              },
+              "formula": "RED / GREEN",
+              "value": 1.830946
+            },
+            "RE_RED_DIFF": {
+              "bands_used": {
+                "RED": 680,
+                "RED_EDGE": 725
+              },
+              "components": {
+                "RED": 0.460264,
+                "RED_EDGE": 0.679552,
+                "RED_EDGE_minus_RED": 0.219288
+              },
+              "formula": "RED_EDGE - RED",
+              "value": 0.219288
+            },
+            "RE_SLOPE": {
+              "bands_used": {
+                "RED": 680,
+                "RED_EDGE": 725
+              },
+              "components": {
+                "RED": 0.460264,
+                "RED_EDGE": 0.679552,
+                "RED_EDGE_minus_RED": 0.219288,
+                "denominator": 45.0
+              },
+              "formula": "(RED_EDGE - RED) / (725 - 680)",
+              "value": 0.004873
+            },
+            "SR_RE": {
+              "bands_used": {
+                "NIR": 850,
+                "RED_EDGE": 725
+              },
+              "components": {
+                "NIR": 0.209844,
+                "RED_EDGE": 0.679552,
+                "denominator": 0.679552,
+                "numerator": 0.209844
+              },
+              "formula": "NIR / RED_EDGE",
+              "value": 0.308798
+            },
+            "SR_RED": {
+              "bands_used": {
+                "NIR": 850,
+                "RED": 680
+              },
+              "components": {
+                "NIR": 0.209844,
+                "RED": 0.460264,
+                "denominator": 0.460264,
+                "numerator": 0.209844
+              },
+              "formula": "NIR / RED",
+              "value": 0.455921
+            },
+            "WATER_RATIO": {
+              "bands_used": {
+                "NIR": 850,
+                "WATER_BAND": 940
+              },
+              "components": {
+                "NIR": 0.209844,
+                "WATER_BAND": 0.536855,
+                "denominator": 0.209844,
+                "numerator": 0.536855
+              },
+              "formula": "WATER_BAND / NIR",
+              "value": 2.558352
+            }
+          },
+          "severity_rank": 1,
+          "severity_score": 2.3666905392417474
+        },
+        {
+          "area_px": 36,
+          "bbox": [
+            1104,
+            795,
+            1113,
+            801
+          ],
+          "centroid": [
+            1108.5555555555557,
+            798.1666666666666
+          ],
+          "delta_from_leaf_average": {
+            "band_532": 0.016606014986972117,
+            "band_556": 0.23203137126442797,
+            "band_650": null,
+            "band_680": 0.22843111130289648,
+            "band_725": 0.46123587812223177,
+            "band_850": -0.0170749365065751,
+            "band_940": 0.4949525021349953
+          },
+          "delta_from_nearby_background": {
+            "band_532": 0.00018357127736512435,
+            "band_556": -0.008116389258208734,
+            "band_650": null,
+            "band_680": 0.0396883400146571,
+            "band_725": 0.04304124640121976,
+            "band_850": -0.13583140022940443,
+            "band_940": 0.07711126208094898
+          },
+          "delta_indices_from_nearby_background": {
+            "GNDVI": -0.20593762752125172,
+            "NDRE": -0.20617030353247218,
+            "NDVI": -0.2515755681869334,
+            "NDWI_850_940": -0.26647686379746327,
+            "NIR_RED_DIFF": -0.17551974024406147,
+            "NIR_RE_DIFF": -0.17887264663062413,
+            "NIR_WATER_DIFF": -0.21294266231035333,
+            "RE_RED_DIFF": 0.0033529063865626596
+          },
+          "label": 2,
+          "max_suspiciousness_score": 0.650236414409208,
+          "mean_indices": {
+            "GNDVI": -0.20846968614701408,
+            "NDRE": -0.554111599020408,
+            "NDVI": -0.34003791917322485,
+            "NDWI_850_940": -0.5245300207379093,
+            "NIR_RED_DIFF": -0.20446623344388273,
+            "NIR_RE_DIFF": -0.4952069866574473,
+            "NIR_WATER_DIFF": -0.44095862387782997,
+            "RE_RED_DIFF": 0.2907407532135646
+          },
+          "mean_reflectance": {
+            "band_532": 0.9940693030754725,
+            "band_556": 0.3059912961390283,
+            "band_650": null,
+            "band_680": 0.403812641898791,
+            "band_725": 0.6945533951123556,
+            "band_850": 0.19934640845490825,
+            "band_940": 0.6403050323327383
+          },
+          "mean_suspiciousness_score": 0.5897852620876511,
+          "nearby_background_mean_indices": {
+            "GNDVI": -0.0025320586257623554,
+            "NDRE": -0.3479412954879358,
+            "NDVI": -0.08846235098629145,
+            "NDWI_850_940": -0.25805315694044606,
+            "NIR_RED_DIFF": -0.028946493199821247,
+            "NIR_RE_DIFF": -0.31633434002682315,
+            "NIR_WATER_DIFF": -0.22801596156747664,
+            "RE_RED_DIFF": 0.2873878468270019
+          },
+          "scalar_indices_from_spot_mean_bands": {
+            "CI_RE": {
+              "bands_used": {
+                "NIR": 850,
+                "RED_EDGE": 725
+              },
+              "components": {
+                "NIR": 0.199346,
+                "RED_EDGE": 0.694553,
+                "denominator": 0.694553,
+                "numerator": 0.199346
+              },
+              "formula": "(NIR / RED_EDGE) - 1",
+              "value": -0.712986
+            },
+            "GNDVI": {
+              "bands_used": {
+                "GREEN": 556,
+                "NIR": 850
+              },
+              "components": {
+                "GREEN": 0.305991,
+                "NIR": 0.199346,
+                "NIR_minus_GREEN": -0.106645,
+                "NIR_plus_GREEN": 0.505338,
+                "denominator": 0.505338,
+                "numerator": -0.106645
+              },
+              "formula": "(NIR - GREEN) / (NIR + GREEN)",
+              "value": -0.211037
+            },
+            "GRI": {
+              "bands_used": {
+                "GREEN": 556,
+                "NIR": 850
+              },
+              "components": {
+                "GREEN": 0.305991,
+                "NIR": 0.199346,
+                "denominator": 0.305991,
+                "numerator": 0.199346
+              },
+              "formula": "NIR / GREEN",
+              "value": 0.651477
+            },
+            "GRND": {
+              "bands_used": {
+                "GREEN": 556,
+                "RED": 680
+              },
+              "components": {
+                "GREEN": 0.305991,
+                "GREEN_minus_RED": -0.097821,
+                "GREEN_plus_RED": 0.709804,
+                "RED": 0.403813,
+                "denominator": 0.709804,
+                "numerator": -0.097821
+              },
+              "formula": "(GREEN - RED) / (GREEN + RED)",
+              "value": -0.137815
+            },
+            "NDRE": {
+              "bands_used": {
+                "NIR": 850,
+                "RED_EDGE": 725
+              },
+              "components": {
+                "NIR": 0.199346,
+                "NIR_minus_RED_EDGE": -0.495207,
+                "NIR_plus_RED_EDGE": 0.8939,
+                "RED_EDGE": 0.694553,
+                "denominator": 0.8939,
+                "numerator": -0.495207
+              },
+              "formula": "(NIR - RED_EDGE) / (NIR + RED_EDGE)",
+              "value": -0.553985
+            },
+            "NDVI": {
+              "bands_used": {
+                "NIR": 850,
+                "RED": 680
+              },
+              "components": {
+                "NIR": 0.199346,
+                "NIR_minus_RED": -0.204466,
+                "NIR_plus_RED": 0.603159,
+                "RED": 0.403813,
+                "denominator": 0.603159,
+                "numerator": -0.204466
+              },
+              "formula": "(NIR - RED) / (NIR + RED)",
+              "value": -0.338992
+            },
+            "NDWI_850_940": {
+              "bands_used": {
+                "NIR": 850,
+                "WATER_BAND": 940
+              },
+              "components": {
+                "NIR": 0.199346,
+                "NIR_minus_WATER_BAND": -0.440959,
+                "NIR_plus_WATER_BAND": 0.839651,
+                "WATER_BAND": 0.640305,
+                "denominator": 0.839651,
+                "numerator": -0.440959
+              },
+              "formula": "(NIR - WATER_BAND) / (NIR + WATER_BAND)",
+              "value": -0.525169
+            },
+            "NIR_RED_DIFF": {
+              "bands_used": {
+                "NIR": 850,
+                "RED": 680
+              },
+              "components": {
+                "NIR": 0.199346,
+                "NIR_minus_RED": -0.204466,
+                "RED": 0.403813
+              },
+              "formula": "NIR - RED",
+              "value": -0.204466
+            },
+            "NIR_RED_SUM": {
+              "bands_used": {
+                "NIR": 850,
+                "RED": 680
+              },
+              "components": {
+                "NIR": 0.199346,
+                "NIR_plus_RED": 0.603159,
+                "RED": 0.403813
+              },
+              "formula": "NIR + RED",
+              "value": 0.603159
+            },
+            "NIR_RE_DIFF": {
+              "bands_used": {
+                "NIR": 850,
+                "RED_EDGE": 725
+              },
+              "components": {
+                "NIR": 0.199346,
+                "NIR_minus_RED_EDGE": -0.495207,
+                "RED_EDGE": 0.694553
+              },
+              "formula": "NIR - RED_EDGE",
+              "value": -0.495207
+            },
+            "NIR_RE_SUM": {
+              "bands_used": {
+                "NIR": 850,
+                "RED_EDGE": 725
+              },
+              "components": {
+                "NIR": 0.199346,
+                "NIR_plus_RED_EDGE": 0.8939,
+                "RED_EDGE": 0.694553
+              },
+              "formula": "NIR + RED_EDGE",
+              "value": 0.8939
+            },
+            "RED_GREEN_RATIO": {
+              "bands_used": {
+                "GREEN": 556,
+                "RED": 680
+              },
+              "components": {
+                "GREEN": 0.305991,
+                "RED": 0.403813,
+                "denominator": 0.305991,
+                "numerator": 0.403813
+              },
+              "formula": "RED / GREEN",
+              "value": 1.319687
+            },
+            "RE_RED_DIFF": {
+              "bands_used": {
+                "RED": 680,
+                "RED_EDGE": 725
+              },
+              "components": {
+                "RED": 0.403813,
+                "RED_EDGE": 0.694553,
+                "RED_EDGE_minus_RED": 0.290741
+              },
+              "formula": "RED_EDGE - RED",
+              "value": 0.290741
+            },
+            "RE_SLOPE": {
+              "bands_used": {
+                "RED": 680,
+                "RED_EDGE": 725
+              },
+              "components": {
+                "RED": 0.403813,
+                "RED_EDGE": 0.694553,
+                "RED_EDGE_minus_RED": 0.290741,
+                "denominator": 45.0
+              },
+              "formula": "(RED_EDGE - RED) / (725 - 680)",
+              "value": 0.006461
+            },
+            "SR_RE": {
+              "bands_used": {
+                "NIR": 850,
+                "RED_EDGE": 725
+              },
+              "components": {
+                "NIR": 0.199346,
+                "RED_EDGE": 0.694553,
+                "denominator": 0.694553,
+                "numerator": 0.199346
+              },
+              "formula": "NIR / RED_EDGE",
+              "value": 0.287014
+            },
+            "SR_RED": {
+              "bands_used": {
+                "NIR": 850,
+                "RED": 680
+              },
+              "components": {
+                "NIR": 0.199346,
+                "RED": 0.403813,
+                "denominator": 0.403813,
+                "numerator": 0.199346
+              },
+              "formula": "NIR / RED",
+              "value": 0.493661
+            },
+            "WATER_RATIO": {
+              "bands_used": {
+                "NIR": 850,
+                "WATER_BAND": 940
+              },
+              "components": {
+                "NIR": 0.199346,
+                "WATER_BAND": 0.640305,
+                "denominator": 0.199346,
+                "numerator": 0.640305
+              },
+              "formula": "WATER_BAND / NIR",
+              "value": 3.212022
+            }
+          },
+          "severity_rank": 2,
+          "severity_score": 2.129666167485868
+        }
+      ]
+    },
+    "target_wavelengths_nm": [
+      532.0,
+      556.0,
+      650.0,
+      680.0,
+      725.0,
+      850.0,
+      940.0
+    ],
+    "vegetation_mask": {
+      "available_image_like_bands": [
+        "532",
+        "556",
+        "680",
+        "725",
+        "850",
+        "940"
+      ],
+      "band_shape": [
+        1080,
+        1920
+      ],
+      "cleanup": true,
+      "component_selection": {
+        "components_considered": 1,
+        "reason": "selected_best_component",
+        "rejected_components": [],
+        "selected_component": {
+          "area_fraction": 0.05002073688271605,
+          "bbox": [
+            780,
+            692,
+            630,
+            270
+          ],
+          "centroid": [
+            1097.0229264483287,
+            824.3208545838435
+          ],
+          "component_area": 103723,
+          "fill_ratio": 0.6097766019988242,
+          "selection_score": 0.91117878216926,
+          "touches_edge": false
+        }
+      },
+      "fallback_percentile": 70.0,
+      "fallback_reason": "Filtered camera image data was segmented as a foreground object first. This avoids selecting lamp spill or the inside of the box as vegetation.",
+      "foreground_attempts": [
+        {
+          "area_fraction": 0.1326075424382716,
+          "quality_score": 0.9591612352791521,
+          "score_name": "850_nm_intensity",
+          "status": "accepted",
+          "threshold_strategy": "otsu",
+          "used_bands": [
+            "850"
+          ]
+        },
+        {
+          "area_fraction": 0.09709490740740741,
+          "quality_score": 1.0155106003924776,
+          "score_name": "850_nm_intensity",
+          "status": "accepted",
+          "threshold_strategy": "percentile_90",
+          "used_bands": [
+            "850"
+          ]
+        },
+        {
+          "area_fraction": 0.038956886574074076,
+          "quality_score": 1.0399502560108846,
+          "score_name": "850_nm_intensity",
+          "status": "accepted",
+          "threshold_strategy": "percentile_95",
+          "used_bands": [
+            "850"
+          ]
+        },
+        {
+          "area_fraction": 0.0011583719135802469,
+          "quality_score": 0.5440644684377859,
+          "score_name": "680_nm_intensity",
+          "status": "accepted",
+          "threshold_strategy": "otsu",
+          "used_bands": [
+            "680"
+          ]
+        },
+        {
+          "area_fraction": 0.09641975308641976,
+          "quality_score": 0.4387868334581163,
+          "score_name": "680_nm_intensity",
+          "status": "accepted",
+          "threshold_strategy": "percentile_90",
+          "used_bands": [
+            "680"
+          ]
+        },
+        {
+          "area_fraction": 0.033465952932098766,
+          "quality_score": 0.45012175147180655,
+          "score_name": "680_nm_intensity",
+          "status": "accepted",
+          "threshold_strategy": "percentile_95",
+          "used_bands": [
+            "680"
+          ]
+        },
+        {
+          "area_fraction": 0.14006703317901234,
+          "quality_score": 0.9463796603040634,
+          "score_name": "725_nm_intensity",
+          "status": "accepted",
+          "threshold_strategy": "otsu",
+          "used_bands": [
+            "725"
+          ]
+        },
+        {
+          "area_fraction": 0.09964747299382716,
+          "quality_score": 1.0124210223571266,
+          "score_name": "725_nm_intensity",
+          "status": "accepted",
+          "threshold_strategy": "percentile_90",
+          "used_bands": [
+            "725"
+          ]
+        },
+        {
+          "area_fraction": 0.03968653549382716,
+          "quality_score": 1.0121259602291397,
+          "score_name": "725_nm_intensity",
+          "status": "accepted",
+          "threshold_strategy": "percentile_95",
+          "used_bands": [
+            "725"
+          ]
+        },
+        {
+          "area_fraction": 0.13132957175925927,
+          "quality_score": 0.9698566956901072,
+          "score_name": "940_nm_intensity",
+          "status": "accepted",
+          "threshold_strategy": "otsu",
+          "used_bands": [
+            "940"
+          ]
+        },
+        {
+          "area_fraction": 0.09450617283950617,
+          "quality_score": 1.019523012271175,
+          "score_name": "940_nm_intensity",
+          "status": "accepted",
+          "threshold_strategy": "percentile_90",
+          "used_bands": [
+            "940"
+          ]
+        },
+        {
+          "area_fraction": 0.04321614583333333,
+          "quality_score": 1.022406597147504,
+          "score_name": "940_nm_intensity",
+          "status": "accepted",
+          "threshold_strategy": "percentile_95",
+          "used_bands": [
+            "940"
+          ]
+        }
+      ],
+      "foreground_candidate_count": 21,
+      "foreground_score": "532_nm_intensity",
+      "mask_dtype": "bool",
+      "method": "filtered_camera_foreground",
+      "ndvi_threshold": 0.2,
+      "threshold_cutoff_normalized": 0.9675569295514055,
+      "threshold_strategy": "percentile_95",
+      "used_bands": [
+        "532"
+      ],
+      "vegetation_pixel_count": 103723
+    },
+    "wavelength_inspection": {
+      "count": 6,
+      "max": 940.0,
+      "min": 532.0,
+      "original_order": [
+        532.0,
+        556.0,
+        680.0,
+        725.0,
+        850.0,
+        940.0
+      ],
+      "sorted": [
+        532.0,
+        556.0,
+        680.0,
+        725.0,
+        850.0,
+        940.0
+      ]
+    },
+    "wavelengths": {
+      "BLUE_532": 532.0,
+      "GREEN_556": 556.0,
+      "NIR_850": 850.0,
+      "RED_680": 680.0,
+      "RED_EDGE_725": 725.0,
+      "WATER_BAND_940": 940.0
+    }
+  },
+  "missing_bands": [
+    "650"
+  ],
+  "report_schema": "plant_health_analysis_v2",
+  "source": {
+    "adapter_used": "mixed_image_bundle_loader",
+    "alignment": {
+      "mode": "resize_only",
+      "reference": "band_850",
+      "reference_image_id": "band_850",
+      "reference_shape": [
+        1080,
+        1920
+      ],
+      "resample": "bilinear",
+      "status": "resized",
+      "transform_model": "affine",
+      "transforms": [
+        {
+          "applied_model": "resize_only",
+          "bands": [
+            "BLUE_532"
+          ],
+          "confidence": 0.25,
+          "image_id": "band_532",
+          "inverse_map": false,
+          "is_reference": false,
+          "matrix": [
+            [
+              20.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              11.25,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "message": "Resized moving image to reference shape.",
+          "mode": "resize_only",
+          "moving_shape": [
+            96,
+            96
+          ],
+          "output_shape": [
+            1080,
+            1920
+          ],
+          "overlap_fraction": null,
+          "pre_resize": true,
+          "quality_after": null,
+          "quality_before": null,
+          "reference_shape": [
+            1080,
+            1920
+          ],
+          "requested_mode": "resize_only",
+          "stages": [],
+          "status": "resized",
+          "success": true,
+          "transform_model": "affine",
+          "warning": "resize-only alignment is low confidence; no image-content registration was performed"
+        },
+        {
+          "applied_model": "resize_only",
+          "bands": [
+            "GREEN_556"
+          ],
+          "confidence": 1.0,
+          "image_id": "band_556",
+          "inverse_map": false,
+          "is_reference": false,
+          "matrix": [
+            [
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "message": "Shapes already match.",
+          "mode": "resize_only",
+          "moving_shape": [
+            1080,
+            1920
+          ],
+          "output_shape": [
+            1080,
+            1920
+          ],
+          "overlap_fraction": null,
+          "pre_resize": false,
+          "quality_after": null,
+          "quality_before": null,
+          "reference_shape": [
+            1080,
+            1920
+          ],
+          "requested_mode": "resize_only",
+          "stages": [],
+          "status": "not_required",
+          "success": true,
+          "transform_model": "affine",
+          "warning": ""
+        },
+        {
+          "applied_model": "resize_only",
+          "bands": [
+            "RED_680"
+          ],
+          "confidence": 1.0,
+          "image_id": "band_680",
+          "inverse_map": false,
+          "is_reference": false,
+          "matrix": [
+            [
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "message": "Shapes already match.",
+          "mode": "resize_only",
+          "moving_shape": [
+            1080,
+            1920
+          ],
+          "output_shape": [
+            1080,
+            1920
+          ],
+          "overlap_fraction": null,
+          "pre_resize": false,
+          "quality_after": null,
+          "quality_before": null,
+          "reference_shape": [
+            1080,
+            1920
+          ],
+          "requested_mode": "resize_only",
+          "stages": [],
+          "status": "not_required",
+          "success": true,
+          "transform_model": "affine",
+          "warning": ""
+        },
+        {
+          "applied_model": "resize_only",
+          "bands": [
+            "RED_EDGE_725"
+          ],
+          "confidence": 1.0,
+          "image_id": "band_725",
+          "inverse_map": false,
+          "is_reference": false,
+          "matrix": [
+            [
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "message": "Shapes already match.",
+          "mode": "resize_only",
+          "moving_shape": [
+            1080,
+            1920
+          ],
+          "output_shape": [
+            1080,
+            1920
+          ],
+          "overlap_fraction": null,
+          "pre_resize": false,
+          "quality_after": null,
+          "quality_before": null,
+          "reference_shape": [
+            1080,
+            1920
+          ],
+          "requested_mode": "resize_only",
+          "stages": [],
+          "status": "not_required",
+          "success": true,
+          "transform_model": "affine",
+          "warning": ""
+        },
+        {
+          "applied_model": "identity",
+          "bands": [
+            "NIR_850"
+          ],
+          "confidence": null,
+          "image_id": "band_850",
+          "inverse_map": false,
+          "is_reference": true,
+          "matrix": [
+            [
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "message": "Reference image; no moving transform applied.",
+          "mode": "reference",
+          "moving_shape": [
+            1080,
+            1920
+          ],
+          "output_shape": [
+            1080,
+            1920
+          ],
+          "overlap_fraction": null,
+          "pre_resize": false,
+          "quality_after": null,
+          "quality_before": null,
+          "reference_shape": [
+            1080,
+            1920
+          ],
+          "requested_mode": "resize_only",
+          "stages": [],
+          "status": "reference",
+          "success": true,
+          "transform_model": "affine",
+          "warning": ""
+        },
+        {
+          "applied_model": "resize_only",
+          "bands": [
+            "WATER_BAND_940"
+          ],
+          "confidence": 1.0,
+          "image_id": "band_940",
+          "inverse_map": false,
+          "is_reference": false,
+          "matrix": [
+            [
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "message": "Shapes already match.",
+          "mode": "resize_only",
+          "moving_shape": [
+            1080,
+            1920
+          ],
+          "output_shape": [
+            1080,
+            1920
+          ],
+          "overlap_fraction": null,
+          "pre_resize": false,
+          "quality_after": null,
+          "quality_before": null,
+          "reference_shape": [
+            1080,
+            1920
+          ],
+          "requested_mode": "resize_only",
+          "stages": [],
+          "status": "not_required",
+          "success": true,
+          "transform_model": "affine",
+          "warning": ""
+        }
+      ],
+      "warning": "resize-only alignment is low confidence; no image-content registration was performed; resize-only alignment is low confidence; no automatic registration was performed"
+    },
+    "analysis_data_kind": "mixed_image_intensity + calibrated_camera_report",
+    "assigned_roles": {
+      "BLUE_532": "BLUE",
+      "GREEN_556": "GREEN",
+      "NIR_850": "NIR",
+      "RED_680": "RED",
+      "RED_EDGE_725": "RED_EDGE",
+      "WATER_BAND_940": "WATER_BAND"
+    },
+    "calibration": {},
+    "calibration_applied": true,
+    "camera_calibration_profile_id": "spectraleaf_camera_calibration_2026_05_ridge_v2",
+    "channel_wavelength_labels_nm": {
+      "BLUE_532": 532.0,
+      "GREEN_556": 556.0,
+      "NIR_850": 850.0,
+      "RED_680": 680.0,
+      "RED_EDGE_725": 725.0,
+      "WATER_BAND_940": 940.0
+    },
+    "cube_shape": [
+      1080,
+      1920,
+      6
+    ],
+    "imported_files": [
+      {
+        "bands": [
+          "BLUE_532"
+        ],
+        "entry_index": 0,
+        "image_id": "band_532",
+        "image_mode": "L",
+        "image_size": [
+          96,
+          96
+        ],
+        "input_path": "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\spectraleaf_desktop_sessions\\offline_smoke_20260613_164829\\532.png",
+        "path": "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\spectraleaf_desktop_sessions\\offline_smoke_20260613_164829\\532.png",
+        "type": "grayscale"
+      },
+      {
+        "bands": [
+          "GREEN_556"
+        ],
+        "entry_index": 1,
+        "image_id": "band_556",
+        "image_mode": "L",
+        "image_size": [
+          1920,
+          1080
+        ],
+        "input_path": "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\spectraleaf_desktop_sessions\\offline_smoke_20260613_164829\\556.png",
+        "path": "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\spectraleaf_desktop_sessions\\offline_smoke_20260613_164829\\556.png",
+        "type": "grayscale"
+      },
+      {
+        "bands": [
+          "RED_680"
+        ],
+        "entry_index": 2,
+        "image_id": "band_680",
+        "image_mode": "L",
+        "image_size": [
+          1920,
+          1080
+        ],
+        "input_path": "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\spectraleaf_desktop_sessions\\offline_smoke_20260613_164829\\680.png",
+        "path": "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\spectraleaf_desktop_sessions\\offline_smoke_20260613_164829\\680.png",
+        "type": "grayscale"
+      },
+      {
+        "bands": [
+          "RED_EDGE_725"
+        ],
+        "entry_index": 3,
+        "image_id": "band_725",
+        "image_mode": "L",
+        "image_size": [
+          1920,
+          1080
+        ],
+        "input_path": "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\spectraleaf_desktop_sessions\\offline_smoke_20260613_164829\\725.png",
+        "path": "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\spectraleaf_desktop_sessions\\offline_smoke_20260613_164829\\725.png",
+        "type": "grayscale"
+      },
+      {
+        "bands": [
+          "NIR_850"
+        ],
+        "entry_index": 4,
+        "image_id": "band_850",
+        "image_mode": "L",
+        "image_size": [
+          1920,
+          1080
+        ],
+        "input_path": "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\spectraleaf_desktop_sessions\\offline_smoke_20260613_164829\\850.png",
+        "path": "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\spectraleaf_desktop_sessions\\offline_smoke_20260613_164829\\850.png",
+        "type": "grayscale"
+      },
+      {
+        "bands": [
+          "WATER_BAND_940"
+        ],
+        "entry_index": 5,
+        "image_id": "band_940",
+        "image_mode": "L",
+        "image_size": [
+          1920,
+          1080
+        ],
+        "input_path": "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\spectraleaf_desktop_sessions\\offline_smoke_20260613_164829\\940.png",
+        "path": "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\spectraleaf_desktop_sessions\\offline_smoke_20260613_164829\\940.png",
+        "type": "grayscale"
+      }
+    ],
+    "is_reflectance": false,
+    "mixed_bundle_spec_path": "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\spectraleaf_desktop_sessions\\offline_smoke_20260613_164829\\mixed_import_spec.json",
+    "sample_id": "mixed_import_spec",
+    "source_data_kind": "mixed_image_data",
+    "source_type": "mixed_image_bundle",
+    "used_mock_synthetic_data": false,
+    "used_real_sample_data": true,
+    "vegetation_pixels": 103723
+  },
+  "source_data_kind": "mixed_image_data",
+  "source_type": "mixed_image_bundle",
+  "suspicious_regions": {
+    "available_anomaly_maps": [
+      "low_gndvi",
+      "low_ndre",
+      "low_ndvi",
+      "low_nir_red_diff",
+      "low_nir_water_diff",
+      "low_rededge_red_diff",
+      "texture_680",
+      "texture_725",
+      "texture_850"
+    ],
+    "available_maps": [
+      "GNDVI",
+      "NDRE",
+      "NDVI",
+      "NDWI_850_940",
+      "NIR_RED_DIFF",
+      "NIR_RE_DIFF",
+      "NIR_WATER_DIFF",
+      "RE_RED_DIFF"
+    ],
+    "parameters": {
+      "min_area_px": 20,
+      "morphology_iterations": 1,
+      "score_threshold": 0.55,
+      "texture_window": 5,
+      "weights": {
+        "low_gndvi": 0.8,
+        "low_green_blue_diff": 0.4,
+        "low_green_red_diff": 0.6,
+        "low_ndre": 1.0,
+        "low_ndvi": 1.0,
+        "low_nir_red_diff": 0.7,
+        "low_nir_water_diff": 0.4,
+        "low_rededge_red_diff": 0.7,
+        "low_rgb_excess_green": 0.8,
+        "texture_680": 0.5,
+        "texture_725": 0.5,
+        "texture_850": 0.4
+      }
+    },
+    "reason": "",
+    "roles": {
+      "BLUE": {
+        "band_key": "532",
+        "reason": "",
+        "role": "BLUE",
+        "status": "available",
+        "wavelength_nm": 532.0
+      },
+      "GREEN": {
+        "band_key": "556",
+        "reason": "",
+        "role": "GREEN",
+        "status": "available",
+        "wavelength_nm": 556.0
+      },
+      "NIR": {
+        "band_key": "850",
+        "reason": "",
+        "role": "NIR",
+        "status": "available",
+        "wavelength_nm": 850.0
+      },
+      "RED": {
+        "band_key": "680",
+        "reason": "",
+        "role": "RED",
+        "status": "available",
+        "wavelength_nm": 680.0
+      },
+      "RED_EDGE": {
+        "band_key": "725",
+        "reason": "",
+        "role": "RED_EDGE",
+        "status": "available",
+        "wavelength_nm": 725.0
+      },
+      "WATER_BAND": {
+        "band_key": "940",
+        "reason": "",
+        "role": "WATER_BAND",
+        "status": "available",
+        "wavelength_nm": 940.0
+      }
+    },
+    "spot_count": 2,
+    "spots": [
+      {
+        "area_px": 49,
+        "bbox": [
+          1117,
+          783,
+          1125,
+          788
+        ],
+        "centroid": [
+          1121.204081632653,
+          785.7551020408164
+        ],
+        "delta_from_leaf_average": {
+          "band_532": 0.01773143289013923,
+          "band_556": 0.17742063395431795,
+          "band_650": null,
+          "band_680": 0.28488258228049157,
+          "band_725": 0.4462343228383674,
+          "band_850": -0.0065774034724388475,
+          "band_940": 0.39150222896504305
+        },
+        "delta_from_nearby_background": {
+          "band_532": 7.68118761114156e-05,
+          "band_556": -0.020841671433722175,
+          "band_650": null,
+          "band_680": 0.046175509353343636,
+          "band_725": 0.06909430592700283,
+          "band_850": -0.09169927635318115,
+          "band_940": 0.03716338508025385
+        },
+        "delta_indices_from_nearby_background": {
+          "GNDVI": -0.12707639717176372,
+          "NDRE": -0.1693275880578738,
+          "NDVI": -0.17328873578343007,
+          "NDWI_850_940": -0.210891522746727,
+          "NIR_RED_DIFF": -0.13787478570652478,
+          "NIR_RE_DIFF": -0.16079358228018403,
+          "NIR_WATER_DIFF": -0.12886266143343506,
+          "RE_RED_DIFF": 0.022918796573659278
+        },
+        "label": 1,
+        "max_suspiciousness_score": 0.7191205118901163,
+        "mean_indices": {
+          "GNDVI": -0.0845798946933481,
+          "NDRE": -0.5282644562858766,
+          "NDVI": -0.37441984001514117,
+          "NDWI_850_940": -0.4254569644042053,
+          "NIR_RED_DIFF": -0.2504201713873416,
+          "NIR_RE_DIFF": -0.4697078983394467,
+          "NIR_WATER_DIFF": -0.32701081767374157,
+          "RE_RED_DIFF": 0.21928772695210516
+        },
+        "mean_reflectance": {
+          "band_532": 0.9951947209786396,
+          "band_556": 0.2513805588289183,
+          "band_650": null,
+          "band_680": 0.4602641128763861,
+          "band_725": 0.6795518398284912,
+          "band_850": 0.2098439414890445,
+          "band_940": 0.536854759162786
+        },
+        "mean_suspiciousness_score": 0.6049786864642245,
+        "nearby_background_mean_indices": {
+          "GNDVI": 0.04249650247841562,
+          "NDRE": -0.3589368682280028,
+          "NDVI": -0.2011311042317111,
+          "NDWI_850_940": -0.21456544165747826,
+          "NIR_RED_DIFF": -0.11254538568081679,
+          "NIR_RE_DIFF": -0.3089143160592627,
+          "NIR_WATER_DIFF": -0.19814815624030652,
+          "RE_RED_DIFF": 0.19636893037844588
+        },
+        "scalar_indices_from_spot_mean_bands": {
+          "CI_RE": {
+            "bands_used": {
+              "NIR": 850,
+              "RED_EDGE": 725
+            },
+            "components": {
+              "NIR": 0.209844,
+              "RED_EDGE": 0.679552,
+              "denominator": 0.679552,
+              "numerator": 0.209844
+            },
+            "formula": "(NIR / RED_EDGE) - 1",
+            "value": -0.691202
+          },
+          "GNDVI": {
+            "bands_used": {
+              "GREEN": 556,
+              "NIR": 850
+            },
+            "components": {
+              "GREEN": 0.251381,
+              "NIR": 0.209844,
+              "NIR_minus_GREEN": -0.041537,
+              "NIR_plus_GREEN": 0.461225,
+              "denominator": 0.461225,
+              "numerator": -0.041537
+            },
+            "formula": "(NIR - GREEN) / (NIR + GREEN)",
+            "value": -0.090057
+          },
+          "GRI": {
+            "bands_used": {
+              "GREEN": 556,
+              "NIR": 850
+            },
+            "components": {
+              "GREEN": 0.251381,
+              "NIR": 0.209844,
+              "denominator": 0.251381,
+              "numerator": 0.209844
+            },
+            "formula": "NIR / GREEN",
+            "value": 0.834766
+          },
+          "GRND": {
+            "bands_used": {
+              "GREEN": 556,
+              "RED": 680
+            },
+            "components": {
+              "GREEN": 0.251381,
+              "GREEN_minus_RED": -0.208884,
+              "GREEN_plus_RED": 0.711645,
+              "RED": 0.460264,
+              "denominator": 0.711645,
+              "numerator": -0.208884
+            },
+            "formula": "(GREEN - RED) / (GREEN + RED)",
+            "value": -0.293522
+          },
+          "NDRE": {
+            "bands_used": {
+              "NIR": 850,
+              "RED_EDGE": 725
+            },
+            "components": {
+              "NIR": 0.209844,
+              "NIR_minus_RED_EDGE": -0.469708,
+              "NIR_plus_RED_EDGE": 0.889396,
+              "RED_EDGE": 0.679552,
+              "denominator": 0.889396,
+              "numerator": -0.469708
+            },
+            "formula": "(NIR - RED_EDGE) / (NIR + RED_EDGE)",
+            "value": -0.52812
+          },
+          "NDVI": {
+            "bands_used": {
+              "NIR": 850,
+              "RED": 680
+            },
+            "components": {
+              "NIR": 0.209844,
+              "NIR_minus_RED": -0.25042,
+              "NIR_plus_RED": 0.670108,
+              "RED": 0.460264,
+              "denominator": 0.670108,
+              "numerator": -0.25042
+            },
+            "formula": "(NIR - RED) / (NIR + RED)",
+            "value": -0.373701
+          },
+          "NDWI_850_940": {
+            "bands_used": {
+              "NIR": 850,
+              "WATER_BAND": 940
+            },
+            "components": {
+              "NIR": 0.209844,
+              "NIR_minus_WATER_BAND": -0.327011,
+              "NIR_plus_WATER_BAND": 0.746699,
+              "WATER_BAND": 0.536855,
+              "denominator": 0.746699,
+              "numerator": -0.327011
+            },
+            "formula": "(NIR - WATER_BAND) / (NIR + WATER_BAND)",
+            "value": -0.437942
+          },
+          "NIR_RED_DIFF": {
+            "bands_used": {
+              "NIR": 850,
+              "RED": 680
+            },
+            "components": {
+              "NIR": 0.209844,
+              "NIR_minus_RED": -0.25042,
+              "RED": 0.460264
+            },
+            "formula": "NIR - RED",
+            "value": -0.25042
+          },
+          "NIR_RED_SUM": {
+            "bands_used": {
+              "NIR": 850,
+              "RED": 680
+            },
+            "components": {
+              "NIR": 0.209844,
+              "NIR_plus_RED": 0.670108,
+              "RED": 0.460264
+            },
+            "formula": "NIR + RED",
+            "value": 0.670108
+          },
+          "NIR_RE_DIFF": {
+            "bands_used": {
+              "NIR": 850,
+              "RED_EDGE": 725
+            },
+            "components": {
+              "NIR": 0.209844,
+              "NIR_minus_RED_EDGE": -0.469708,
+              "RED_EDGE": 0.679552
+            },
+            "formula": "NIR - RED_EDGE",
+            "value": -0.469708
+          },
+          "NIR_RE_SUM": {
+            "bands_used": {
+              "NIR": 850,
+              "RED_EDGE": 725
+            },
+            "components": {
+              "NIR": 0.209844,
+              "NIR_plus_RED_EDGE": 0.889396,
+              "RED_EDGE": 0.679552
+            },
+            "formula": "NIR + RED_EDGE",
+            "value": 0.889396
+          },
+          "RED_GREEN_RATIO": {
+            "bands_used": {
+              "GREEN": 556,
+              "RED": 680
+            },
+            "components": {
+              "GREEN": 0.251381,
+              "RED": 0.460264,
+              "denominator": 0.251381,
+              "numerator": 0.460264
+            },
+            "formula": "RED / GREEN",
+            "value": 1.830946
+          },
+          "RE_RED_DIFF": {
+            "bands_used": {
+              "RED": 680,
+              "RED_EDGE": 725
+            },
+            "components": {
+              "RED": 0.460264,
+              "RED_EDGE": 0.679552,
+              "RED_EDGE_minus_RED": 0.219288
+            },
+            "formula": "RED_EDGE - RED",
+            "value": 0.219288
+          },
+          "RE_SLOPE": {
+            "bands_used": {
+              "RED": 680,
+              "RED_EDGE": 725
+            },
+            "components": {
+              "RED": 0.460264,
+              "RED_EDGE": 0.679552,
+              "RED_EDGE_minus_RED": 0.219288,
+              "denominator": 45.0
+            },
+            "formula": "(RED_EDGE - RED) / (725 - 680)",
+            "value": 0.004873
+          },
+          "SR_RE": {
+            "bands_used": {
+              "NIR": 850,
+              "RED_EDGE": 725
+            },
+            "components": {
+              "NIR": 0.209844,
+              "RED_EDGE": 0.679552,
+              "denominator": 0.679552,
+              "numerator": 0.209844
+            },
+            "formula": "NIR / RED_EDGE",
+            "value": 0.308798
+          },
+          "SR_RED": {
+            "bands_used": {
+              "NIR": 850,
+              "RED": 680
+            },
+            "components": {
+              "NIR": 0.209844,
+              "RED": 0.460264,
+              "denominator": 0.460264,
+              "numerator": 0.209844
+            },
+            "formula": "NIR / RED",
+            "value": 0.455921
+          },
+          "WATER_RATIO": {
+            "bands_used": {
+              "NIR": 850,
+              "WATER_BAND": 940
+            },
+            "components": {
+              "NIR": 0.209844,
+              "WATER_BAND": 0.536855,
+              "denominator": 0.209844,
+              "numerator": 0.536855
+            },
+            "formula": "WATER_BAND / NIR",
+            "value": 2.558352
+          }
+        },
+        "severity_rank": 1,
+        "severity_score": 2.3666905392417474
+      },
+      {
+        "area_px": 36,
+        "bbox": [
+          1104,
+          795,
+          1113,
+          801
+        ],
+        "centroid": [
+          1108.5555555555557,
+          798.1666666666666
+        ],
+        "delta_from_leaf_average": {
+          "band_532": 0.016606014986972117,
+          "band_556": 0.23203137126442797,
+          "band_650": null,
+          "band_680": 0.22843111130289648,
+          "band_725": 0.46123587812223177,
+          "band_850": -0.0170749365065751,
+          "band_940": 0.4949525021349953
+        },
+        "delta_from_nearby_background": {
+          "band_532": 0.00018357127736512435,
+          "band_556": -0.008116389258208734,
+          "band_650": null,
+          "band_680": 0.0396883400146571,
+          "band_725": 0.04304124640121976,
+          "band_850": -0.13583140022940443,
+          "band_940": 0.07711126208094898
+        },
+        "delta_indices_from_nearby_background": {
+          "GNDVI": -0.20593762752125172,
+          "NDRE": -0.20617030353247218,
+          "NDVI": -0.2515755681869334,
+          "NDWI_850_940": -0.26647686379746327,
+          "NIR_RED_DIFF": -0.17551974024406147,
+          "NIR_RE_DIFF": -0.17887264663062413,
+          "NIR_WATER_DIFF": -0.21294266231035333,
+          "RE_RED_DIFF": 0.0033529063865626596
+        },
+        "label": 2,
+        "max_suspiciousness_score": 0.650236414409208,
+        "mean_indices": {
+          "GNDVI": -0.20846968614701408,
+          "NDRE": -0.554111599020408,
+          "NDVI": -0.34003791917322485,
+          "NDWI_850_940": -0.5245300207379093,
+          "NIR_RED_DIFF": -0.20446623344388273,
+          "NIR_RE_DIFF": -0.4952069866574473,
+          "NIR_WATER_DIFF": -0.44095862387782997,
+          "RE_RED_DIFF": 0.2907407532135646
+        },
+        "mean_reflectance": {
+          "band_532": 0.9940693030754725,
+          "band_556": 0.3059912961390283,
+          "band_650": null,
+          "band_680": 0.403812641898791,
+          "band_725": 0.6945533951123556,
+          "band_850": 0.19934640845490825,
+          "band_940": 0.6403050323327383
+        },
+        "mean_suspiciousness_score": 0.5897852620876511,
+        "nearby_background_mean_indices": {
+          "GNDVI": -0.0025320586257623554,
+          "NDRE": -0.3479412954879358,
+          "NDVI": -0.08846235098629145,
+          "NDWI_850_940": -0.25805315694044606,
+          "NIR_RED_DIFF": -0.028946493199821247,
+          "NIR_RE_DIFF": -0.31633434002682315,
+          "NIR_WATER_DIFF": -0.22801596156747664,
+          "RE_RED_DIFF": 0.2873878468270019
+        },
+        "scalar_indices_from_spot_mean_bands": {
+          "CI_RE": {
+            "bands_used": {
+              "NIR": 850,
+              "RED_EDGE": 725
+            },
+            "components": {
+              "NIR": 0.199346,
+              "RED_EDGE": 0.694553,
+              "denominator": 0.694553,
+              "numerator": 0.199346
+            },
+            "formula": "(NIR / RED_EDGE) - 1",
+            "value": -0.712986
+          },
+          "GNDVI": {
+            "bands_used": {
+              "GREEN": 556,
+              "NIR": 850
+            },
+            "components": {
+              "GREEN": 0.305991,
+              "NIR": 0.199346,
+              "NIR_minus_GREEN": -0.106645,
+              "NIR_plus_GREEN": 0.505338,
+              "denominator": 0.505338,
+              "numerator": -0.106645
+            },
+            "formula": "(NIR - GREEN) / (NIR + GREEN)",
+            "value": -0.211037
+          },
+          "GRI": {
+            "bands_used": {
+              "GREEN": 556,
+              "NIR": 850
+            },
+            "components": {
+              "GREEN": 0.305991,
+              "NIR": 0.199346,
+              "denominator": 0.305991,
+              "numerator": 0.199346
+            },
+            "formula": "NIR / GREEN",
+            "value": 0.651477
+          },
+          "GRND": {
+            "bands_used": {
+              "GREEN": 556,
+              "RED": 680
+            },
+            "components": {
+              "GREEN": 0.305991,
+              "GREEN_minus_RED": -0.097821,
+              "GREEN_plus_RED": 0.709804,
+              "RED": 0.403813,
+              "denominator": 0.709804,
+              "numerator": -0.097821
+            },
+            "formula": "(GREEN - RED) / (GREEN + RED)",
+            "value": -0.137815
+          },
+          "NDRE": {
+            "bands_used": {
+              "NIR": 850,
+              "RED_EDGE": 725
+            },
+            "components": {
+              "NIR": 0.199346,
+              "NIR_minus_RED_EDGE": -0.495207,
+              "NIR_plus_RED_EDGE": 0.8939,
+              "RED_EDGE": 0.694553,
+              "denominator": 0.8939,
+              "numerator": -0.495207
+            },
+            "formula": "(NIR - RED_EDGE) / (NIR + RED_EDGE)",
+            "value": -0.553985
+          },
+          "NDVI": {
+            "bands_used": {
+              "NIR": 850,
+              "RED": 680
+            },
+            "components": {
+              "NIR": 0.199346,
+              "NIR_minus_RED": -0.204466,
+              "NIR_plus_RED": 0.603159,
+              "RED": 0.403813,
+              "denominator": 0.603159,
+              "numerator": -0.204466
+            },
+            "formula": "(NIR - RED) / (NIR + RED)",
+            "value": -0.338992
+          },
+          "NDWI_850_940": {
+            "bands_used": {
+              "NIR": 850,
+              "WATER_BAND": 940
+            },
+            "components": {
+              "NIR": 0.199346,
+              "NIR_minus_WATER_BAND": -0.440959,
+              "NIR_plus_WATER_BAND": 0.839651,
+              "WATER_BAND": 0.640305,
+              "denominator": 0.839651,
+              "numerator": -0.440959
+            },
+            "formula": "(NIR - WATER_BAND) / (NIR + WATER_BAND)",
+            "value": -0.525169
+          },
+          "NIR_RED_DIFF": {
+            "bands_used": {
+              "NIR": 850,
+              "RED": 680
+            },
+            "components": {
+              "NIR": 0.199346,
+              "NIR_minus_RED": -0.204466,
+              "RED": 0.403813
+            },
+            "formula": "NIR - RED",
+            "value": -0.204466
+          },
+          "NIR_RED_SUM": {
+            "bands_used": {
+              "NIR": 850,
+              "RED": 680
+            },
+            "components": {
+              "NIR": 0.199346,
+              "NIR_plus_RED": 0.603159,
+              "RED": 0.403813
+            },
+            "formula": "NIR + RED",
+            "value": 0.603159
+          },
+          "NIR_RE_DIFF": {
+            "bands_used": {
+              "NIR": 850,
+              "RED_EDGE": 725
+            },
+            "components": {
+              "NIR": 0.199346,
+              "NIR_minus_RED_EDGE": -0.495207,
+              "RED_EDGE": 0.694553
+            },
+            "formula": "NIR - RED_EDGE",
+            "value": -0.495207
+          },
+          "NIR_RE_SUM": {
+            "bands_used": {
+              "NIR": 850,
+              "RED_EDGE": 725
+            },
+            "components": {
+              "NIR": 0.199346,
+              "NIR_plus_RED_EDGE": 0.8939,
+              "RED_EDGE": 0.694553
+            },
+            "formula": "NIR + RED_EDGE",
+            "value": 0.8939
+          },
+          "RED_GREEN_RATIO": {
+            "bands_used": {
+              "GREEN": 556,
+              "RED": 680
+            },
+            "components": {
+              "GREEN": 0.305991,
+              "RED": 0.403813,
+              "denominator": 0.305991,
+              "numerator": 0.403813
+            },
+            "formula": "RED / GREEN",
+            "value": 1.319687
+          },
+          "RE_RED_DIFF": {
+            "bands_used": {
+              "RED": 680,
+              "RED_EDGE": 725
+            },
+            "components": {
+              "RED": 0.403813,
+              "RED_EDGE": 0.694553,
+              "RED_EDGE_minus_RED": 0.290741
+            },
+            "formula": "RED_EDGE - RED",
+            "value": 0.290741
+          },
+          "RE_SLOPE": {
+            "bands_used": {
+              "RED": 680,
+              "RED_EDGE": 725
+            },
+            "components": {
+              "RED": 0.403813,
+              "RED_EDGE": 0.694553,
+              "RED_EDGE_minus_RED": 0.290741,
+              "denominator": 45.0
+            },
+            "formula": "(RED_EDGE - RED) / (725 - 680)",
+            "value": 0.006461
+          },
+          "SR_RE": {
+            "bands_used": {
+              "NIR": 850,
+              "RED_EDGE": 725
+            },
+            "components": {
+              "NIR": 0.199346,
+              "RED_EDGE": 0.694553,
+              "denominator": 0.694553,
+              "numerator": 0.199346
+            },
+            "formula": "NIR / RED_EDGE",
+            "value": 0.287014
+          },
+          "SR_RED": {
+            "bands_used": {
+              "NIR": 850,
+              "RED": 680
+            },
+            "components": {
+              "NIR": 0.199346,
+              "RED": 0.403813,
+              "denominator": 0.403813,
+              "numerator": 0.199346
+            },
+            "formula": "NIR / RED",
+            "value": 0.493661
+          },
+          "WATER_RATIO": {
+            "bands_used": {
+              "NIR": 850,
+              "WATER_BAND": 940
+            },
+            "components": {
+              "NIR": 0.199346,
+              "WATER_BAND": 0.640305,
+              "denominator": 0.199346,
+              "numerator": 0.640305
+            },
+            "formula": "WATER_BAND / NIR",
+            "value": 3.212022
+          }
+        },
+        "severity_rank": 2,
+        "severity_score": 2.129666167485868
+      }
+    ]
+  },
+  "target_band_mapping": {
+    "532": {
+      "distance_nm": 0.0,
+      "note": "Exact or near-exact source match at 532 nm.",
+      "source_indices": [
+        0
+      ],
+      "source_wavelengths": [
+        532.0
+      ],
+      "status": "exact",
+      "target_wavelength": 532.0,
+      "weights": [
+        1.0
+      ]
+    },
+    "556": {
+      "distance_nm": 0.0,
+      "note": "Exact or near-exact source match at 556 nm.",
+      "source_indices": [
+        1
+      ],
+      "source_wavelengths": [
+        556.0
+      ],
+      "status": "exact",
+      "target_wavelength": 556.0,
+      "weights": [
+        1.0
+      ]
+    },
+    "650": {
+      "distance_nm": null,
+      "note": "No exact, nearest, or interpolatable source band was available within the configured tolerances for 650 nm.",
+      "source_indices": [],
+      "source_wavelengths": [],
+      "status": "missing",
+      "target_wavelength": 650.0,
+      "weights": []
+    },
+    "680": {
+      "distance_nm": 0.0,
+      "note": "Exact or near-exact source match at 680 nm.",
+      "source_indices": [
+        2
+      ],
+      "source_wavelengths": [
+        680.0
+      ],
+      "status": "exact",
+      "target_wavelength": 680.0,
+      "weights": [
+        1.0
+      ]
+    },
+    "725": {
+      "distance_nm": 0.0,
+      "note": "Exact or near-exact source match at 725 nm.",
+      "source_indices": [
+        3
+      ],
+      "source_wavelengths": [
+        725.0
+      ],
+      "status": "exact",
+      "target_wavelength": 725.0,
+      "weights": [
+        1.0
+      ]
+    },
+    "850": {
+      "distance_nm": 0.0,
+      "note": "Exact or near-exact source match at 850 nm.",
+      "source_indices": [
+        4
+      ],
+      "source_wavelengths": [
+        850.0
+      ],
+      "status": "exact",
+      "target_wavelength": 850.0,
+      "weights": [
+        1.0
+      ]
+    },
+    "940": {
+      "distance_nm": 0.0,
+      "note": "Exact or near-exact source match at 940 nm.",
+      "source_indices": [
+        5
+      ],
+      "source_wavelengths": [
+        940.0
+      ],
+      "status": "exact",
+      "target_wavelength": 940.0,
+      "weights": [
+        1.0
+      ]
+    }
+  },
+  "used_mock_synthetic_data": false,
+  "used_real_sample_data": true,
+  "validation_profile": {
+    "applied_to_current_report": true,
+    "current_input_kind": "mixed_image_data",
+    "guidance": [
+      "Use normalized band patterns and ratios rather than raw brightness alone.",
+      "Treat ordinary RGB-only photos as visual/masking data, not true NIR or red-edge measurements.",
+      "For strongest proof, capture the same leaf with the same filter order used by the validation data.",
+      "The box and outside measurements need separate calibration because outside light was much stronger."
+    ],
+    "profile_id": "spectraleaf_real_leaf_validation_2026_05",
+    "reference_metrics": {
+      "camera_median_per_sample_normalized_correlation": 0.603,
+      "camera_spectrometer_paired_measurements": 28,
+      "full_spectrum_classifier_accuracy": 0.417,
+      "healthy_median_shape_similarity_r": 0.569,
+      "inside_outside_median_shape_similarity_r": 0.564,
+      "inside_outside_pairs": 27,
+      "outside_to_inside_signal_ratio": 137.8,
+      "unhealthy_median_shape_similarity_r": 0.533
+    },
+    "title": "Profil de validare camera + spectrometru",
+    "warnings": [
+      "Pentru imagini mixte, validarea depinde de alinierea corecta intre RGB si benzile grayscale.",
+      "In setul de validare nu au fost gasite poze JPG facute afara; comparatia afara/in cutie este bazata pe spectrele spectrometrului."
+    ]
+  },
+  "vegetation": {
+    "mask": {
+      "available_image_like_bands": [
+        "532",
+        "556",
+        "680",
+        "725",
+        "850",
+        "940"
+      ],
+      "band_shape": [
+        1080,
+        1920
+      ],
+      "cleanup": true,
+      "component_selection": {
+        "components_considered": 1,
+        "reason": "selected_best_component",
+        "rejected_components": [],
+        "selected_component": {
+          "area_fraction": 0.05002073688271605,
+          "bbox": [
+            780,
+            692,
+            630,
+            270
+          ],
+          "centroid": [
+            1097.0229264483287,
+            824.3208545838435
+          ],
+          "component_area": 103723,
+          "fill_ratio": 0.6097766019988242,
+          "selection_score": 0.91117878216926,
+          "touches_edge": false
+        }
+      },
+      "fallback_percentile": 70.0,
+      "fallback_reason": "Filtered camera image data was segmented as a foreground object first. This avoids selecting lamp spill or the inside of the box as vegetation.",
+      "foreground_attempts": [
+        {
+          "area_fraction": 0.1326075424382716,
+          "quality_score": 0.9591612352791521,
+          "score_name": "850_nm_intensity",
+          "status": "accepted",
+          "threshold_strategy": "otsu",
+          "used_bands": [
+            "850"
+          ]
+        },
+        {
+          "area_fraction": 0.09709490740740741,
+          "quality_score": 1.0155106003924776,
+          "score_name": "850_nm_intensity",
+          "status": "accepted",
+          "threshold_strategy": "percentile_90",
+          "used_bands": [
+            "850"
+          ]
+        },
+        {
+          "area_fraction": 0.038956886574074076,
+          "quality_score": 1.0399502560108846,
+          "score_name": "850_nm_intensity",
+          "status": "accepted",
+          "threshold_strategy": "percentile_95",
+          "used_bands": [
+            "850"
+          ]
+        },
+        {
+          "area_fraction": 0.0011583719135802469,
+          "quality_score": 0.5440644684377859,
+          "score_name": "680_nm_intensity",
+          "status": "accepted",
+          "threshold_strategy": "otsu",
+          "used_bands": [
+            "680"
+          ]
+        },
+        {
+          "area_fraction": 0.09641975308641976,
+          "quality_score": 0.4387868334581163,
+          "score_name": "680_nm_intensity",
+          "status": "accepted",
+          "threshold_strategy": "percentile_90",
+          "used_bands": [
+            "680"
+          ]
+        },
+        {
+          "area_fraction": 0.033465952932098766,
+          "quality_score": 0.45012175147180655,
+          "score_name": "680_nm_intensity",
+          "status": "accepted",
+          "threshold_strategy": "percentile_95",
+          "used_bands": [
+            "680"
+          ]
+        },
+        {
+          "area_fraction": 0.14006703317901234,
+          "quality_score": 0.9463796603040634,
+          "score_name": "725_nm_intensity",
+          "status": "accepted",
+          "threshold_strategy": "otsu",
+          "used_bands": [
+            "725"
+          ]
+        },
+        {
+          "area_fraction": 0.09964747299382716,
+          "quality_score": 1.0124210223571266,
+          "score_name": "725_nm_intensity",
+          "status": "accepted",
+          "threshold_strategy": "percentile_90",
+          "used_bands": [
+            "725"
+          ]
+        },
+        {
+          "area_fraction": 0.03968653549382716,
+          "quality_score": 1.0121259602291397,
+          "score_name": "725_nm_intensity",
+          "status": "accepted",
+          "threshold_strategy": "percentile_95",
+          "used_bands": [
+            "725"
+          ]
+        },
+        {
+          "area_fraction": 0.13132957175925927,
+          "quality_score": 0.9698566956901072,
+          "score_name": "940_nm_intensity",
+          "status": "accepted",
+          "threshold_strategy": "otsu",
+          "used_bands": [
+            "940"
+          ]
+        },
+        {
+          "area_fraction": 0.09450617283950617,
+          "quality_score": 1.019523012271175,
+          "score_name": "940_nm_intensity",
+          "status": "accepted",
+          "threshold_strategy": "percentile_90",
+          "used_bands": [
+            "940"
+          ]
+        },
+        {
+          "area_fraction": 0.04321614583333333,
+          "quality_score": 1.022406597147504,
+          "score_name": "940_nm_intensity",
+          "status": "accepted",
+          "threshold_strategy": "percentile_95",
+          "used_bands": [
+            "940"
+          ]
+        }
+      ],
+      "foreground_candidate_count": 21,
+      "foreground_score": "532_nm_intensity",
+      "mask_dtype": "bool",
+      "method": "filtered_camera_foreground",
+      "ndvi_threshold": 0.2,
+      "threshold_cutoff_normalized": 0.9675569295514055,
+      "threshold_strategy": "percentile_95",
+      "used_bands": [
+        "532"
+      ],
+      "vegetation_pixel_count": 103723
+    },
+    "spectrum_metadata": {
+      "mask_shape": [
+        1080,
+        1920
+      ],
+      "mask_strategy": "vegetation_only_for_matching_2d_bands",
+      "mask_used": true,
+      "per_band": {
+        "532": {
+          "reason": "vegetation_pixels_only",
+          "used_mask": true
+        },
+        "556": {
+          "reason": "vegetation_pixels_only",
+          "used_mask": true
+        },
+        "680": {
+          "reason": "vegetation_pixels_only",
+          "used_mask": true
+        },
+        "725": {
+          "reason": "vegetation_pixels_only",
+          "used_mask": true
+        },
+        "850": {
+          "reason": "vegetation_pixels_only",
+          "used_mask": true
+        },
+        "940": {
+          "reason": "vegetation_pixels_only",
+          "used_mask": true
+        }
+      },
+      "source_type": "mixed_image_bundle",
+      "vegetation_pixel_count": 103723
+    }
+  },
+  "vegetation_pixel_count": 103723,
+  "warnings": [
+    "mixed image bundle input; ordinary RGB channels are approximate display labels unless documented otherwise",
+    "mixed image alignment status: resized",
+    "resize-only alignment is low confidence; no image-content registration was performed; resize-only alignment is low confidence; no automatic registration was performed",
+    "target band 650 is missing",
+    "Pentru imagini mixte, validarea depinde de alinierea corecta intre RGB si benzile grayscale.",
+    "In setul de validare nu au fost gasite poze JPG facute afara; comparatia afara/in cutie este bazata pe spectrele spectrometrului.",
+    "Referinta neagra a fost verificata, dar nu a fost scazuta deoarece nu este fizic valida pentru aceste filtre.",
+    "940 nm este marcat low-confidence pentru calibrarea cu spectrometrul; banda camera ramane vizibila si poate fi compensata dupa curba sursei, dar nu este folosita pentru concluzii calibrate.",
+    "Compensarea curbei sursei pentru 940 nm ar inmulti semnalul cu aproximativ 4.72x; valoarea compensata este raportata, dar are greutate de incredere mica."
+  ],
+  "wavelengths": {
+    "available_wavelengths_nm": [
+      532.0,
+      556.0,
+      680.0,
+      725.0,
+      850.0,
+      940.0
+    ],
+    "count": 6,
+    "max_nm": 940.0,
+    "min_nm": 532.0,
+    "target_profile": "profile_7band_default",
+    "target_wavelengths_nm": [
+      532.0,
+      556.0,
+      650.0,
+      680.0,
+      725.0,
+      850.0,
+      940.0
+    ]
+  },
+  "whole_leaf": {
+    "average_bands": {
+      "532": 0.9774632880885004,
+      "556": 0.07395992487460033,
+      "680": 0.17538153059589454,
+      "725": 0.23331751699012385,
+      "850": 0.21642134496148335,
+      "940": 0.14535253019774294
+    },
+    "index_availability": {
+      "available": 4,
+      "available_count": 4,
+      "available_indices": [
+        "NDVI",
+        "NDRE",
+        "GNDVI",
+        "WATER_PROXY"
+      ],
+      "by_index": {
+        "GNDVI": "available",
+        "NDRE": "available",
+        "NDVI": "available",
+        "WATER_PROXY": "available"
+      },
+      "total": 4,
+      "unavailable": 0,
+      "unavailable_count": 0,
+      "unavailable_indices": [],
+      "unavailable_reasons": {}
+    },
+    "indices": {
+      "CI_RE": {
+        "bands_used": {
+          "NIR": 850,
+          "RED_EDGE": 725
+        },
+        "components": {
+          "NIR": 0.216421,
+          "RED_EDGE": 0.233318,
+          "denominator": 0.233318,
+          "numerator": 0.216421
+        },
+        "formula": "(NIR / RED_EDGE) - 1",
+        "value": -0.072417
+      },
+      "GNDVI": {
+        "approximate": true,
+        "available": true,
+        "bands_used": {
+          "GREEN": 556,
+          "NIR": 850
+        },
+        "components": {
+          "GREEN": 0.07396,
+          "NIR": 0.216421,
+          "NIR_minus_GREEN": 0.142461,
+          "NIR_plus_GREEN": 0.290381,
+          "denominator": 0.290381,
+          "numerator": 0.142461
+        },
+        "formula": "(NIR - GREEN) / (NIR + GREEN)",
+        "label": "GNDVI (green + NIR)",
+        "missing_roles": [],
+        "reason": "",
+        "reasons": [],
+        "required_roles": [
+          "NIR",
+          "GREEN"
+        ],
+        "source_note": "Exact or near-exact source match at 850 nm.; Exact or near-exact source match at 556 nm. GREEN uses an approximate RGB/display-channel label; not a calibrated narrowband green measurement.",
+        "source_notes": [
+          "Exact or near-exact source match at 850 nm.",
+          "Exact or near-exact source match at 556 nm. GREEN uses an approximate RGB/display-channel label; not a calibrated narrowband green measurement."
+        ],
+        "status": "available",
+        "value": 0.490601,
+        "wavelengths_nm": {
+          "GREEN": 556.0,
+          "NIR": 850.0
+        }
+      },
+      "GRI": {
+        "bands_used": {
+          "GREEN": 556,
+          "NIR": 850
+        },
+        "components": {
+          "GREEN": 0.07396,
+          "NIR": 0.216421,
+          "denominator": 0.07396,
+          "numerator": 0.216421
+        },
+        "formula": "NIR / GREEN",
+        "value": 2.926197
+      },
+      "GRND": {
+        "bands_used": {
+          "GREEN": 556,
+          "RED": 680
+        },
+        "components": {
+          "GREEN": 0.07396,
+          "GREEN_minus_RED": -0.101422,
+          "GREEN_plus_RED": 0.249341,
+          "RED": 0.175382,
+          "denominator": 0.249341,
+          "numerator": -0.101422
+        },
+        "formula": "(GREEN - RED) / (GREEN + RED)",
+        "value": -0.406758
+      },
+      "NDRE": {
+        "approximate": false,
+        "available": true,
+        "bands_used": {
+          "NIR": 850,
+          "RED_EDGE": 725
+        },
+        "components": {
+          "NIR": 0.216421,
+          "NIR_minus_RED_EDGE": -0.016896,
+          "NIR_plus_RED_EDGE": 0.449739,
+          "RED_EDGE": 0.233318,
+          "denominator": 0.449739,
+          "numerator": -0.016896
+        },
+        "formula": "(NIR - RED_EDGE) / (NIR + RED_EDGE)",
+        "label": "NDRE (red-edge + NIR)",
+        "missing_roles": [],
+        "reason": "",
+        "reasons": [],
+        "required_roles": [
+          "NIR",
+          "RED_EDGE"
+        ],
+        "source_note": "Exact or near-exact source match at 850 nm.; Exact or near-exact source match at 725 nm.",
+        "source_notes": [
+          "Exact or near-exact source match at 850 nm.",
+          "Exact or near-exact source match at 725 nm."
+        ],
+        "status": "available",
+        "value": -0.037569,
+        "wavelengths_nm": {
+          "NIR": 850.0,
+          "RED_EDGE": 725.0
+        }
+      },
+      "NDVI": {
+        "approximate": false,
+        "available": true,
+        "bands_used": {
+          "NIR": 850,
+          "RED": 680
+        },
+        "components": {
+          "NIR": 0.216421,
+          "NIR_minus_RED": 0.04104,
+          "NIR_plus_RED": 0.391803,
+          "RED": 0.175382,
+          "denominator": 0.391803,
+          "numerator": 0.04104
+        },
+        "formula": "(NIR - RED) / (NIR + RED)",
+        "label": "NDVI (proper 680 nm red + NIR)",
+        "missing_roles": [],
+        "reason": "",
+        "reasons": [],
+        "required_roles": [
+          "NIR",
+          "RED"
+        ],
+        "source_note": "Exact or near-exact source match at 850 nm.; Proper NDVI red band at 680 nm. Exact or near-exact source match at 680 nm.",
+        "source_notes": [
+          "Exact or near-exact source match at 850 nm.",
+          "Proper NDVI red band at 680 nm. Exact or near-exact source match at 680 nm."
+        ],
+        "status": "available",
+        "value": 0.104746,
+        "wavelengths_nm": {
+          "NIR": 850.0,
+          "RED": 680.0
+        }
+      },
+      "NDWI_850_940": {
+        "approximate": false,
+        "available": false,
+        "bands_used": {
+          "NIR": 850,
+          "WATER_BAND": 940
+        },
+        "components": {
+          "NIR": 0.216421,
+          "NIR_minus_WATER_BAND": 0.071069,
+          "NIR_plus_WATER_BAND": 0.361774,
+          "WATER_BAND": 0.145353,
+          "denominator": 0.361774,
+          "numerator": 0.071069
+        },
+        "formula": "(NIR - WATER_BAND) / (NIR + WATER_BAND)",
+        "label": "Water proxy (water band + NIR)",
+        "missing_roles": [],
+        "raw_value_excluded_for_reliability": 0.196445,
+        "reason": "NDWI_850_940 depends on 940 nm. The 940 nm spectrometer target is marked low-confidence, so this calibrated water proxy is not used for conclusions.",
+        "reasons": [],
+        "reliability": "low_confidence_excluded",
+        "required_roles": [
+          "NIR",
+          "WATER_BAND"
+        ],
+        "source_note": "Exact or near-exact source match at 850 nm.; Exact or near-exact source match at 940 nm.",
+        "source_notes": [
+          "Exact or near-exact source match at 850 nm.",
+          "Exact or near-exact source match at 940 nm."
+        ],
+        "status": "available",
+        "value": null,
+        "wavelengths_nm": {
+          "NIR": 850.0,
+          "WATER_BAND": 940.0
+        }
+      },
+      "NIR_RED_DIFF": {
+        "bands_used": {
+          "NIR": 850,
+          "RED": 680
+        },
+        "components": {
+          "NIR": 0.216421,
+          "NIR_minus_RED": 0.04104,
+          "RED": 0.175382
+        },
+        "formula": "NIR - RED",
+        "value": 0.04104
+      },
+      "NIR_RED_SUM": {
+        "bands_used": {
+          "NIR": 850,
+          "RED": 680
+        },
+        "components": {
+          "NIR": 0.216421,
+          "NIR_plus_RED": 0.391803,
+          "RED": 0.175382
+        },
+        "formula": "NIR + RED",
+        "value": 0.391803
+      },
+      "NIR_RE_DIFF": {
+        "bands_used": {
+          "NIR": 850,
+          "RED_EDGE": 725
+        },
+        "components": {
+          "NIR": 0.216421,
+          "NIR_minus_RED_EDGE": -0.016896,
+          "RED_EDGE": 0.233318
+        },
+        "formula": "NIR - RED_EDGE",
+        "value": -0.016896
+      },
+      "NIR_RE_SUM": {
+        "bands_used": {
+          "NIR": 850,
+          "RED_EDGE": 725
+        },
+        "components": {
+          "NIR": 0.216421,
+          "NIR_plus_RED_EDGE": 0.449739,
+          "RED_EDGE": 0.233318
+        },
+        "formula": "NIR + RED_EDGE",
+        "value": 0.449739
+      },
+      "RED_GREEN_RATIO": {
+        "bands_used": {
+          "GREEN": 556,
+          "RED": 680
+        },
+        "components": {
+          "GREEN": 0.07396,
+          "RED": 0.175382,
+          "denominator": 0.07396,
+          "numerator": 0.175382
+        },
+        "formula": "RED / GREEN",
+        "value": 2.371305
+      },
+      "RE_RED_DIFF": {
+        "bands_used": {
+          "RED": 680,
+          "RED_EDGE": 725
+        },
+        "components": {
+          "RED": 0.175382,
+          "RED_EDGE": 0.233318,
+          "RED_EDGE_minus_RED": 0.057936
+        },
+        "formula": "RED_EDGE - RED",
+        "value": 0.057936
+      },
+      "RE_SLOPE": {
+        "bands_used": {
+          "RED": 680,
+          "RED_EDGE": 725
+        },
+        "components": {
+          "RED": 0.175382,
+          "RED_EDGE": 0.233318,
+          "RED_EDGE_minus_RED": 0.057936,
+          "denominator": 45.0
+        },
+        "formula": "(RED_EDGE - RED) / (725 - 680)",
+        "value": 0.001287
+      },
+      "SR_RE": {
+        "bands_used": {
+          "NIR": 850,
+          "RED_EDGE": 725
+        },
+        "components": {
+          "NIR": 0.216421,
+          "RED_EDGE": 0.233318,
+          "denominator": 0.233318,
+          "numerator": 0.216421
+        },
+        "formula": "NIR / RED_EDGE",
+        "value": 0.927583
+      },
+      "SR_RED": {
+        "bands_used": {
+          "NIR": 850,
+          "RED": 680
+        },
+        "components": {
+          "NIR": 0.216421,
+          "RED": 0.175382,
+          "denominator": 0.175382,
+          "numerator": 0.216421
+        },
+        "formula": "NIR / RED",
+        "value": 1.234003
+      },
+      "WATER_RATIO": {
+        "bands_used": {
+          "NIR": 850,
+          "WATER_BAND": 940
+        },
+        "components": {
+          "NIR": 0.216421,
+          "WATER_BAND": 0.145353,
+          "denominator": 0.216421,
+          "numerator": 0.145353
+        },
+        "formula": "WATER_BAND / NIR",
+        "value": 0.671618
+      }
+    },
+    "interpretation": {
+      "caution": "Acestea sunt interpretari relative deterministe ale unor masurari de aproape. Nu reprezinta un diagnostic de boala, seceta sau deficienta de nutrienti.",
+      "conclusion": "Esantionul arata un semnal vegetal moderat spre util. Semnalul sensibil la red-edge este modest si trebuie interpretat comparativ. Aceste rezultate pot reflecta variatie normala intre esantioane sau diferente fiziologice subtile si ar trebui comparate intre probe.",
+      "lines": [
+        {
+          "interpretation": "NDVI = 0.10 sugereaza un semnal vegetal general slab sau o structura foliara activa limitata.",
+          "label": "NDVI",
+          "level": "low",
+          "value": 0.104746
+        },
+        {
+          "interpretation": "GNDVI = 0.49 sugereaza un raspuns verde-NIR mai puternic si un semnal activ de frunza in raport cu aceasta configuratie de masurare.",
+          "label": "GNDVI",
+          "level": "high",
+          "value": 0.490601
+        },
+        {
+          "interpretation": "NDRE = -0.04 indica un raspuns red-edge foarte slab, care poate reflecta un semnal red-edge limitat. Acest rezultat trebuie interpretat comparativ, nu ca un diagnostic de sine statator.",
+          "label": "NDRE",
+          "level": "very_low",
+          "value": -0.037569
+        },
+        {
+          "interpretation": "CI_RE = -0.07 sugereaza un semnal red-edge legat de clorofila foarte redus. Este cel mai util pentru comparatie relativa intre esantioane.",
+          "label": "CI_RE",
+          "level": "very_low",
+          "value": -0.072417
+        },
+        {
+          "interpretation": "Proxy de apa nu este disponibil pentru acest esantion.",
+          "label": "Proxy de apa",
+          "level": "unavailable",
+          "reason": "NDWI_850_940 depends on 940 nm. The 940 nm spectrometer target is marked low-confidence, so this calibrated water proxy is not used for conclusions.",
+          "value": null
+        }
+      ],
+      "overall_status": "Semnal vegetal general moderat spre puternic.",
+      "summary_title": "Interpretare"
+    },
+    "role_aware_indices": {
+      "availability_summary": {
+        "available": 4,
+        "available_count": 4,
+        "available_indices": [
+          "NDVI",
+          "NDRE",
+          "GNDVI",
+          "WATER_PROXY"
+        ],
+        "by_index": {
+          "GNDVI": "available",
+          "NDRE": "available",
+          "NDVI": "available",
+          "WATER_PROXY": "available"
+        },
+        "total": 4,
+        "unavailable": 0,
+        "unavailable_count": 0,
+        "unavailable_indices": [],
+        "unavailable_reasons": {}
+      },
+      "index_aliases": {
+        "NDWI_850_940": "WATER_PROXY"
+      },
+      "indices": {
+        "GNDVI": {
+          "approximate": true,
+          "available": true,
+          "bands_used": {
+            "GREEN": 556,
+            "NIR": 850
+          },
+          "components": {
+            "GREEN": 0.07396,
+            "NIR": 0.216421,
+            "NIR_minus_GREEN": 0.142461,
+            "NIR_plus_GREEN": 0.290381,
+            "denominator": 0.290381,
+            "numerator": 0.142461
+          },
+          "formula": "(NIR - GREEN) / (NIR + GREEN)",
+          "label": "GNDVI (green + NIR)",
+          "missing_roles": [],
+          "reason": "",
+          "reasons": [],
+          "required_roles": [
+            "NIR",
+            "GREEN"
+          ],
+          "source_note": "Exact or near-exact source match at 850 nm.; Exact or near-exact source match at 556 nm. GREEN uses an approximate RGB/display-channel label; not a calibrated narrowband green measurement.",
+          "source_notes": [
+            "Exact or near-exact source match at 850 nm.",
+            "Exact or near-exact source match at 556 nm. GREEN uses an approximate RGB/display-channel label; not a calibrated narrowband green measurement."
+          ],
+          "status": "available",
+          "value": 0.490601,
+          "wavelengths_nm": {
+            "GREEN": 556.0,
+            "NIR": 850.0
+          }
+        },
+        "NDRE": {
+          "approximate": false,
+          "available": true,
+          "bands_used": {
+            "NIR": 850,
+            "RED_EDGE": 725
+          },
+          "components": {
+            "NIR": 0.216421,
+            "NIR_minus_RED_EDGE": -0.016896,
+            "NIR_plus_RED_EDGE": 0.449739,
+            "RED_EDGE": 0.233318,
+            "denominator": 0.449739,
+            "numerator": -0.016896
+          },
+          "formula": "(NIR - RED_EDGE) / (NIR + RED_EDGE)",
+          "label": "NDRE (red-edge + NIR)",
+          "missing_roles": [],
+          "reason": "",
+          "reasons": [],
+          "required_roles": [
+            "NIR",
+            "RED_EDGE"
+          ],
+          "source_note": "Exact or near-exact source match at 850 nm.; Exact or near-exact source match at 725 nm.",
+          "source_notes": [
+            "Exact or near-exact source match at 850 nm.",
+            "Exact or near-exact source match at 725 nm."
+          ],
+          "status": "available",
+          "value": -0.037569,
+          "wavelengths_nm": {
+            "NIR": 850.0,
+            "RED_EDGE": 725.0
+          }
+        },
+        "NDVI": {
+          "approximate": false,
+          "available": true,
+          "bands_used": {
+            "NIR": 850,
+            "RED": 680
+          },
+          "components": {
+            "NIR": 0.216421,
+            "NIR_minus_RED": 0.04104,
+            "NIR_plus_RED": 0.391803,
+            "RED": 0.175382,
+            "denominator": 0.391803,
+            "numerator": 0.04104
+          },
+          "formula": "(NIR - RED) / (NIR + RED)",
+          "label": "NDVI (proper 680 nm red + NIR)",
+          "missing_roles": [],
+          "reason": "",
+          "reasons": [],
+          "required_roles": [
+            "NIR",
+            "RED"
+          ],
+          "source_note": "Exact or near-exact source match at 850 nm.; Proper NDVI red band at 680 nm. Exact or near-exact source match at 680 nm.",
+          "source_notes": [
+            "Exact or near-exact source match at 850 nm.",
+            "Proper NDVI red band at 680 nm. Exact or near-exact source match at 680 nm."
+          ],
+          "status": "available",
+          "value": 0.104746,
+          "wavelengths_nm": {
+            "NIR": 850.0,
+            "RED": 680.0
+          }
+        },
+        "WATER_PROXY": {
+          "approximate": false,
+          "available": true,
+          "bands_used": {
+            "NIR": 850,
+            "WATER_BAND": 940
+          },
+          "components": {
+            "NIR": 0.216421,
+            "NIR_minus_WATER_BAND": 0.071069,
+            "NIR_plus_WATER_BAND": 0.361774,
+            "WATER_BAND": 0.145353,
+            "denominator": 0.361774,
+            "numerator": 0.071069
+          },
+          "formula": "(NIR - WATER_BAND) / (NIR + WATER_BAND)",
+          "label": "Water proxy (water band + NIR)",
+          "missing_roles": [],
+          "reason": "",
+          "reasons": [],
+          "required_roles": [
+            "NIR",
+            "WATER_BAND"
+          ],
+          "source_note": "Exact or near-exact source match at 850 nm.; Exact or near-exact source match at 940 nm.",
+          "source_notes": [
+            "Exact or near-exact source match at 850 nm.",
+            "Exact or near-exact source match at 940 nm."
+          ],
+          "status": "available",
+          "value": 0.196445,
+          "wavelengths_nm": {
+            "NIR": 850.0,
+            "WATER_BAND": 940.0
+          }
+        }
+      },
+      "roles": {
+        "GREEN": {
+          "approximate_source": true,
+          "band_key": "556",
+          "reason": "",
+          "role": "GREEN",
+          "source_note": "Exact or near-exact source match at 556 nm. GREEN uses an approximate RGB/display-channel label; not a calibrated narrowband green measurement.",
+          "status": "available",
+          "value": 0.07396,
+          "wavelength_nm": 556.0
+        },
+        "NIR": {
+          "approximate_source": false,
+          "band_key": "850",
+          "reason": "",
+          "role": "NIR",
+          "source_note": "Exact or near-exact source match at 850 nm.",
+          "status": "available",
+          "value": 0.216421,
+          "wavelength_nm": 850.0
+        },
+        "RED": {
+          "approximate_source": false,
+          "band_key": "680",
+          "reason": "",
+          "role": "RED",
+          "source_note": "Exact or near-exact source match at 680 nm.",
+          "status": "available",
+          "value": 0.175382,
+          "wavelength_nm": 680.0
+        },
+        "RED_EDGE": {
+          "approximate_source": false,
+          "band_key": "725",
+          "reason": "",
+          "role": "RED_EDGE",
+          "source_note": "Exact or near-exact source match at 725 nm.",
+          "status": "available",
+          "value": 0.233318,
+          "wavelength_nm": 725.0
+        },
+        "WATER_BAND": {
+          "approximate_source": false,
+          "band_key": "940",
+          "reason": "",
+          "role": "WATER_BAND",
+          "source_note": "Exact or near-exact source match at 940 nm.",
+          "status": "available",
+          "value": 0.145353,
+          "wavelength_nm": 940.0
+        }
+      }
+    }
+  }
+}

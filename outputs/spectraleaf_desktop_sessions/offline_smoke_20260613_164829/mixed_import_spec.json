@@ -1,0 +1,136 @@
+{
+  "alignment": {
+    "mode": "resize_only",
+    "reference": "band_850",
+    "reference_image_id": "band_850",
+    "reference_path": "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\spectraleaf_desktop_sessions\\offline_smoke_20260613_164829\\850.png",
+    "transform_model": "affine"
+  },
+  "bands": [
+    {
+      "alignment_reference_image_id": "band_850",
+      "assignment": "grayscale",
+      "id": "band_532_gray",
+      "path": "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\spectraleaf_desktop_sessions\\offline_smoke_20260613_164829\\532.png",
+      "role": "BLUE",
+      "role_label": "BLUE",
+      "source_channel": "L",
+      "source_image_id": "band_532",
+      "wavelength_nm": 532.0
+    },
+    {
+      "alignment_reference_image_id": "band_850",
+      "assignment": "grayscale",
+      "id": "band_556_gray",
+      "path": "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\spectraleaf_desktop_sessions\\offline_smoke_20260613_164829\\556.png",
+      "role": "GREEN",
+      "role_label": "GREEN",
+      "source_channel": "L",
+      "source_image_id": "band_556",
+      "wavelength_nm": 556.0
+    },
+    {
+      "alignment_reference_image_id": "band_850",
+      "assignment": "grayscale",
+      "id": "band_680_gray",
+      "path": "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\spectraleaf_desktop_sessions\\offline_smoke_20260613_164829\\680.png",
+      "role": "RED",
+      "role_label": "RED",
+      "source_channel": "L",
+      "source_image_id": "band_680",
+      "wavelength_nm": 680.0
+    },
+    {
+      "alignment_reference_image_id": "band_850",
+      "assignment": "grayscale",
+      "id": "band_725_gray",
+      "path": "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\spectraleaf_desktop_sessions\\offline_smoke_20260613_164829\\725.png",
+      "role": "RED_EDGE",
+      "role_label": "RED_EDGE",
+      "source_channel": "L",
+      "source_image_id": "band_725",
+      "wavelength_nm": 725.0
+    },
+    {
+      "alignment_reference_image_id": "band_850",
+      "assignment": "grayscale",
+      "id": "band_850_gray",
+      "path": "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\spectraleaf_desktop_sessions\\offline_smoke_20260613_164829\\850.png",
+      "role": "NIR",
+      "role_label": "NIR",
+      "source_channel": "L",
+      "source_image_id": "band_850",
+      "wavelength_nm": 850.0
+    },
+    {
+      "alignment_reference_image_id": "band_850",
+      "assignment": "grayscale",
+      "id": "band_940_gray",
+      "path": "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\spectraleaf_desktop_sessions\\offline_smoke_20260613_164829\\940.png",
+      "role": "WATER_BAND",
+      "role_label": "WATER_BAND",
+      "source_channel": "L",
+      "source_image_id": "band_940",
+      "wavelength_nm": 940.0
+    }
+  ],
+  "bundle_type": "mixed_image_bundle",
+  "created_by": "plant_health_mvp.analysis_app.import_wizard",
+  "images": [
+    {
+      "assignment": "grayscale",
+      "id": "band_532",
+      "path": "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\spectraleaf_desktop_sessions\\offline_smoke_20260613_164829\\532.png",
+      "role": "BLUE",
+      "role_label": "BLUE",
+      "wavelength_nm": 532.0
+    },
+    {
+      "assignment": "grayscale",
+      "id": "band_556",
+      "path": "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\spectraleaf_desktop_sessions\\offline_smoke_20260613_164829\\556.png",
+      "role": "GREEN",
+      "role_label": "GREEN",
+      "wavelength_nm": 556.0
+    },
+    {
+      "assignment": "grayscale",
+      "id": "band_680",
+      "path": "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\spectraleaf_desktop_sessions\\offline_smoke_20260613_164829\\680.png",
+      "role": "RED",
+      "role_label": "RED",
+      "wavelength_nm": 680.0
+    },
+    {
+      "assignment": "grayscale",
+      "id": "band_725",
+      "path": "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\spectraleaf_desktop_sessions\\offline_smoke_20260613_164829\\725.png",
+      "role": "RED_EDGE",
+      "role_label": "RED_EDGE",
+      "wavelength_nm": 725.0
+    },
+    {
+      "assignment": "grayscale",
+      "id": "band_850",
+      "path": "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\spectraleaf_desktop_sessions\\offline_smoke_20260613_164829\\850.png",
+      "role": "NIR",
+      "role_label": "NIR",
+      "wavelength_nm": 850.0
+    },
+    {
+      "assignment": "grayscale",
+      "id": "band_940",
+      "path": "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\spectraleaf_desktop_sessions\\offline_smoke_20260613_164829\\940.png",
+      "role": "WATER_BAND",
+      "role_label": "WATER_BAND",
+      "wavelength_nm": 940.0
+    }
+  ],
+  "loader_hints": {
+    "align_to_reference": true,
+    "band_axis": "last",
+    "rgb_channel_order": "RGB"
+  },
+  "schema": "plant_health_mvp.mixed_image_bundle.v1",
+  "version": 1
+}

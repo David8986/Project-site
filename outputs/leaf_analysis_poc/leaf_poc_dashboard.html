@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Leaf Analysis POC</title>
+  <style>
+    :root {
+      --bg: #f7f8f4;
+      --ink: #17211b;
+      --muted: #667168;
+      --line: #d9ded5;
+      --panel: #ffffff;
+      --green: #287a46;
+      --amber: #b66b1f;
+      --red: #a43d2f;
+      --blue: #315f8c;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, Segoe UI, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      letter-spacing: 0;
+    }
+    header {
+      padding: 28px 32px 18px;
+      border-bottom: 1px solid var(--line);
+      background: #ffffff;
+    }
+    h1 { margin: 0 0 8px; font-size: 28px; line-height: 1.15; }
+    h2 { margin: 0 0 14px; font-size: 17px; }
+    p { margin: 0; color: var(--muted); line-height: 1.5; }
+    main { padding: 24px 32px 40px; max-width: 1280px; margin: 0 auto; }
+    .grid { display: grid; gap: 16px; }
+    .kpis { grid-template-columns: repeat(4, minmax(0, 1fr)); margin-bottom: 18px; }
+    .two { grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); }
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 18px;
+      box-shadow: 0 1px 2px rgba(23, 33, 27, .05);
+    }
+    .kpi .label { color: var(--muted); font-size: 12px; text-transform: uppercase; }
+    .kpi .value { font-size: 28px; font-weight: 750; margin-top: 6px; }
+    .kpi .note { font-size: 12px; color: var(--muted); margin-top: 6px; }
+    table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    th, td { padding: 9px 8px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+    th { font-size: 12px; color: var(--muted); font-weight: 700; }
+    .pill { display: inline-flex; border-radius: 999px; padding: 3px 8px; font-size: 12px; font-weight: 700; }
+    .good { background: #dff2e5; color: #1d6d3a; }
+    .warn { background: #f8ead5; color: #8a4c12; }
+    .bad { background: #f7dddd; color: #842c24; }
+    .bar-row { display: grid; grid-template-columns: 150px 1fr 78px; gap: 10px; align-items: center; margin: 11px 0; }
+    .track { height: 12px; background: #edf0ea; border-radius: 999px; overflow: hidden; }
+    .bar { height: 100%; border-radius: 999px; background: var(--green); }
+    .bar.amber { background: var(--amber); }
+    .bar.blue { background: var(--blue); }
+    .controls { display: flex; gap: 8px; margin: 0 0 14px; flex-wrap: wrap; }
+    button {
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--ink);
+      border-radius: 6px;
+      padding: 8px 11px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    button.active { background: #193b28; color: #fff; border-color: #193b28; }
+    .image-strip { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px; }
+    .image-strip img { width: 100%; border-radius: 8px; border: 1px solid var(--line); display: block; }
+    .small { font-size: 12px; color: var(--muted); }
+    .status { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
+    code { background: #eef1eb; padding: 2px 5px; border-radius: 4px; }
+    @media (max-width: 900px) {
+      main, header { padding-left: 18px; padding-right: 18px; }
+      .kpis, .two, .image-strip { grid-template-columns: 1fr; }
+      .bar-row { grid-template-columns: 120px 1fr 64px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Leaf Camera + Spectrometer Proof of Concept</h1>
+    <p>Uses the real computed numbers from your current dataset. Camera features are available now; raw spectrometer intensity curves still need CSV export from OceanView.</p>
+    <div class="status">
+      <span class="pill good">Camera metrics ready</span>
+      <span class="pill warn">Spectrometer metadata ready</span>
+      <span class="pill bad">Raw spectra missing</span>
+    </div>
+  </header>
+  <main>
+    <section class="grid kpis">
+      <div class="panel kpi"><div class="label">Photos</div><div class="value">14</div><div class="note">JPG measurements analyzed</div></div>
+      <div class="panel kpi"><div class="label">Photo groups</div><div class="value">2</div><div class="note">Two leaf/condition groups</div></div>
+      <div class="panel kpi"><div class="label">Spectrometer rows</div><div class="value">50</div><div class="note">OCV catalog entries</div></div>
+      <div class="panel kpi"><div class="label">Raw spectra</div><div class="value">0</div><div class="note">Need OceanView CSV export</div></div>
+    </section>
+
+    <section class="grid two">
+      <div class="panel">
+        <h2>App-Ready Classification</h2>
+        <table>
+          <thead><tr><th>Group</th><th>Condition</th><th>Saturation</th><th>GCC</th><th>Usability</th><th>Class</th></tr></thead>
+          <tbody id="groupRows"></tbody>
+        </table>
+      </div>
+      <div class="panel">
+        <h2>Metric Bars</h2>
+        <div id="metricBars"></div>
+        <p class="small">GCC near 0.333 means neutral gray. Higher saturation means the camera image contains more usable visible color.</p>
+      </div>
+    </section>
+
+    <section class="panel" style="margin-top:16px">
+      <h2>Proxy Wavelength Graphs</h2>
+      <p class="small">These are not true spectrometer curves. They use the detected leaf brightness/color from each filtered JPG as a proxy response at the assigned wavelength.</p>
+      <div class="image-strip">
+        <div>
+          <p class="small">Mean leaf brightness by assigned wavelength</p>
+          <img src="proxy_wavelength_brightness_graph.png" alt="Proxy wavelength brightness graph" />
+        </div>
+        <div>
+          <p class="small">GCC and saturation by assigned wavelength</p>
+          <img src="proxy_wavelength_indices_graph.png" alt="Proxy wavelength indices graph" />
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" style="margin-top:16px">
+      <h2>Photo Group Explorer</h2>
+      <div class="controls" id="groupButtons"></div>
+      <div id="groupDetail"></div>
+    </section>
+
+    <section class="grid two" style="margin-top:16px">
+      <div class="panel">
+        <h2>How This Becomes An App Feature</h2>
+        <table>
+          <thead><tr><th>Input</th><th>Feature</th><th>Use in app</th></tr></thead>
+          <tbody>
+            <tr><td>JPG photo</td><td>GCC, ExG, VARI, saturation, brightness</td><td>Classify whether the camera image is visible-color useful or filter/IR-like.</td></tr>
+            <tr><td>OCV file name/folder</td><td>condition, filter_nm, measurement type</td><td>Attach spectrometer measurements to the right leaf group.</td></tr>
+            <tr><td>Future exported CSV</td><td>I532, I556, I680, I725, I850, I940</td><td>Compare camera features against spectral response and ratios like 850/680.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="panel">
+        <h2>Proof Rule</h2>
+        <p>If <code>saturation &lt; 0.05</code>, treat the photo group as filter/IR-like. If saturation is higher and <code>GCC &gt; 0.34</code>, treat it as visible leaf color signal.</p>
+        <div style="height:12px"></div>
+        <p>This separates your current groups: <code>Poze normale frunza 1</code> becomes filter/IR-like, while <code>Poze normale frunza 2</code> becomes visible leaf color signal.</p>
+      </div>
+    </section>
+
+    <section class="image-strip">
+      <div>
+        <p class="small">Original photo contact sheet</p>
+        <img src="../spectrometer_photo_comparison/photo_contact_sheet.jpg" alt="Photo contact sheet" />
+      </div>
+      <div>
+        <p class="small">Leaf masks used for numeric features</p>
+        <img src="../spectrometer_photo_comparison/photo_leaf_masks.jpg" alt="Leaf mask sheet" />
+      </div>
+    </section>
+  </main>
+  <script>
+    const DATA = {"dataset_name": "Leaf camera and OceanView spectrometer measurements", "status": {"camera_photo_metrics_available": true, "spectrometer_file_metadata_available": true, "raw_spectrometer_intensity_arrays_available": false, "required_next_step": "Export wavelength-intensity spectra from OceanView as CSV/TXT."}, "summary": {"photo_count": 14, "photo_group_count": 2, "spectrometer_catalog_rows": 50, "duplicate_ocv_files_included_in_catalog": 17}, "app_features": [{"photo_group": "Poze normale frunza 1", "photo_count": 7, "leaf_condition": "green/healthy leaf", "avg_gcc": 0.333223, "avg_exg": -1.7e-05, "avg_vari": -6.8e-05, "avg_saturation": 0.000127, "avg_brightness": 0.349994, "visible_color_usability_score_0_100": 0.0, "green_dominance_score": -0.033, "prototype_classification": "filter_or_ir_like", "recommended_use": "Use as filter/brightness response input; do not rely on RGB color indices."}, {"photo_group": "Poze normale frunza 2", "photo_count": 7, "leaf_condition": "yellow/unhealthy leaf", "avg_gcc": 0.347846, "avg_exg": -0.015168, "avg_vari": 0.624965, "avg_saturation": 0.216174, "avg_brightness": 0.50185, "visible_color_usability_score_0_100": 61.8, "green_dominance_score": 4.354, "prototype_classification": "visible_leaf_color_signal", "recommended_use": "Use for visible-camera color features and camera-vs-spectrometer comparison."}], "photo_rows": [{"photo_group": "Poze normale frunza 1", "photo_file": "WIN_20260515_15_03_51_Pro.jpg", "relative_path": "Camera Roll\\Poze normale frunza 1\\WIN_20260515_15_03_51_Pro.jpg", "masked_leaf_pixels": "674615", "leaf_area_fraction": "0.325335", "mean_r": "0.136418", "mean_g": "0.136363", "mean_b": "0.136429", "mean_hue_deg": "359.848336", "mean_saturation": "0.000889", "mean_value_brightness": "0.136461", "gcc": "0.333234", "exg": "-0.00012", "vari": "-0.000473", "appearance": "dark grayscale/IR-like"}, {"photo_group": "Poze normale frunza 1", "photo_file": "WIN_20260515_15_04_05_Pro.jpg", "relative_path": "Camera Roll\\Poze normale frunza 1\\WIN_20260515_15_04_05_Pro.jpg", "masked_leaf_pixels": "747113", "leaf_area_fraction": "0.360298", "mean_r": "0.126673", "mean_g": "0.126673", "mean_b": "0.126673", "mean_hue_deg": "0.0", "mean_saturation": "0.0", "mean_value_brightness": "0.126673", "gcc": "0.333334", "exg": "0.0", "vari": "0.0", "appearance": "dark grayscale/IR-like"}, {"photo_group": "Poze normale frunza 1", "photo_file": "WIN_20260515_15_04_17_Pro.jpg", "relative_path": "Camera Roll\\Poze normale frunza 1\\WIN_20260515_15_04_17_Pro.jpg", "masked_leaf_pixels": "539661", "leaf_area_fraction": "0.260253", "mean_r": "0.77393", "mean_g": "0.77393", "mean_b": "0.77393", "mean_hue_deg": "0.0", "mean_saturation": "0.0", "mean_value_brightness": "0.77393", "gcc": "0.333333", "exg": "0.0", "vari": "0.0", "appearance": "bright grayscale/white"}, {"photo_group": "Poze normale frunza 1", "photo_file": "WIN_20260515_15_04_30_Pro.jpg", "relative_path": "Camera Roll\\Poze normale frunza 1\\WIN_20260515_15_04_30_Pro.jpg", "masked_leaf_pixels": "489959", "leaf_area_fraction": "0.236284", "mean_r": "0.158374", "mean_g": "0.158374", "mean_b": "0.158374", "mean_hue_deg": "0.0", "mean_saturation": "0.0", "mean_value_brightness": "0.158374", "gcc": "0.333333", "exg": "0.0", "vari": "0.0", "appearance": "dark grayscale/IR-like"}, {"photo_group": "Poze normale frunza 1", "photo_file": "WIN_20260515_15_04_42_Pro.jpg", "relative_path": "Camera Roll\\Poze normale frunza 1\\WIN_20260515_15_04_42_Pro.jpg", "masked_leaf_pixels": "469760", "leaf_area_fraction": "0.226543", "mean_r": "0.363601", "mean_g": "0.363601", "mean_b": "0.363601", "mean_hue_deg": "0.0", "mean_saturation": "0.0", "mean_value_brightness": "0.363601", "gcc": "0.33333", "exg": "0.0", "vari": "0.0", "appearance": "dark grayscale/IR-like"}, {"photo_group": "Poze normale frunza 1", "photo_file": "WIN_20260515_15_05_00_Pro.jpg", "relative_path": "Camera Roll\\Poze normale frunza 1\\WIN_20260515_15_05_00_Pro.jpg", "masked_leaf_pixels": "541229", "leaf_area_fraction": "0.261009", "mean_r": "0.58295", "mean_g": "0.58295", "mean_b": "0.58295", "mean_hue_deg": "0.0", "mean_saturation": "0.0", "mean_value_brightness": "0.58295", "gcc": "0.33332", "exg": "0.0", "vari": "0.0", "appearance": "bright grayscale/white"}, {"photo_group": "Poze normale frunza 1", "photo_file": "WIN_20260515_15_05_08_Pro.jpg", "relative_path": "Camera Roll\\Poze normale frunza 1\\WIN_20260515_15_05_08_Pro.jpg", "masked_leaf_pixels": "477744", "leaf_area_fraction": "0.230394", "mean_r": "0.30797", "mean_g": "0.30797", "mean_b": "0.30797", "mean_hue_deg": "0.0", "mean_saturation": "0.0", "mean_value_brightness": "0.30797", "gcc": "0.332674", "exg": "0.0", "vari": "0.0", "appearance": "dark grayscale/IR-like"}, {"photo_group": "Poze normale frunza 2", "photo_file": "WIN_20260515_15_16_17_Pro.jpg", "relative_path": "Camera Roll\\Poze normale frunza 2\\WIN_20260515_15_16_17_Pro.jpg", "masked_leaf_pixels": "854010", "leaf_area_fraction": "0.411849", "mean_r": "0.335839", "mean_g": "0.337101", "mean_b": "0.308508", "mean_hue_deg": "33.157093", "mean_saturation": "0.165441", "mean_value_brightness": "0.35491", "gcc": "0.350427", "exg": "0.029855", "vari": "0.012364", "appearance": "red/brown"}, {"photo_group": "Poze normale frunza 2", "photo_file": "WIN_20260515_15_16_24_Pro.jpg", "relative_path": "Camera Roll\\Poze normale frunza 2\\WIN_20260515_15_16_24_Pro.jpg", "masked_leaf_pixels": "861595", "leaf_area_fraction": "0.415507", "mean_r": "0.136681", "mean_g": "0.193912", "mean_b": "0.118394", "mean_hue_deg": "87.983085", "mean_saturation": "0.451957", "mean_value_brightness": "0.200383", "gcc": "0.485551", "exg": "0.13275", "vari": "4.900319", "appearance": "green"}, {"photo_group": "Poze normale frunza 2", "photo_file": "WIN_20260515_15_16_48_Pro.jpg", "relative_path": "Camera Roll\\Poze normale frunza 2\\WIN_20260515_15_16_48_Pro.jpg", "masked_leaf_pixels": "952261", "leaf_area_fraction": "0.459231", "mean_r": "0.787816", "mean_g": "0.715279", "mean_b": "0.739214", "mean_hue_deg": "340.229602", "mean_saturation": "0.094456", "mean_value_brightness": "0.78796", "gcc": "0.318598", "exg": "-0.096472", "vari": "-0.097319", "appearance": "red/brown"}, {"photo_group": "Poze normale frunza 2", "photo_file": "WIN_20260515_15_17_13_Pro.jpg", "relative_path": "Camera Roll\\Poze normale frunza 2\\WIN_20260515_15_17_13_Pro.jpg", "masked_leaf_pixels": "734407", "leaf_area_fraction": "0.35417", "mean_r": "0.370103", "mean_g": "0.304053", "mean_b": "0.264056", "mean_hue_deg": "23.631051", "mean_saturation": "0.306114", "mean_value_brightness": "0.370387", "gcc": "0.321333", "exg": "-0.026053", "vari": "-0.166663", "appearance": "red/brown"}, {"photo_group": "Poze normale frunza 2", "photo_file": "WIN_20260515_15_17_30_Pro.jpg", "relative_path": "Camera Roll\\Poze normale frunza 2\\WIN_20260515_15_17_30_Pro.jpg", "masked_leaf_pixels": "1014879", "leaf_area_fraction": "0.489429", "mean_r": "0.479383", "mean_g": "0.329843", "mean_b": "0.290122", "mean_hue_deg": "7.021183", "mean_saturation": "0.393414", "mean_value_brightness": "0.480072", "gcc": "0.298983", "exg": "-0.109819", "vari": "-0.280533", "appearance": "red/brown"}, {"photo_group": "Poze normale frunza 2", "photo_file": "WIN_20260515_15_17_42_Pro.jpg", "relative_path": "Camera Roll\\Poze normale frunza 2\\WIN_20260515_15_17_42_Pro.jpg", "masked_leaf_pixels": "994706", "leaf_area_fraction": "0.4797", "mean_r": "0.701539", "mean_g": "0.698318", "mean_b": "0.70896", "mean_hue_deg": "262.746467", "mean_saturation": "0.030629", "mean_value_brightness": "0.713801", "gcc": "0.33114", "exg": "-0.013864", "vari": "-0.004824", "appearance": "bright grayscale/white"}, {"photo_group": "Poze normale frunza 2", "photo_file": "WIN_20260515_15_17_53_Pro.jpg", "relative_path": "Camera Roll\\Poze normale frunza 2\\WIN_20260515_15_17_53_Pro.jpg", "masked_leaf_pixels": "1084516", "leaf_area_fraction": "0.523011", "mean_r": "0.569476", "mean_g": "0.575172", "mean_b": "0.603437", "mean_hue_deg": "233.239974", "mean_saturation": "0.071206", "mean_value_brightness": "0.605437", "gcc": "0.328889", "exg": "-0.02257", "vari": "0.011409", "appearance": "bright grayscale/white"}], "photo_to_filter_association": [{"photo_group": "Poze normale frunza 1", "photo_file": "WIN_20260515_15_03_51_Pro.jpg", "proposed_leaf_condition": "green/healthy leaf", "proposed_camera_filter_or_light": "532 nm", "matching_spectrometer_folder": "Camera Roll\\spectrometru frunza\\verde frunza", "matching_spectrometer_measurement": "532 nm", "confidence": "low", "reason": "Assigned by photo order; group 1 is mostly grayscale, so filter labels need manual confirmation."}, {"photo_group": "Poze normale frunza 1", "photo_file": "WIN_20260515_15_04_05_Pro.jpg", "proposed_leaf_condition": "green/healthy leaf", "proposed_camera_filter_or_light": "556 nm", "matching_spectrometer_folder": "Camera Roll\\spectrometru frunza\\verde frunza", "matching_spectrometer_measurement": "556 nm", "confidence": "low", "reason": "Assigned by photo order; group 1 is mostly grayscale, so filter labels need manual confirmation."}, {"photo_group": "Poze normale frunza 1", "photo_file": "WIN_20260515_15_04_17_Pro.jpg", "proposed_leaf_condition": "green/healthy leaf", "proposed_camera_filter_or_light": "full/no filter", "matching_spectrometer_folder": "Camera Roll\\spectrometru frunza\\verde frunza", "matching_spectrometer_measurement": "full/no filter", "confidence": "low", "reason": "Assigned by photo order; group 1 is mostly grayscale, so filter labels need manual confirmation."}, {"photo_group": "Poze normale frunza 1", "photo_file": "WIN_20260515_15_04_30_Pro.jpg", "proposed_leaf_condition": "green/healthy leaf", "proposed_camera_filter_or_light": "680 nm", "matching_spectrometer_folder": "Camera Roll\\spectrometru frunza\\verde frunza", "matching_spectrometer_measurement": "680 nm", "confidence": "low", "reason": "Assigned by photo order; group 1 is mostly grayscale, so filter labels need manual confirmation."}, {"photo_group": "Poze normale frunza 1", "photo_file": "WIN_20260515_15_04_42_Pro.jpg", "proposed_leaf_condition": "green/healthy leaf", "proposed_camera_filter_or_light": "725 nm", "matching_spectrometer_folder": "Camera Roll\\spectrometru frunza\\verde frunza", "matching_spectrometer_measurement": "725 nm", "confidence": "low", "reason": "Assigned by photo order; group 1 is mostly grayscale, so filter labels need manual confirmation."}, {"photo_group": "Poze normale frunza 1", "photo_file": "WIN_20260515_15_05_00_Pro.jpg", "proposed_leaf_condition": "green/healthy leaf", "proposed_camera_filter_or_light": "850 nm", "matching_spectrometer_folder": "Camera Roll\\spectrometru frunza\\verde frunza", "matching_spectrometer_measurement": "850 nm", "confidence": "low", "reason": "Assigned by photo order; group 1 is mostly grayscale, so filter labels need manual confirmation."}, {"photo_group": "Poze normale frunza 1", "photo_file": "WIN_20260515_15_05_08_Pro.jpg", "proposed_leaf_condition": "green/healthy leaf", "proposed_camera_filter_or_light": "940 nm", "matching_spectrometer_folder": "Camera Roll\\spectrometru frunza\\verde frunza", "matching_spectrometer_measurement": "940 nm", "confidence": "low", "reason": "Assigned by photo order; group 1 is mostly grayscale, so filter labels need manual confirmation."}, {"photo_group": "Poze normale frunza 2", "photo_file": "WIN_20260515_15_16_17_Pro.jpg", "proposed_leaf_condition": "yellow/unhealthy leaf", "proposed_camera_filter_or_light": "532 nm", "matching_spectrometer_folder": "Camera Roll\\spectrometru frunza\\fruza nesanatoasa-galben", "matching_spectrometer_measurement": "532 nm", "confidence": "medium", "reason": "Assigned by photo order and visible color sequence; group 2 visually matches green/white/red/NIR order."}, {"photo_group": "Poze normale frunza 2", "photo_file": "WIN_20260515_15_16_24_Pro.jpg", "proposed_leaf_condition": "yellow/unhealthy leaf", "proposed_camera_filter_or_light": "556 nm", "matching_spectrometer_folder": "Camera Roll\\spectrometru frunza\\fruza nesanatoasa-galben", "matching_spectrometer_measurement": "556 nm", "confidence": "medium", "reason": "Assigned by photo order and visible color sequence; group 2 visually matches green/white/red/NIR order."}, {"photo_group": "Poze normale frunza 2", "photo_file": "WIN_20260515_15_16_48_Pro.jpg", "proposed_leaf_condition": "yellow/unhealthy leaf", "proposed_camera_filter_or_light": "full/no filter", "matching_spectrometer_folder": "Camera Roll\\spectrometru frunza\\fruza nesanatoasa-galben", "matching_spectrometer_measurement": "full/no filter", "confidence": "medium", "reason": "Assigned by photo order and visible color sequence; group 2 visually matches green/white/red/NIR order."}, {"photo_group": "Poze normale frunza 2", "photo_file": "WIN_20260515_15_17_13_Pro.jpg", "proposed_leaf_condition": "yellow/unhealthy leaf", "proposed_camera_filter_or_light": "680 nm", "matching_spectrometer_folder": "Camera Roll\\spectrometru frunza\\fruza nesanatoasa-galben", "matching_spectrometer_measurement": "680 nm", "confidence": "medium", "reason": "Assigned by photo order and visible color sequence; group 2 visually matches green/white/red/NIR order."}, {"photo_group": "Poze normale frunza 2", "photo_file": "WIN_20260515_15_17_30_Pro.jpg", "proposed_leaf_condition": "yellow/unhealthy leaf", "proposed_camera_filter_or_light": "725 nm", "matching_spectrometer_folder": "Camera Roll\\spectrometru frunza\\fruza nesanatoasa-galben", "matching_spectrometer_measurement": "725 nm", "confidence": "medium", "reason": "Assigned by photo order and visible color sequence; group 2 visually matches green/white/red/NIR order."}, {"photo_group": "Poze normale frunza 2", "photo_file": "WIN_20260515_15_17_42_Pro.jpg", "proposed_leaf_condition": "yellow/unhealthy leaf", "proposed_camera_filter_or_light": "850 nm", "matching_spectrometer_folder": "Camera Roll\\spectrometru frunza\\fruza nesanatoasa-galben", "matching_spectrometer_measurement": "850 nm", "confidence": "medium", "reason": "Assigned by photo order and visible color sequence; group 2 visually matches green/white/red/NIR order."}, {"photo_group": "Poze normale frunza 2", "photo_file": "WIN_20260515_15_17_53_Pro.jpg", "proposed_leaf_condition": "yellow/unhealthy leaf", "proposed_camera_filter_or_light": "940 nm", "matching_spectrometer_folder": "Camera Roll\\spectrometru frunza\\fruza nesanatoasa-galben", "matching_spectrometer_measurement": "940 nm", "confidence": "medium", "reason": "Assigned by photo order and visible color sequence; group 2 visually matches green/white/red/NIR order."}], "spectrometer_catalog": [{"file": "galben direct.ocv", "relative_path": "Camera Roll\\spectrometru frunza\\fara filtru frunza verde-galben-maro\\galben direct.ocv", "size_bytes": "8346", "is_oceanview_zip_container": "True", "duplicate_hint": "", "leaf_condition": "yellow/unhealthy leaf", "measurement_type": "direct/no filter", "filter_nm": ""}, {"file": "maro direct.ocv", "relative_path": "Camera Roll\\spectrometru frunza\\fara filtru frunza verde-galben-maro\\maro direct.ocv", "size_bytes": "8346", "is_oceanview_zip_container": "True", "duplicate_hint": "", "leaf_condition": "brown leaf area", "measurement_type": "direct/no filter", "filter_nm": ""}, {"file": "verde direct.ocv", "relative_path": "Camera Roll\\spectrometru frunza\\fara filtru frunza verde-galben-maro\\verde direct.ocv", "size_bytes": "8346", "is_oceanview_zip_container": "True", "duplicate_hint": "", "leaf_condition": "green/healthy leaf", "measurement_type": "direct/no filter", "filter_nm": ""}, {"file": "532 nm.ocv", "relative_path": "Camera Roll\\spectrometru frunza\\fruza nesanatoasa-galben\\532 nm.ocv", "size_bytes": "8346", "is_oceanview_zip_container": "True", "duplicate_hint": "", "leaf_condition": "yellow/unhealthy leaf", "measurement_type": "filtered", "filter_nm": "532"}, {"file": "556 nm.ocv", "relative_path": "Camera Roll\\spectrometru frunza\\fruza nesanatoasa-galben\\556 nm.ocv", "size_bytes": "8346", "is_oceanview_zip_container": "True", "duplicate_hint": "", "leaf_condition": "yellow/unhealthy leaf", "measurement_type": "filtered", "filter_nm": "556"}, {"file": "680 nm.ocv", "relative_path": "Camera Roll\\spectrometru frunza\\fruza nesanatoasa-galben\\680 nm.ocv", "size_bytes": "8346", "is_oceanview_zip_container": "True", "duplicate_hint": "", "leaf_condition": "yellow/unhealthy leaf", "measurement_type": "filtered", "filter_nm": "680"}, {"file": "725 nm.ocv", "relative_path": "Camera Roll\\spectrometru frunza\\fruza nesanatoasa-galben\\725 nm.ocv", "size_bytes": "8346", "is_oceanview_zip_container": "True", "duplicate_hint": "", "leaf_condition": "yellow/unhealthy leaf", "measurement_type": "filtered", "filter_nm": "725"}, {"file": "850.ocv", "relative_path": "Camera Roll\\spectrometru frunza\\fruza nesanatoasa-galben\\850.ocv", "size_bytes": "8346", "is_oceanview_zip_container": "True", "duplicate_hint": "", "leaf_condition": "yellow/unhealthy leaf", "measurement_type": "filtered", "filter_nm": "850"}, {"file": "940.ocv", "relative_path": "Camera Roll\\spectrometru frunza\\fruza nesanatoasa-galben\\940.ocv", "size_bytes": "8346", "is_oceanview_zip_container": "True", "duplicate_hint": "", "leaf_condition": "yellow/unhealthy leaf", "measurement_type": "filtered", "filter_nm": "940"}, {"file": "532 nm.ocv", "relative_path": "Camera Roll\\spectrometru frunza\\verde frunza\\532 nm.ocv", "size_bytes": "8346", "is_oceanview_zip_container": "True", "duplicate_hint": "", "leaf_condition": "green/healthy leaf", "measurement_type": "filtered", "filter_nm": "532"}, {"file": "556 nm.ocv", "relative_path": "Camera Roll\\spectrometru frunza\\verde frunza\\556 nm.ocv", "size_bytes": "8346", "is_oceanview_zip_container": "True", "duplicate_hint": "", "leaf_condition": "green/healthy leaf", "measurement_type": "filtered", "filter_nm": "556"}, {"file": "680 nm.ocv", "relative_path": "Camera Roll\\spectrometru frunza\\verde frunza\\680 nm.ocv", "size_bytes": "8347", "is_oceanview_zip_container": "True", "duplicate_hint": "", "leaf_condition": "green/healthy leaf", "measurement_type": "filtered", "filter_nm": "680"}, {"file": "725 nm.ocv", "relative_path": "Camera Roll\\spectrometru frunza\\verde frunza\\725 nm.ocv", "size_bytes": "8347", "is_oceanview_zip_container": "True", "duplicate_hint": "", "leaf_condition": "green/healthy leaf", "measurement_type": "filtered", "filter_nm": "725"}, {"file": "850 nm.ocv", "relative_path": "Camera Roll\\spectrometru frunza\\verde frunza\\850 nm.ocv", "size_bytes": "8347", "is_oceanview_zip_container": "True", "duplicate_hint": "", "leaf_condition": "green/healthy leaf", "measurement_type": "filtered", "filter_nm": "850"}, {"file": "940nm.ocv", "relative_path": "Camera Roll\\spectrometru frunza\\verde frunza\\940nm.ocv", "size_bytes": "8347", "is_oceanview_zip_container": "True", "duplicate_hint": "", "leaf_condition": "green/healthy leaf", "measurement_type": "filtered", "filter_nm": "940"}, {"file": "Spectru intreg.ocv", "relative_path": "Camera Roll\\spectrometru frunza\\verde frunza\\Spectru intreg.ocv", "size_bytes": "8347", "is_oceanview_zip_container": "True", "duplicate_hint": "", "leaf_condition": "green/healthy leaf", "measurement_type": "full spectrum", "filter_nm": ""}, {"file": "f verde532.ocv", "relative_path": "f verde532.ocv", "size_bytes": "8323", "is_oceanview_zip_container": "True", "duplicate_hint": "", "leaf_condition": "green/healthy leaf", "measurement_type": "filtered", "filter_nm": "532"}, {"file": "f_g_532.ocv", "relative_path": "f_g_532.ocv", "size_bytes": "8323", "is_oceanview_zip_container": "True", "duplicate_hint": "", "leaf_condition": "yellow/unhealthy leaf", "measurement_type": "filtered", "filter_nm": "532"}, {"file": "f_g_556.ocv", "relative_path": "f_g_556.ocv", "size_bytes": "8323", "is_oceanview_zip_container": "True", "duplicate_hint": "", "leaf_condition": "yellow/unhealthy leaf", "measurement_type": "filtered", "filter_nm": "556"}, {"file": "f_g_680.ocv", "relative_path": "f_g_680.ocv", "size_bytes": "8323", "is_oceanview_zip_container": "True", "duplicate_hint": "", "leaf_condition": "yellow/unhealthy leaf", "measurement_type": "filtered", "filter_nm": "680"}, {"file": "f_g_725.ocv", "relative_path": "f_g_725.ocv", "size_bytes": "8323", "is_oceanview_zip_container": "True", "duplicate_hint": "", "leaf_condition": "yellow/unhealthy leaf", "measurement_type": "filtered", "filter_nm": "725"}, {"file": "f_g_850.ocv", "relative_path": "f_g_850.ocv", "size_bytes": "8323", "is_oceanview_zip_container": "True", "duplicate_hint": "", "leaf_condition": "yellow/unhealthy leaf", "measurement_type": "filtered", "filter_nm": "850"}, {"file": "f_g_940.ocv", "relative_path": "f_g_940.ocv", "size_bytes": "8344", "is_oceanview_zip_container": "True", "duplicate_hint": "", "leaf_condition": "yellow/unhealthy leaf", "measurement_type": "filtered", "filter_nm": "940"}, {"file": "f_v_680.ocv", "relative_path": "f_v_680.ocv", "size_bytes": "8323", "is_oceanview_zip_container": "True", "duplicate_hint": "", "leaf_condition": "green/healthy leaf", "measurement_type": "filtered", "filter_nm": "680"}, {"file": "f_v_680_2.ocv", "relative_path": "f_v_680_2.ocv", "size_bytes": "8323", "is_oceanview_zip_container": "True", "duplicate_hint": "", "leaf_condition": "green/healthy leaf", "measurement_type": "filtered", "filter_nm": "680"}, {"file": "f_v_725.ocv", "relative_path": "f_v_725.ocv", "size_bytes": "8323", "is_oceanview_zip_container": "True", "duplicate_hint": "", "leaf_condition": "green/healthy leaf", "measurement_type": "filtered", "filter_nm": "725"}, {"file": "f_v_850.ocv", "relative_path": "f_v_850.ocv", "size_bytes": "8323", "is_oceanview_zip_container": "True", "duplicate_hint": "", "leaf_condition": "green/healthy leaf", "measurement_type": "filtered", "filter_nm": "850"}, {"file": "f_v_940.ocv", "relative_path": "f_v_940.ocv", "size_bytes": "8323", "is_oceanview_zip_container": "True", "duplicate_hint": "", "leaf_condition": "green/healthy leaf", "measurement_type": "filtered", "filter_nm": "940"}, {"file": "frunza galbenfarafiltru.ocv", "relative_path": "frunza galbenfarafiltru.ocv", "size_bytes": "8328", "is_oceanview_zip_container": "True", "duplicate_hint": "", "leaf_condition": "yellow/unhealthy leaf", "measurement_type": "direct/no filter", "filter_nm": ""}, {"file": "frunzasanatoasa spectruintreg.ocv", "relative_path": "frunzasanatoasa spectruintreg.ocv", "size_bytes": "8328", "is_oceanview_zip_container": "True", "duplicate_hint": "", "leaf_condition": "unknown", "measurement_type": "full spectrum", "filter_nm": ""}, {"file": "fverde 556.ocv", "relative_path": "fverde 556.ocv", "size_bytes": "8323", "is_oceanview_zip_container": "True", "duplicate_hint": "", "leaf_condition": "green/healthy leaf", "measurement_type": "filtered", "filter_nm": "556"}, {"file": "f verde532.ocv", "relative_path": "New folder\\f verde532.ocv", "size_bytes": "8323", "is_oceanview_zip_container": "True", "duplicate_hint": "possible duplicate copy", "leaf_condition": "green/healthy leaf", "measurement_type": "filtered", "filter_nm": "532"}, {"file": "f_g_532.ocv", "relative_path": "New folder\\f_g_532.ocv", "size_bytes": "8323", "is_oceanview_zip_container": "True", "duplicate_hint": "possible duplicate copy", "leaf_condition": "yellow/unhealthy leaf", "measurement_type": "filtered", "filter_nm": "532"}, {"file": "f_g_556.ocv", "relative_path": "New folder\\f_g_556.ocv", "size_bytes": "8323", "is_oceanview_zip_container": "True", "duplicate_hint": "possible duplicate copy", "leaf_condition": "yellow/unhealthy leaf", "measurement_type": "filtered", "filter_nm": "556"}, {"file": "f_g_680.ocv", "relative_path": "New folder\\f_g_680.ocv", "size_bytes": "8323", "is_oceanview_zip_container": "True", "duplicate_hint": "possible duplicate copy", "leaf_condition": "yellow/unhealthy leaf", "measurement_type": "filtered", "filter_nm": "680"}, {"file": "f_g_725.ocv", "relative_path": "New folder\\f_g_725.ocv", "size_bytes": "8323", "is_oceanview_zip_container": "True", "duplicate_hint": "possible duplicate copy", "leaf_condition": "yellow/unhealthy leaf", "measurement_type": "filtered", "filter_nm": "725"}, {"file": "f_g_850.ocv", "relative_path": "New folder\\f_g_850.ocv", "size_bytes": "8323", "is_oceanview_zip_container": "True", "duplicate_hint": "possible duplicate copy", "leaf_condition": "yellow/unhealthy leaf", "measurement_type": "filtered", "filter_nm": "850"}, {"file": "f_g_940.ocv", "relative_path": "New folder\\f_g_940.ocv", "size_bytes": "8344", "is_oceanview_zip_container": "True", "duplicate_hint": "possible duplicate copy", "leaf_condition": "yellow/unhealthy leaf", "measurement_type": "filtered", "filter_nm": "940"}, {"file": "f_v_680.ocv", "relative_path": "New folder\\f_v_680.ocv", "size_bytes": "8323", "is_oceanview_zip_container": "True", "duplicate_hint": "possible duplicate copy", "leaf_condition": "green/healthy leaf", "measurement_type": "filtered", "filter_nm": "680"}, {"file": "f_v_680_2.ocv", "relative_path": "New folder\\f_v_680_2.ocv", "size_bytes": "8323", "is_oceanview_zip_container": "True", "duplicate_hint": "possible duplicate copy", "leaf_condition": "green/healthy leaf", "measurement_type": "filtered", "filter_nm": "680"}, {"file": "f_v_725.ocv", "relative_path": "New folder\\f_v_725.ocv", "size_bytes": "8323", "is_oceanview_zip_container": "True", "duplicate_hint": "possible duplicate copy", "leaf_condition": "green/healthy leaf", "measurement_type": "filtered", "filter_nm": "725"}, {"file": "f_v_850.ocv", "relative_path": "New folder\\f_v_850.ocv", "size_bytes": "8323", "is_oceanview_zip_container": "True", "duplicate_hint": "possible duplicate copy", "leaf_condition": "green/healthy leaf", "measurement_type": "filtered", "filter_nm": "850"}, {"file": "f_v_940.ocv", "relative_path": "New folder\\f_v_940.ocv", "size_bytes": "8323", "is_oceanview_zip_container": "True", "duplicate_hint": "possible duplicate copy", "leaf_condition": "green/healthy leaf", "measurement_type": "filtered", "filter_nm": "940"}, {"file": "frunza galbenfarafiltru.ocv", "relative_path": "New folder\\frunza galbenfarafiltru.ocv", "size_bytes": "8328", "is_oceanview_zip_container": "True", "duplicate_hint": "possible duplicate copy", "leaf_condition": "yellow/unhealthy leaf", "measurement_type": "direct/no filter", "filter_nm": ""}, {"file": "frunzasanatoasa spectruintreg.ocv", "relative_path": "New folder\\frunzasanatoasa spectruintreg.ocv", "size_bytes": "8328", "is_oceanview_zip_container": "True", "duplicate_hint": "possible duplicate copy", "leaf_condition": "unknown", "measurement_type": "full spectrum", "filter_nm": ""}, {"file": "fverde 556.ocv", "relative_path": "New folder\\fverde 556.ocv", "size_bytes": "8323", "is_oceanview_zip_container": "True", "duplicate_hint": "possible duplicate copy", "leaf_condition": "green/healthy leaf", "measurement_type": "filtered", "filter_nm": "556"}, {"file": "UVvis af.ocv", "relative_path": "New folder\\UVvis af.ocv", "size_bytes": "8323", "is_oceanview_zip_container": "True", "duplicate_hint": "possible duplicate copy", "leaf_condition": "outside/UV-VIS reference", "measurement_type": "unknown", "filter_nm": ""}, {"file": "Uvvis_af.ocv", "relative_path": "New folder\\Uvvis_af.ocv", "size_bytes": "8328", "is_oceanview_zip_container": "True", "duplicate_hint": "possible duplicate copy", "leaf_condition": "outside/UV-VIS reference", "measurement_type": "unknown", "filter_nm": ""}, {"file": "UVvis af.ocv", "relative_path": "UVvis af.ocv", "size_bytes": "8323", "is_oceanview_zip_container": "True", "duplicate_hint": "", "leaf_condition": "outside/UV-VIS reference", "measurement_type": "unknown", "filter_nm": ""}, {"file": "Uvvis_af.ocv", "relative_path": "Uvvis_af.ocv", "size_bytes": "8328", "is_oceanview_zip_container": "True", "duplicate_hint": "", "leaf_condition": "outside/UV-VIS reference", "measurement_type": "unknown", "filter_nm": ""}]};
+    const groups = DATA.app_features;
+    const photos = DATA.photo_rows;
+    const assoc = DATA.photo_to_filter_association;
+
+    function fmt(v, digits = 4) {
+      const n = Number(v);
+      if (!Number.isFinite(n)) return "";
+      return n.toFixed(digits);
+    }
+    function classPill(value) {
+      return value === "filter_or_ir_like"
+        ? '<span class="pill warn">filter / IR-like</span>'
+        : '<span class="pill good">visible color signal</span>';
+    }
+    document.getElementById("groupRows").innerHTML = groups.map(g => `
+      <tr>
+        <td>${g.photo_group}</td>
+        <td>${g.leaf_condition}</td>
+        <td>${fmt(g.avg_saturation, 6)}</td>
+        <td>${fmt(g.avg_gcc, 6)}</td>
+        <td>${g.visible_color_usability_score_0_100} / 100</td>
+        <td>${classPill(g.prototype_classification)}</td>
+      </tr>`).join("");
+
+    const barMetrics = [
+      ["avg_saturation", "Saturation", 0.35, "amber"],
+      ["avg_gcc", "GCC", 0.45, ""],
+      ["avg_brightness", "Brightness", 1, "blue"]
+    ];
+    document.getElementById("metricBars").innerHTML = groups.flatMap(g => barMetrics.map(([key, label, max, cls]) => {
+      const width = Math.max(0, Math.min(100, Number(g[key]) / max * 100));
+      return `<div class="bar-row"><div>${g.photo_group} ${label}</div><div class="track"><div class="bar ${cls}" style="width:${width}%"></div></div><div>${fmt(g[key], 4)}</div></div>`;
+    })).join("");
+
+    const buttons = document.getElementById("groupButtons");
+    const detail = document.getElementById("groupDetail");
+    function showGroup(groupName) {
+      [...buttons.children].forEach(btn => btn.classList.toggle("active", btn.dataset.group === groupName));
+      const rows = photos.filter(p => p.photo_group === groupName);
+      const map = assoc.filter(a => a.photo_group === groupName);
+      const g = groups.find(item => item.photo_group === groupName);
+      detail.innerHTML = `
+        <p><strong>${groupName}</strong>: ${g.recommended_use}</p>
+        <table style="margin-top:12px">
+          <thead><tr><th>Photo</th><th>Proposed filter/light</th><th>Brightness</th><th>Saturation</th><th>GCC</th><th>Appearance</th></tr></thead>
+          <tbody>${rows.map(row => {
+            const m = map.find(a => a.photo_file === row.photo_file) || {};
+            return `<tr><td>${row.photo_file}</td><td>${m.proposed_camera_filter_or_light || ""}</td><td>${fmt(row.mean_value_brightness, 4)}</td><td>${fmt(row.mean_saturation, 4)}</td><td>${fmt(row.gcc, 4)}</td><td>${row.appearance}</td></tr>`;
+          }).join("")}</tbody>
+        </table>`;
+    }
+    buttons.innerHTML = groups.map((g, i) => `<button data-group="${g.photo_group}" class="${i === 0 ? "active" : ""}">${g.photo_group}</button>`).join("");
+    buttons.addEventListener("click", event => {
+      if (event.target.dataset.group) showGroup(event.target.dataset.group);
+    });
+    showGroup(groups[0].photo_group);
+  </script>
+</body>
+</html>

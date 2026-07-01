@@ -1,0 +1,31 @@
+﻿sample_id,condition,filter_nm,camera_brightness_median_0_255,camera_display_brightness_boosted,camera_brightness_mean_0_255,spectrometer_peak_wavelength_nm,spectrometer_peak_offset_from_filter_nm,spectrometer_peak_10nm_median_intensity,spectrometer_display_intensity_boosted,spectrometer_match_method,spectrometer_file,matched
+in cutie\Set frunze 1\frunza nesanatoasa,unhealthy,532,96.0,96.0,95.396,544.956,12.956,380.45,380.45,local peak within +/-90 nm of filter,532.txt,True
+in cutie\Set frunze 1\frunza nesanatoasa,unhealthy,556,95.0,95.0,94.473,554.967,-1.033,400.93,400.93,local peak within +/-90 nm of filter,556.txt,True
+in cutie\Set frunze 1\frunza nesanatoasa,unhealthy,680,84.0,84.0,85.201,695.012,15.012,383.6,383.6,local peak within +/-90 nm of filter,680.txt,True
+in cutie\Set frunze 1\frunza nesanatoasa,unhealthy,725,185.0,185.0,184.245,724.858,-0.142,553.27,553.27,local peak within +/-90 nm of filter,725.txt,True
+in cutie\Set frunze 1\frunza nesanatoasa,unhealthy,850,222.0,230.88,219.823,834.888,-15.112,486.31,486.31,local peak within +/-90 nm of filter,850.txt,True
+in cutie\Set frunze 1\frunza nesanatoasa,unhealthy,940,144.0,155.52,142.22,934.978,-5.022,368.79,368.79,local peak within +/-90 nm of filter,950.txt,True
+in cutie\Set frunze 1\frunza verde,healthy,532,50.0,50.0,49.334,544.956,12.956,415.27,415.27,local peak within +/-90 nm of filter,532.txt,True
+in cutie\Set frunze 1\frunza verde,healthy,556,51.0,51.0,50.764,554.967,-1.033,443.31,443.31,local peak within +/-90 nm of filter,556.txt,True
+in cutie\Set frunze 1\frunza verde,healthy,680,69.0,69.0,70.266,695.012,15.012,370.21,370.21,local peak within +/-90 nm of filter,680.txt,True
+in cutie\Set frunze 1\frunza verde,healthy,725,174.0,174.0,174.772,724.858,-0.142,565.08,565.08,local peak within +/-90 nm of filter,725.txt,True
+in cutie\Set frunze 1\frunza verde,healthy,850,205.0,213.2,205.454,844.978,-5.022,469.14,469.14,local peak within +/-90 nm of filter,850.txt,True
+in cutie\Set frunze 1\frunza verde,healthy,940,131.0,141.48,131.946,934.978,-5.022,359.81,359.81,local peak within +/-90 nm of filter,940.txt,True
+in cutie\Set frunze 2\nesanatoasa,unhealthy,532,53.0,53.0,45.883,535.131,3.131,446.77,446.77,local peak within +/-90 nm of filter,532.txt,True
+in cutie\Set frunze 2\nesanatoasa,unhealthy,556,50.0,50.0,44.926,554.967,-1.033,479.855,479.855,local peak within +/-90 nm of filter,556.txt,True
+in cutie\Set frunze 2\nesanatoasa,unhealthy,680,140.0,140.0,133.244,674.955,-5.045,543.34,543.34,local peak within +/-90 nm of filter,680.txt,True
+in cutie\Set frunze 2\nesanatoasa,unhealthy,725,95.0,95.0,103.114,724.858,-0.142,535.94,535.94,local peak within +/-90 nm of filter,725.txt,True
+in cutie\Set frunze 2\nesanatoasa,unhealthy,850,156.0,162.24,152.309,834.888,-15.112,486.31,486.31,local peak within +/-90 nm of filter,850.txt,True
+in cutie\Set frunze 2\nesanatoasa,unhealthy,940,92.0,99.36,86.828,934.978,-5.022,361.23,361.23,local peak within +/-90 nm of filter,940.txt,True
+in cutie\Set frunze 2\sanatoasa,healthy,532,78.0,78.0,83.223,535.131,3.131,368.79,368.79,local peak within +/-90 nm of filter,532.txt,True
+in cutie\Set frunze 2\sanatoasa,healthy,556,79.0,79.0,83.612,544.956,-11.044,386.59,386.59,local peak within +/-90 nm of filter,556.txt,True
+in cutie\Set frunze 2\sanatoasa,healthy,680,40.0,40.0,50.522,644.839,-35.161,356.19,356.19,local peak within +/-90 nm of filter,680.txt,True
+in cutie\Set frunze 2\sanatoasa,healthy,725,172.0,172.0,173.255,724.858,-0.142,507.27,507.27,local peak within +/-90 nm of filter,725.txt,True
+in cutie\Set frunze 2\sanatoasa,healthy,850,229.0,238.16,229.444,834.888,-15.112,457.64,457.64,local peak within +/-90 nm of filter,850.txt,True
+in cutie\Set frunze 2\sanatoasa,healthy,940,136.0,146.88,129.673,925.055,-14.945,384.86,384.86,local peak within +/-90 nm of filter,940.txt,True
+in cutie\frunza sanatoasa dar galbena,healthy_yellow,532,65.0,65.0,64.675,544.956,12.956,438.9,438.9,local peak within +/-90 nm of filter,532.txt,True
+in cutie\frunza sanatoasa dar galbena,healthy_yellow,556,77.0,77.0,76.74,544.956,-11.044,450.71,450.71,local peak within +/-90 nm of filter,556.txt,True
+in cutie\frunza sanatoasa dar galbena,healthy_yellow,680,110.0,110.0,101.367,695.012,15.012,453.55,453.55,local peak within +/-90 nm of filter,680.txt,True
+in cutie\frunza sanatoasa dar galbena,healthy_yellow,725,150.0,150.0,128.628,724.858,-0.142,545.86,545.86,local peak within +/-90 nm of filter,725.txt,True
+in cutie\frunza sanatoasa dar galbena,healthy_yellow,850,195.0,202.8,192.485,834.888,-15.112,456.7,456.7,local peak within +/-90 nm of filter,850.txt,True
+in cutie\frunza sanatoasa dar galbena,healthy_yellow,940,106.0,114.48,92.971,934.978,-5.022,353.51,353.51,local peak within +/-90 nm of filter,940.txt,True

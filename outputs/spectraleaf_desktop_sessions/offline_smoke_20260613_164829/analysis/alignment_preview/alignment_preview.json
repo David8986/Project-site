@@ -1,0 +1,43 @@
+{
+  "alignment_mode": "resize_only",
+  "transform_model": "affine",
+  "status": "resized",
+  "confidence": 0.25,
+  "reference_image_id": "band_850",
+  "moving_image_id": "band_532",
+  "reference_shape": [
+    1080,
+    1920
+  ],
+  "moving_shape": [
+    96,
+    96
+  ],
+  "output_shape": [
+    1080,
+    1920
+  ],
+  "warning": "resize-only alignment is low confidence; no image-content registration was performed",
+  "message": "Resized moving image to reference shape.",
+  "applied_model": "resize_only",
+  "matrix": [
+    [
+      20.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      11.25,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "bands": [
+    "BLUE_532"
+  ]
+}

@@ -1,0 +1,31 @@
+﻿sample_id,condition,filter_nm,camera_brightness_median_0_255,camera_brightness_mean_0_255,spectrometer_10nm_median_intensity,spectrometer_file,matched
+in cutie\Set frunze 1\frunza nesanatoasa,unhealthy,532,96.0,95.396,375.41,532.txt,True
+in cutie\Set frunze 1\frunza nesanatoasa,unhealthy,556,95.0,94.473,400.93,556.txt,True
+in cutie\Set frunze 1\frunza nesanatoasa,unhealthy,680,84.0,85.201,359.65,680.txt,True
+in cutie\Set frunze 1\frunza nesanatoasa,unhealthy,725,185.0,184.245,553.27,725.txt,True
+in cutie\Set frunze 1\frunza nesanatoasa,unhealthy,850,222.0,219.823,476.23,850.txt,True
+in cutie\Set frunze 1\frunza nesanatoasa,unhealthy,940,144.0,142.22,368.79,950.txt,True
+in cutie\Set frunze 1\frunza verde,healthy,532,50.0,49.334,405.18,532.txt,True
+in cutie\Set frunze 1\frunza verde,healthy,556,51.0,50.764,443.31,556.txt,True
+in cutie\Set frunze 1\frunza verde,healthy,680,69.0,70.266,342.48,680.txt,True
+in cutie\Set frunze 1\frunza verde,healthy,725,174.0,174.772,565.08,725.txt,True
+in cutie\Set frunze 1\frunza verde,healthy,850,205.0,205.454,469.14,850.txt,True
+in cutie\Set frunze 1\frunza verde,healthy,940,131.0,131.946,359.81,940.txt,True
+in cutie\Set frunze 2\nesanatoasa,unhealthy,532,53.0,45.883,446.77,532.txt,True
+in cutie\Set frunze 2\nesanatoasa,unhealthy,556,50.0,44.926,479.855,556.txt,True
+in cutie\Set frunze 2\nesanatoasa,unhealthy,680,140.0,133.244,525.7,680.txt,True
+in cutie\Set frunze 2\nesanatoasa,unhealthy,725,95.0,103.114,535.94,725.txt,True
+in cutie\Set frunze 2\nesanatoasa,unhealthy,850,156.0,152.309,476.23,850.txt,True
+in cutie\Set frunze 2\nesanatoasa,unhealthy,940,92.0,86.828,361.23,940.txt,True
+in cutie\Set frunze 2\sanatoasa,healthy,532,78.0,83.223,368.79,532.txt,True
+in cutie\Set frunze 2\sanatoasa,healthy,556,79.0,83.612,376.51,556.txt,True
+in cutie\Set frunze 2\sanatoasa,healthy,680,40.0,50.522,334.76,680.txt,True
+in cutie\Set frunze 2\sanatoasa,healthy,725,172.0,173.255,507.27,725.txt,True
+in cutie\Set frunze 2\sanatoasa,healthy,850,229.0,229.444,452.6,850.txt,True
+in cutie\Set frunze 2\sanatoasa,healthy,940,136.0,129.673,379.82,940.txt,True
+in cutie\frunza sanatoasa dar galbena,healthy_yellow,532,65.0,64.675,416.21,532.txt,True
+in cutie\frunza sanatoasa dar galbena,healthy_yellow,556,77.0,76.74,429.29,556.txt,True
+in cutie\frunza sanatoasa dar galbena,healthy_yellow,680,110.0,101.367,386.75,680.txt,True
+in cutie\frunza sanatoasa dar galbena,healthy_yellow,725,150.0,128.628,545.86,725.txt,True
+in cutie\frunza sanatoasa dar galbena,healthy_yellow,850,195.0,192.485,456.7,850.txt,True
+in cutie\frunza sanatoasa dar galbena,healthy_yellow,940,106.0,92.971,353.51,940.txt,True

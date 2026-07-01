@@ -1,0 +1,8 @@
+target_band_nm,source_band_index,source_wavelength_nm,status,distance_nm,average_vegetation_value,note
+532,0,532.0,exact,0.0,0.9774632880885004,Exact or near-exact source match at 532 nm.
+556,1,556.0,exact,0.0,0.07395992487460033,Exact or near-exact source match at 556 nm.
+650,,,missing,,,"No exact, nearest, or interpolatable source band was available within the configured tolerances for 650 nm."
+680,2,680.0,exact,0.0,0.17538153059589454,Exact or near-exact source match at 680 nm.
+725,3,725.0,exact,0.0,0.23331751699012385,Exact or near-exact source match at 725 nm.
+850,4,850.0,exact,0.0,0.21642134496148335,Exact or near-exact source match at 850 nm.
+940,5,940.0,exact,0.0,0.14535253019774294,Exact or near-exact source match at 940 nm.

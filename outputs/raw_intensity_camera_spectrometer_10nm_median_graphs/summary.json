@@ -1,0 +1,21 @@
+{
+  "method": "No normalization. Spectrometer curves use median intensity inside every 10 nm bin. Camera values use median brightness from the detected leaf area on a 0-255 scale. The smoothed camera line is only a visual guide through measured points.",
+  "matched_pairs": 30,
+  "overall_raw_intensity_pearson_r": 0.494946,
+  "graphs": [
+    "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\raw_intensity_camera_spectrometer_10nm_median_graphs\\graphs\\raw_intensity_in_cutie_Set_frunze_1_frunza_nesanatoasa.png",
+    "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\raw_intensity_camera_spectrometer_10nm_median_graphs\\graphs\\raw_intensity_in_cutie_Set_frunze_1_frunza_verde.png",
+    "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\raw_intensity_camera_spectrometer_10nm_median_graphs\\graphs\\raw_intensity_in_cutie_Set_frunze_2_nesanatoasa.png",
+    "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\raw_intensity_camera_spectrometer_10nm_median_graphs\\graphs\\raw_intensity_in_cutie_Set_frunze_2_sanatoasa.png",
+    "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\raw_intensity_camera_spectrometer_10nm_median_graphs\\graphs\\raw_intensity_in_cutie_frunza_sanatoasa_dar_galbena.png",
+    "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\raw_intensity_camera_spectrometer_10nm_median_graphs\\graphs\\matched_filter_raw_intensity_dual_axis.png",
+    "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\raw_intensity_camera_spectrometer_10nm_median_graphs\\graphs\\raw_intensity_scatter_camera_vs_spectrometer.png",
+    "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\raw_intensity_camera_spectrometer_10nm_median_graphs\\graphs\\raw_intensity_correlation_by_sample.png"
+  ],
+  "gallery": "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\raw_intensity_camera_spectrometer_10nm_median_graphs\\raw_intensity_graph_gallery.jpg",
+  "csv_files": {
+    "pairs": "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\raw_intensity_camera_spectrometer_10nm_median_graphs\\raw_intensity_camera_spectrometer_pairs.csv",
+    "correlations": "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\raw_intensity_camera_spectrometer_10nm_median_graphs\\raw_intensity_camera_spectrometer_correlations.csv"
+  },
+  "judgement": "These raw-intensity plots are easier to read visually, but the spectrometer is still the better measurement instrument because it records a full intensity curve. The camera brightness is useful as a filtered proxy, especially after leaf masking, but it should be calibrated against spectrometer data for quantitative claims."
+}

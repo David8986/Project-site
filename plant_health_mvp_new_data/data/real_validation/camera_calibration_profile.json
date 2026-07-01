@@ -1,0 +1,828 @@
+{
+  "bands": {
+    "532": {
+      "app_training_sample_count": 5,
+      "camera_dark_reference_brightness": 0.699978,
+      "camera_white_reference_brightness": 0.777582,
+      "dark_white_correction_usable": false,
+      "dark_white_rejection_reason": "paired leaf brightness is mostly below the dark reference, so subtracting this dark frame would create non-physical negative reflectance",
+      "median_abs_normalized_shape_error_after_gain": 0.470581,
+      "median_app_white_normalized_camera": 0.326174,
+      "median_spectrometer_point_intensity_at_filter": 373.696636,
+      "median_spectrometer_window_median_intensity": 388.48,
+      "normalized_shape_gain_from_camera_to_spectrometer": 2.759817,
+      "paired_sample_count": 5,
+      "single_band_window_model": {
+        "available": true,
+        "linear": {
+          "intercept": 470.198129,
+          "leave_one_leaf_out_mae": 25.111799,
+          "leave_one_leaf_out_r2": -0.144572,
+          "leave_one_leaf_out_rmse": 29.840095,
+          "slope": -241.55705
+        },
+        "median_multiplier": {
+          "factor": 1191.020608,
+          "leave_one_leaf_out_mae": 181.388523,
+          "leave_one_leaf_out_rmse": 206.735003
+        },
+        "selected_model": "linear",
+        "training_mean": {
+          "leave_one_leaf_out_mae": 28.354,
+          "leave_one_leaf_out_rmse": 34.86492,
+          "value": 387.854
+        }
+      },
+      "source_curve_compensation": {
+        "available": true,
+        "compensation_multiplier_vs_850": 0.421782,
+        "dark_window_median_intensity": 362.33,
+        "method": "source_minus_dark_relative_curve",
+        "net_source_window_intensity": 29143.54,
+        "relative_to_850_net_source": 2.370891,
+        "reliability_weight": 1.0,
+        "source_window_median_intensity": 29505.87,
+        "status": "usable",
+        "warning": ""
+      },
+      "spectrometer_window_half_width_nm": 10.0,
+      "validation_pair_count": 5,
+      "wavelength_nm": 532,
+      "white_normalization_multiplier": 1.286038
+    },
+    "556": {
+      "app_training_sample_count": 5,
+      "camera_dark_reference_brightness": 0.699978,
+      "camera_white_reference_brightness": 0.413677,
+      "dark_white_correction_usable": false,
+      "dark_white_rejection_reason": "dark/white denominator is not positive enough for this filter (camera auto-exposure or missing per-filter dark frame)",
+      "median_abs_normalized_shape_error_after_gain": 0.387581,
+      "median_app_white_normalized_camera": 0.727481,
+      "median_spectrometer_point_intensity_at_filter": 449.214965,
+      "median_spectrometer_window_median_intensity": 440.63,
+      "normalized_shape_gain_from_camera_to_spectrometer": 4.139606,
+      "paired_sample_count": 5,
+      "single_band_window_model": {
+        "available": true,
+        "linear": {
+          "intercept": 529.693265,
+          "leave_one_leaf_out_mae": 29.711402,
+          "leave_one_leaf_out_r2": 0.129179,
+          "leave_one_leaf_out_rmse": 30.926715,
+          "slope": -152.066832
+        },
+        "median_multiplier": {
+          "factor": 605.692661,
+          "leave_one_leaf_out_mae": 196.632586,
+          "leave_one_leaf_out_rmse": 209.154437
+        },
+        "selected_model": "linear",
+        "training_mean": {
+          "leave_one_leaf_out_mae": 36.502,
+          "leave_one_leaf_out_rmse": 41.426612,
+          "value": 427.742
+        }
+      },
+      "source_curve_compensation": {
+        "available": true,
+        "compensation_multiplier_vs_850": 0.352692,
+        "dark_window_median_intensity": 372.42,
+        "method": "source_minus_dark_relative_curve",
+        "net_source_window_intensity": 34852.64,
+        "relative_to_850_net_source": 2.835339,
+        "reliability_weight": 1.0,
+        "source_window_median_intensity": 35225.06,
+        "status": "usable",
+        "warning": ""
+      },
+      "spectrometer_window_half_width_nm": 10.0,
+      "validation_pair_count": 5,
+      "wavelength_nm": 556,
+      "white_normalization_multiplier": 2.417345
+    },
+    "680": {
+      "app_training_sample_count": 5,
+      "camera_dark_reference_brightness": 0.699978,
+      "camera_white_reference_brightness": 0.768138,
+      "dark_white_correction_usable": false,
+      "dark_white_rejection_reason": "paired leaf brightness is mostly below the dark reference, so subtracting this dark frame would create non-physical negative reflectance",
+      "median_abs_normalized_shape_error_after_gain": 0.008329,
+      "median_app_white_normalized_camera": 0.434977,
+      "median_spectrometer_point_intensity_at_filter": 350.171341,
+      "median_spectrometer_window_median_intensity": 342.01,
+      "normalized_shape_gain_from_camera_to_spectrometer": 0.809812,
+      "paired_sample_count": 5,
+      "single_band_window_model": {
+        "available": true,
+        "linear": {
+          "intercept": 181.108783,
+          "leave_one_leaf_out_mae": 58.37502,
+          "leave_one_leaf_out_r2": 0.145022,
+          "leave_one_leaf_out_rmse": 73.039606,
+          "slope": 442.85431
+        },
+        "median_multiplier": {
+          "factor": 786.271652,
+          "leave_one_leaf_out_mae": 79.195087,
+          "leave_one_leaf_out_rmse": 88.212949
+        },
+        "selected_model": "linear",
+        "training_mean": {
+          "leave_one_leaf_out_mae": 77.24,
+          "leave_one_leaf_out_rmse": 98.739496,
+          "value": 386.34
+        }
+      },
+      "source_curve_compensation": {
+        "available": true,
+        "compensation_multiplier_vs_850": 0.329594,
+        "dark_window_median_intensity": 359.81,
+        "method": "source_minus_dark_relative_curve",
+        "net_source_window_intensity": 37295.09,
+        "relative_to_850_net_source": 3.034038,
+        "reliability_weight": 1.0,
+        "source_window_median_intensity": 37654.9,
+        "status": "usable",
+        "warning": ""
+      },
+      "spectrometer_window_half_width_nm": 10.0,
+      "validation_pair_count": 5,
+      "wavelength_nm": 680,
+      "white_normalization_multiplier": 1.301849
+    },
+    "725": {
+      "app_training_sample_count": 5,
+      "camera_dark_reference_brightness": 0.699978,
+      "camera_white_reference_brightness": 0.654237,
+      "dark_white_correction_usable": false,
+      "dark_white_rejection_reason": "dark/white denominator is not positive enough for this filter (camera auto-exposure or missing per-filter dark frame)",
+      "median_abs_normalized_shape_error_after_gain": 0.110363,
+      "median_app_white_normalized_camera": 1.038513,
+      "median_spectrometer_point_intensity_at_filter": 550.238515,
+      "median_spectrometer_window_median_intensity": 528.22,
+      "normalized_shape_gain_from_camera_to_spectrometer": 1.207897,
+      "paired_sample_count": 5,
+      "single_band_window_model": {
+        "available": true,
+        "linear": {
+          "intercept": 487.445329,
+          "leave_one_leaf_out_mae": 25.644798,
+          "leave_one_leaf_out_r2": -0.822752,
+          "leave_one_leaf_out_rmse": 33.294066,
+          "slope": 46.413736
+        },
+        "median_multiplier": {
+          "factor": 539.403793,
+          "leave_one_leaf_out_mae": 122.578207,
+          "leave_one_leaf_out_rmse": 127.834362
+        },
+        "selected_model": "training_mean",
+        "training_mean": {
+          "leave_one_leaf_out_mae": 26.011,
+          "leave_one_leaf_out_rmse": 30.82571,
+          "value": 530.644
+        }
+      },
+      "source_curve_compensation": {
+        "available": true,
+        "compensation_multiplier_vs_850": 0.389727,
+        "dark_window_median_intensity": 350.99,
+        "method": "source_minus_dark_relative_curve",
+        "net_source_window_intensity": 31540.61,
+        "relative_to_850_net_source": 2.565898,
+        "reliability_weight": 1.0,
+        "source_window_median_intensity": 31891.6,
+        "status": "usable",
+        "warning": ""
+      },
+      "spectrometer_window_half_width_nm": 10.0,
+      "validation_pair_count": 5,
+      "wavelength_nm": 725,
+      "white_normalization_multiplier": 1.528498
+    },
+    "850": {
+      "app_training_sample_count": 4,
+      "camera_dark_reference_brightness": 0.699978,
+      "camera_white_reference_brightness": 0.596867,
+      "dark_white_correction_usable": false,
+      "dark_white_rejection_reason": "dark/white denominator is not positive enough for this filter (camera auto-exposure or missing per-filter dark frame)",
+      "median_abs_normalized_shape_error_after_gain": 0.143514,
+      "median_app_white_normalized_camera": 1.397088,
+      "median_spectrometer_point_intensity_at_filter": 454.358769,
+      "median_spectrometer_window_median_intensity": 446.145,
+      "normalized_shape_gain_from_camera_to_spectrometer": 0.79888,
+      "paired_sample_count": 4,
+      "single_band_window_model": {
+        "available": true,
+        "linear": {
+          "intercept": 431.140056,
+          "leave_one_leaf_out_mae": 24.814457,
+          "leave_one_leaf_out_r2": -4.903182,
+          "leave_one_leaf_out_rmse": 28.143398,
+          "slope": 11.828168
+        },
+        "median_multiplier": {
+          "factor": 328.168386,
+          "leave_one_leaf_out_mae": 50.011986,
+          "leave_one_leaf_out_rmse": 52.478078
+        },
+        "selected_model": "training_mean",
+        "training_mean": {
+          "leave_one_leaf_out_mae": 14.126667,
+          "leave_one_leaf_out_rmse": 15.444441,
+          "value": 447.6
+        }
+      },
+      "source_curve_compensation": {
+        "available": true,
+        "compensation_multiplier_vs_850": 1.0,
+        "dark_window_median_intensity": 327.04,
+        "method": "source_minus_dark_relative_curve",
+        "net_source_window_intensity": 12292.23,
+        "relative_to_850_net_source": 1.0,
+        "reliability_weight": 1.0,
+        "source_window_median_intensity": 12619.27,
+        "status": "usable",
+        "warning": ""
+      },
+      "spectrometer_window_half_width_nm": 10.0,
+      "validation_pair_count": 4,
+      "wavelength_nm": 850,
+      "white_normalization_multiplier": 1.675415
+    },
+    "940": {
+      "app_training_sample_count": 4,
+      "camera_dark_reference_brightness": 0.699978,
+      "camera_white_reference_brightness": 0.667304,
+      "dark_white_correction_usable": false,
+      "dark_white_rejection_reason": "dark/white denominator is not positive enough for this filter (camera auto-exposure or missing per-filter dark frame)",
+      "median_abs_normalized_shape_error_after_gain": 0.17886,
+      "median_app_white_normalized_camera": 0.654209,
+      "median_spectrometer_point_intensity_at_filter": 339.960228,
+      "median_spectrometer_window_median_intensity": null,
+      "normalized_shape_gain_from_camera_to_spectrometer": 0.314387,
+      "paired_sample_count": 4,
+      "single_band_window_model": {
+        "available": false,
+        "reason": "at least 3 paired samples are required"
+      },
+      "source_curve_compensation": {
+        "available": true,
+        "compensation_multiplier_vs_850": 4.715249,
+        "dark_window_median_intensity": 318.22,
+        "method": "source_minus_dark_relative_curve",
+        "net_source_window_intensity": 2606.91,
+        "relative_to_850_net_source": 0.212078,
+        "reliability_weight": 0.212078,
+        "source_window_median_intensity": 2925.13,
+        "status": "weak_source_amplifies_noise",
+        "warning": "Source curve compensation is possible, but this band is weak and the multiplier would amplify noise."
+      },
+      "spectrometer_window_half_width_nm": 10.0,
+      "validation_pair_count": 4,
+      "wavelength_nm": 940,
+      "white_normalization_multiplier": 1.498567
+    }
+  },
+  "calibrated_wavelengths_nm": [
+    532,
+    556,
+    680,
+    725,
+    850
+  ],
+  "dark_reference_policy": {
+    "dark_reference_available": true,
+    "dark_reference_brightness": 0.699978,
+    "note": "Only a no-filter camera dark reference was available. The app records it, but it applies dark subtraction only if a filter passes physical validity checks.",
+    "status": "guarded"
+  },
+  "filter_wavelengths_nm": [
+    532,
+    556,
+    680,
+    725,
+    850,
+    940
+  ],
+  "generated_from": {
+    "camera_features_csv": "outputs\\real_leaf_analysis\\camera_features.csv",
+    "camera_spectra_pairs_csv": "outputs\\real_leaf_analysis\\camera_spectra_pairs.csv",
+    "camera_validation_pairs_csv": "outputs\\camera_validation_report\\camera_spectrometer_validation_pairs.csv",
+    "data_root": "C:\\Users\\david\\OneDrive\\Desktop\\data analisys"
+  },
+  "limitations": [
+    "The correction applies to filter-named camera JPGs, not arbitrary RGB photos.",
+    "The white-reference correction compensates filter and light-source strength inside the box.",
+    "Dark subtraction is disabled for filters where the no-filter dark frame is brighter than the leaf data.",
+    "No outside camera JPG calibration was available; outside comparison remains spectrometer-only.",
+    "The regression is guarded by leave-one-leaf-out validation because the current dataset has few leaves.",
+    "940 nm can be source-curve compensated, but the compensation multiplier is high because the source signal is weak there; it remains excluded from calibrated conclusions."
+  ],
+  "low_confidence_spectrometer_targets": {
+    "940": {
+      "affected_outputs": [
+        "best_spectrometer_window_intensity",
+        "from_best_spectrometer_window_intensity.NDWI_850_940",
+        "water proxy interpretation"
+      ],
+      "reason": "940 nm is treated as low-confidence for spectrometer-derived calibration because the measured box-source curve is weak there: after dark subtraction, the 940 nm source signal is about 21% of the 850 nm signal, so curve compensation would multiply noise by about 4.7x. The Ocean Optics USB2000+XR1-ES nominal range includes 940 nm, but this setup gives a low-SNR 940 nm reference. The camera band remains available as a raw/white-normalized exploratory measurement, but it is excluded from spectrometer-equivalent calibration targets and water-index conclusions.",
+      "status": "excluded_from_spectrometer_calibration",
+      "wavelength_nm": 940
+    }
+  },
+  "measurement_basis": "The calibration is trained on the same values produced by the app: max-channel filter JPG bands averaged over the app vegetation mask, divided by the matching white-reference brightness. Spectrometer targets are robust median intensities inside +/-10 nm windows. The measured source-minus-dark curve is also stored as a compensation/confidence curve, so weak wavelengths can be corrected without being over-trusted.",
+  "model_selection": "For four or more observed camera bands, validated multiband ridge regression is tried per target. If leave-one-leaf-out validation does not beat a training-mean baseline, the app falls back to the selected single-band model for that wavelength.",
+  "multiband_ridge": {
+    "excluded_target_wavelengths": {
+      "940": "940 nm is treated as low-confidence for spectrometer-derived calibration because the measured box-source curve is weak there: after dark subtraction, the 940 nm source signal is about 21% of the 850 nm signal, so curve compensation would multiply noise by about 4.7x. The Ocean Optics USB2000+XR1-ES nominal range includes 940 nm, but this setup gives a low-SNR 940 nm reference. The camera band remains available as a raw/white-normalized exploratory measurement, but it is excluded from spectrometer-equivalent calibration targets and water-index conclusions."
+    },
+    "feature_field": "app_white_normalized_camera",
+    "feature_imputation_medians": {
+      "532": 0.326174,
+      "556": 0.727481,
+      "680": 0.434977,
+      "725": 1.038513,
+      "850": 1.397088,
+      "940": 0.654209
+    },
+    "feature_wavelengths_nm": [
+      532,
+      556,
+      680,
+      725,
+      850,
+      940
+    ],
+    "minimum_observed_features_for_prediction": 4,
+    "missing_feature_policy": "impute training median and report imputed bands",
+    "model_type": "per-target ridge regression",
+    "models": {
+      "532": {
+        "alpha": 10.0,
+        "baseline_training_mean_rmse": 34.86492,
+        "coefficients": {
+          "532": -4.391847,
+          "556": -4.849943,
+          "680": 4.64176,
+          "725": -2.111163,
+          "850": -2.250201,
+          "940": -2.158497
+        },
+        "feature_means": {
+          "532": 0.340889,
+          "556": 0.670437,
+          "680": 0.463428,
+          "725": 0.93073,
+          "850": 1.392688,
+          "940": 0.654746
+        },
+        "feature_stds": {
+          "532": 0.097132,
+          "556": 0.173762,
+          "680": 0.166076,
+          "725": 0.166052,
+          "850": 0.082565,
+          "940": 0.101978
+        },
+        "intercept": 387.854,
+        "leave_one_leaf_out_mae": 24.649574,
+        "leave_one_leaf_out_r2": 0.08228,
+        "leave_one_leaf_out_rmse": 26.719837,
+        "passes_validation": true,
+        "target_wavelength_nm": 532,
+        "training_samples": 5,
+        "validation_improvement_fraction": 0.233618
+      },
+      "556": {
+        "alpha": 3.0,
+        "baseline_training_mean_rmse": 41.426612,
+        "coefficients": {
+          "532": -6.911631,
+          "556": -7.699248,
+          "680": 8.093171,
+          "725": -1.784152,
+          "850": -6.101303,
+          "940": -3.80837
+        },
+        "feature_means": {
+          "532": 0.340889,
+          "556": 0.670437,
+          "680": 0.463428,
+          "725": 0.93073,
+          "850": 1.392688,
+          "940": 0.654746
+        },
+        "feature_stds": {
+          "532": 0.097132,
+          "556": 0.173762,
+          "680": 0.166076,
+          "725": 0.166052,
+          "850": 0.082565,
+          "940": 0.101978
+        },
+        "intercept": 427.742,
+        "leave_one_leaf_out_mae": 23.762466,
+        "leave_one_leaf_out_r2": 0.404743,
+        "leave_one_leaf_out_rmse": 25.569466,
+        "passes_validation": true,
+        "target_wavelength_nm": 556,
+        "training_samples": 5,
+        "validation_improvement_fraction": 0.382777
+      },
+      "680": {
+        "alpha": 0.01,
+        "baseline_training_mean_rmse": 98.739496,
+        "coefficients": {
+          "532": -9.975992,
+          "556": -19.257707,
+          "680": 38.746303,
+          "725": -19.412784,
+          "850": 34.924047,
+          "940": -19.469102
+        },
+        "feature_means": {
+          "532": 0.340889,
+          "556": 0.670437,
+          "680": 0.463428,
+          "725": 0.93073,
+          "850": 1.392688,
+          "940": 0.654746
+        },
+        "feature_stds": {
+          "532": 0.097132,
+          "556": 0.173762,
+          "680": 0.166076,
+          "725": 0.166052,
+          "850": 0.082565,
+          "940": 0.101978
+        },
+        "intercept": 386.34,
+        "leave_one_leaf_out_mae": 55.571992,
+        "leave_one_leaf_out_r2": 0.035531,
+        "leave_one_leaf_out_rmse": 77.575575,
+        "passes_validation": true,
+        "target_wavelength_nm": 680,
+        "training_samples": 5,
+        "validation_improvement_fraction": 0.214341
+      },
+      "725": {
+        "alpha": 300.0,
+        "baseline_training_mean_rmse": 30.82571,
+        "coefficients": {
+          "532": -0.073511,
+          "556": -0.085497,
+          "680": -0.001782,
+          "725": 0.128513,
+          "850": -0.182588,
+          "940": 0.060646
+        },
+        "feature_means": {
+          "532": 0.340889,
+          "556": 0.670437,
+          "680": 0.463428,
+          "725": 0.93073,
+          "850": 1.392688,
+          "940": 0.654746
+        },
+        "feature_stds": {
+          "532": 0.097132,
+          "556": 0.173762,
+          "680": 0.166076,
+          "725": 0.166052,
+          "850": 0.082565,
+          "940": 0.101978
+        },
+        "intercept": 530.644,
+        "leave_one_leaf_out_mae": 26.763969,
+        "leave_one_leaf_out_r2": -0.628396,
+        "leave_one_leaf_out_rmse": 31.469012,
+        "passes_validation": false,
+        "target_wavelength_nm": 725,
+        "training_samples": 5,
+        "validation_improvement_fraction": -0.020869
+      },
+      "850": {
+        "alpha": 300.0,
+        "baseline_training_mean_rmse": 15.444441,
+        "coefficients": {
+          "532": -0.046306,
+          "556": -0.080395,
+          "680": -0.033382,
+          "725": 0.103319,
+          "850": 0.013126,
+          "940": 0.091995
+        },
+        "feature_means": {
+          "532": 0.368952,
+          "556": 0.724228,
+          "680": 0.392285,
+          "725": 0.990378,
+          "850": 1.391589,
+          "940": 0.684511
+        },
+        "feature_stds": {
+          "532": 0.088631,
+          "556": 0.15256,
+          "680": 0.09576,
+          "725": 0.129142,
+          "850": 0.092278,
+          "940": 0.092572
+        },
+        "intercept": 447.6,
+        "leave_one_leaf_out_mae": 14.545244,
+        "leave_one_leaf_out_r2": -0.865769,
+        "leave_one_leaf_out_rmse": 15.822035,
+        "passes_validation": false,
+        "target_wavelength_nm": 850,
+        "training_samples": 4,
+        "validation_improvement_fraction": -0.024449
+      }
+    },
+    "selection_policy": "A ridge model is used only for target wavelengths where leave-one-leaf-out RMSE beats the training-mean baseline; other wavelengths fall back to the selected single-band model.",
+    "spectrometer_window_half_width_nm": 10.0,
+    "target_field": "spectrometer_window_median",
+    "target_wavelengths_nm": [
+      532,
+      556,
+      680,
+      725,
+      850
+    ]
+  },
+  "primary_corrected_camera_field": "white_normalized_camera",
+  "primary_spectrometer_estimate_field": "best_spectrometer_window_intensity",
+  "profile_id": "spectraleaf_camera_calibration_2026_05_ridge_v2",
+  "source_response_compensation": {
+    "available": true,
+    "bands": {
+      "532": {
+        "compensation_multiplier_vs_850": 0.421782,
+        "dark_window_median_intensity": 362.33,
+        "net_source_window_intensity": 29143.54,
+        "relative_to_850_net_source": 2.370891,
+        "relative_to_peak_net_source": 0.781431,
+        "reliability_weight": 1.0,
+        "source_window_median_intensity": 29505.87,
+        "status": "usable",
+        "warning": "",
+        "wavelength_nm": 532
+      },
+      "556": {
+        "compensation_multiplier_vs_850": 0.352692,
+        "dark_window_median_intensity": 372.42,
+        "net_source_window_intensity": 34852.64,
+        "relative_to_850_net_source": 2.835339,
+        "relative_to_peak_net_source": 0.93451,
+        "reliability_weight": 1.0,
+        "source_window_median_intensity": 35225.06,
+        "status": "usable",
+        "warning": "",
+        "wavelength_nm": 556
+      },
+      "680": {
+        "compensation_multiplier_vs_850": 0.329594,
+        "dark_window_median_intensity": 359.81,
+        "net_source_window_intensity": 37295.09,
+        "relative_to_850_net_source": 3.034038,
+        "relative_to_peak_net_source": 1.0,
+        "reliability_weight": 1.0,
+        "source_window_median_intensity": 37654.9,
+        "status": "usable",
+        "warning": "",
+        "wavelength_nm": 680
+      },
+      "725": {
+        "compensation_multiplier_vs_850": 0.389727,
+        "dark_window_median_intensity": 350.99,
+        "net_source_window_intensity": 31540.61,
+        "relative_to_850_net_source": 2.565898,
+        "relative_to_peak_net_source": 0.845704,
+        "reliability_weight": 1.0,
+        "source_window_median_intensity": 31891.6,
+        "status": "usable",
+        "warning": "",
+        "wavelength_nm": 725
+      },
+      "850": {
+        "compensation_multiplier_vs_850": 1.0,
+        "dark_window_median_intensity": 327.04,
+        "net_source_window_intensity": 12292.23,
+        "relative_to_850_net_source": 1.0,
+        "relative_to_peak_net_source": 0.329594,
+        "reliability_weight": 1.0,
+        "source_window_median_intensity": 12619.27,
+        "status": "usable",
+        "warning": "",
+        "wavelength_nm": 850
+      },
+      "940": {
+        "compensation_multiplier_vs_850": 4.715249,
+        "dark_window_median_intensity": 318.22,
+        "net_source_window_intensity": 2606.91,
+        "relative_to_850_net_source": 0.212078,
+        "relative_to_peak_net_source": 0.0699,
+        "reliability_weight": 0.212078,
+        "source_window_median_intensity": 2925.13,
+        "status": "weak_source_amplifies_noise",
+        "warning": "Source curve compensation is possible, but this band is weak and the multiplier would amplify noise.",
+        "wavelength_nm": 940
+      }
+    },
+    "dark_file": "C:\\Users\\david\\OneDrive\\Desktop\\data analisys\\in cutie\\Refirinta neagra\\referinta neagra fara .txt",
+    "formula": "camera_source_compensated(lambda) = white_normalized_camera(lambda) * net_source(850 nm) / net_source(lambda); reliability_weight(lambda) = min(1, net_source(lambda) / net_source(850 nm))",
+    "low_relative_threshold": 0.3,
+    "method": "source_minus_dark_relative_curve",
+    "reference_wavelength_nm": 850,
+    "source_file": "C:\\Users\\david\\OneDrive\\Desktop\\data analisys\\in cutie\\spectru sursa.txt"
+  },
+  "spectrometer": {
+    "model": "Ocean Optics USB2000+XR1-ES",
+    "nominal_optical_resolution_nm": "1.7-2.1",
+    "nominal_wavelength_range_nm": [
+      200,
+      1025
+    ],
+    "note": "Model information was supplied by the user and cross-checked against public specifications. Nominal range includes 940 nm, but the current calibration still marks 940 nm low-confidence because the measured dataset/setup may be unreliable at that band."
+  },
+  "spectrometer_target_wavelengths_nm": [
+    532,
+    556,
+    680,
+    725,
+    850
+  ],
+  "title": "Validated camera calibration from app band averages and spectrometer windows",
+  "training_samples": [
+    {
+      "app_white_normalized_camera": {
+        "532": 0.4811102134198401,
+        "556": 0.8955791628361138,
+        "680": 0.43497689280105156,
+        "725": 1.104384851643188,
+        "850": 1.4442904073264666
+      },
+      "condition": "unhealthy",
+      "mask": {
+        "mask_method": "filtered_camera_foreground",
+        "mask_used_bands": [
+          "680"
+        ],
+        "vegetation_pixel_count": 109922
+      },
+      "sample_id": "in cutie/Set frunze 1/frunza nesanatoasa",
+      "spectrometer_point_intensity": {
+        "532": 373.696636,
+        "556": 388.567176,
+        "680": 346.619756,
+        "725": 584.327401,
+        "850": 463.387927
+      },
+      "spectrometer_window_median": {
+        "532": 372.89,
+        "556": 405.97,
+        "680": 342.01,
+        "725": 548.23,
+        "850": 452.28999999999996
+      }
+    },
+    {
+      "app_white_normalized_camera": {
+        "532": 0.24880645893884984,
+        "556": 0.4812285879601317,
+        "680": 0.35872614408951814,
+        "725": 1.0476010874635464,
+        "850": 1.349885285116402,
+        "940": 0.7754146069738377
+      },
+      "condition": "healthy",
+      "mask": {
+        "mask_method": "filtered_camera_foreground",
+        "mask_used_bands": [
+          "532",
+          "556",
+          "680",
+          "725",
+          "850",
+          "940"
+        ],
+        "vegetation_pixel_count": 102896
+      },
+      "sample_id": "in cutie/Set frunze 1/frunza verde",
+      "spectrometer_point_intensity": {
+        "532": 368.383621,
+        "556": 449.214965,
+        "680": 351.338659,
+        "725": 533.024579,
+        "850": 462.57886,
+        "940": 304.886971
+      },
+      "spectrometer_window_median": {
+        "532": 402.66,
+        "556": 443.31,
+        "680": 337.44,
+        "725": 565.08,
+        "850": 464.1
+      }
+    },
+    {
+      "app_white_normalized_camera": {
+        "532": 0.22863511061567401,
+        "556": 0.45527517192305417,
+        "680": 0.748000112213514,
+        "725": 0.6921415327371259,
+        "940": 0.5356853505877348
+      },
+      "condition": "unhealthy",
+      "mask": {
+        "mask_method": "filtered_camera_foreground",
+        "mask_used_bands": [
+          "680"
+        ],
+        "vegetation_pixel_count": 107028
+      },
+      "sample_id": "in cutie/Set frunze 2/nesanatoasa",
+      "spectrometer_point_intensity": {
+        "532": 410.570981,
+        "556": 519.390659,
+        "680": 505.007561,
+        "725": 560.363317,
+        "940": 340.842574
+      },
+      "spectrometer_window_median": {
+        "532": 429.13,
+        "556": 472.29,
+        "680": 540.82,
+        "725": 518.29
+      }
+    },
+    {
+      "app_white_normalized_camera": {
+        "532": 0.41971892255749566,
+        "556": 0.7926220650344302,
+        "680": 0.2579312776706946,
+        "725": 1.038512539470183,
+        "850": 1.507505427418211,
+        "940": 0.7620518743389695
+      },
+      "condition": "healthy",
+      "mask": {
+        "mask_method": "filtered_camera_foreground",
+        "mask_used_bands": [
+          "556"
+        ],
+        "vegetation_pixel_count": 113580
+      },
+      "sample_id": "in cutie/Set frunze 2/sanatoasa",
+      "spectrometer_point_intensity": {
+        "532": 354.56764,
+        "556": 410.328776,
+        "680": 267.173049,
+        "725": 550.238515,
+        "850": 425.658679,
+        "940": 339.077882
+      },
+      "spectrometer_window_median": {
+        "532": 346.11,
+        "556": 376.51,
+        "680": 332.24,
+        "725": 493.4,
+        "850": 440.0
+      }
+    },
+    {
+      "app_white_normalized_camera": {
+        "532": 0.32617403711501974,
+        "556": 0.7274811610297909,
+        "680": 0.51750703244246,
+        "725": 0.7710115506468214,
+        "850": 1.2646733331839848,
+        "940": 0.5463669044551998
+      },
+      "condition": "healthy_yellow",
+      "mask": {
+        "mask_method": "filtered_camera_foreground",
+        "mask_used_bands": [
+          "850"
+        ],
+        "vegetation_pixel_count": 111433
+      },
+      "sample_id": "in cutie/frunza sanatoasa dar galbena",
+      "spectrometer_point_intensity": {
+        "532": 425.380981,
+        "556": 459.816847,
+        "680": 350.171341,
+        "725": 542.10495,
+        "850": 446.138679,
+        "940": 373.82311
+      },
+      "spectrometer_window_median": {
+        "532": 388.48,
+        "556": 440.63,
+        "680": 379.19,
+        "725": 528.22,
+        "850": 434.01
+      }
+    }
+  ]
+}

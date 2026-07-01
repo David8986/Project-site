@@ -1,0 +1,51 @@
+file,relative_path,size_bytes,is_oceanview_zip_container,duplicate_hint,leaf_condition,measurement_type,filter_nm
+galben direct.ocv,Camera Roll\spectrometru frunza\fara filtru frunza verde-galben-maro\galben direct.ocv,8346,True,,yellow/unhealthy leaf,direct/no filter,
+maro direct.ocv,Camera Roll\spectrometru frunza\fara filtru frunza verde-galben-maro\maro direct.ocv,8346,True,,brown leaf area,direct/no filter,
+verde direct.ocv,Camera Roll\spectrometru frunza\fara filtru frunza verde-galben-maro\verde direct.ocv,8346,True,,green/healthy leaf,direct/no filter,
+532 nm.ocv,Camera Roll\spectrometru frunza\fruza nesanatoasa-galben\532 nm.ocv,8346,True,,yellow/unhealthy leaf,filtered,532
+556 nm.ocv,Camera Roll\spectrometru frunza\fruza nesanatoasa-galben\556 nm.ocv,8346,True,,yellow/unhealthy leaf,filtered,556
+680 nm.ocv,Camera Roll\spectrometru frunza\fruza nesanatoasa-galben\680 nm.ocv,8346,True,,yellow/unhealthy leaf,filtered,680
+725 nm.ocv,Camera Roll\spectrometru frunza\fruza nesanatoasa-galben\725 nm.ocv,8346,True,,yellow/unhealthy leaf,filtered,725
+850.ocv,Camera Roll\spectrometru frunza\fruza nesanatoasa-galben\850.ocv,8346,True,,yellow/unhealthy leaf,filtered,850
+940.ocv,Camera Roll\spectrometru frunza\fruza nesanatoasa-galben\940.ocv,8346,True,,yellow/unhealthy leaf,filtered,940
+532 nm.ocv,Camera Roll\spectrometru frunza\verde frunza\532 nm.ocv,8346,True,,green/healthy leaf,filtered,532
+556 nm.ocv,Camera Roll\spectrometru frunza\verde frunza\556 nm.ocv,8346,True,,green/healthy leaf,filtered,556
+680 nm.ocv,Camera Roll\spectrometru frunza\verde frunza\680 nm.ocv,8347,True,,green/healthy leaf,filtered,680
+725 nm.ocv,Camera Roll\spectrometru frunza\verde frunza\725 nm.ocv,8347,True,,green/healthy leaf,filtered,725
+850 nm.ocv,Camera Roll\spectrometru frunza\verde frunza\850 nm.ocv,8347,True,,green/healthy leaf,filtered,850
+940nm.ocv,Camera Roll\spectrometru frunza\verde frunza\940nm.ocv,8347,True,,green/healthy leaf,filtered,940
+Spectru intreg.ocv,Camera Roll\spectrometru frunza\verde frunza\Spectru intreg.ocv,8347,True,,green/healthy leaf,full spectrum,
+f verde532.ocv,f verde532.ocv,8323,True,,green/healthy leaf,filtered,532
+f_g_532.ocv,f_g_532.ocv,8323,True,,yellow/unhealthy leaf,filtered,532
+f_g_556.ocv,f_g_556.ocv,8323,True,,yellow/unhealthy leaf,filtered,556
+f_g_680.ocv,f_g_680.ocv,8323,True,,yellow/unhealthy leaf,filtered,680
+f_g_725.ocv,f_g_725.ocv,8323,True,,yellow/unhealthy leaf,filtered,725
+f_g_850.ocv,f_g_850.ocv,8323,True,,yellow/unhealthy leaf,filtered,850
+f_g_940.ocv,f_g_940.ocv,8344,True,,yellow/unhealthy leaf,filtered,940
+f_v_680.ocv,f_v_680.ocv,8323,True,,green/healthy leaf,filtered,680
+f_v_680_2.ocv,f_v_680_2.ocv,8323,True,,green/healthy leaf,filtered,680
+f_v_725.ocv,f_v_725.ocv,8323,True,,green/healthy leaf,filtered,725
+f_v_850.ocv,f_v_850.ocv,8323,True,,green/healthy leaf,filtered,850
+f_v_940.ocv,f_v_940.ocv,8323,True,,green/healthy leaf,filtered,940
+frunza galbenfarafiltru.ocv,frunza galbenfarafiltru.ocv,8328,True,,yellow/unhealthy leaf,direct/no filter,
+frunzasanatoasa spectruintreg.ocv,frunzasanatoasa spectruintreg.ocv,8328,True,,unknown,full spectrum,
+fverde 556.ocv,fverde 556.ocv,8323,True,,green/healthy leaf,filtered,556
+f verde532.ocv,New folder\f verde532.ocv,8323,True,possible duplicate copy,green/healthy leaf,filtered,532
+f_g_532.ocv,New folder\f_g_532.ocv,8323,True,possible duplicate copy,yellow/unhealthy leaf,filtered,532
+f_g_556.ocv,New folder\f_g_556.ocv,8323,True,possible duplicate copy,yellow/unhealthy leaf,filtered,556
+f_g_680.ocv,New folder\f_g_680.ocv,8323,True,possible duplicate copy,yellow/unhealthy leaf,filtered,680
+f_g_725.ocv,New folder\f_g_725.ocv,8323,True,possible duplicate copy,yellow/unhealthy leaf,filtered,725
+f_g_850.ocv,New folder\f_g_850.ocv,8323,True,possible duplicate copy,yellow/unhealthy leaf,filtered,850
+f_g_940.ocv,New folder\f_g_940.ocv,8344,True,possible duplicate copy,yellow/unhealthy leaf,filtered,940
+f_v_680.ocv,New folder\f_v_680.ocv,8323,True,possible duplicate copy,green/healthy leaf,filtered,680
+f_v_680_2.ocv,New folder\f_v_680_2.ocv,8323,True,possible duplicate copy,green/healthy leaf,filtered,680
+f_v_725.ocv,New folder\f_v_725.ocv,8323,True,possible duplicate copy,green/healthy leaf,filtered,725
+f_v_850.ocv,New folder\f_v_850.ocv,8323,True,possible duplicate copy,green/healthy leaf,filtered,850
+f_v_940.ocv,New folder\f_v_940.ocv,8323,True,possible duplicate copy,green/healthy leaf,filtered,940
+frunza galbenfarafiltru.ocv,New folder\frunza galbenfarafiltru.ocv,8328,True,possible duplicate copy,yellow/unhealthy leaf,direct/no filter,
+frunzasanatoasa spectruintreg.ocv,New folder\frunzasanatoasa spectruintreg.ocv,8328,True,possible duplicate copy,unknown,full spectrum,
+fverde 556.ocv,New folder\fverde 556.ocv,8323,True,possible duplicate copy,green/healthy leaf,filtered,556
+UVvis af.ocv,New folder\UVvis af.ocv,8323,True,possible duplicate copy,outside/UV-VIS reference,unknown,
+Uvvis_af.ocv,New folder\Uvvis_af.ocv,8328,True,possible duplicate copy,outside/UV-VIS reference,unknown,
+UVvis af.ocv,UVvis af.ocv,8323,True,,outside/UV-VIS reference,unknown,
+Uvvis_af.ocv,Uvvis_af.ocv,8328,True,,outside/UV-VIS reference,unknown,

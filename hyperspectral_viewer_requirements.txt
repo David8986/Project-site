@@ -1,0 +1,5 @@
+numpy
+spectral
+PySide6
+matplotlib
+pillow

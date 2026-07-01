@@ -1,0 +1,666 @@
+{
+  "average_bands": {
+    "band_532": 0.977463,
+    "band_556": 0.07396,
+    "band_650": null,
+    "band_680": 0.175382,
+    "band_725": 0.233318,
+    "band_850": 0.216421,
+    "band_940": 0.145353
+  },
+  "band_mapping": {
+    "532": {
+      "source_band_index": 0,
+      "source_wavelength": 532.0,
+      "status": "exact"
+    },
+    "556": {
+      "source_band_index": 1,
+      "source_wavelength": 556.0,
+      "status": "exact"
+    },
+    "650": {
+      "source_band_index": null,
+      "source_wavelength": null,
+      "status": "missing"
+    },
+    "680": {
+      "source_band_index": 2,
+      "source_wavelength": 680.0,
+      "status": "exact"
+    },
+    "725": {
+      "source_band_index": 3,
+      "source_wavelength": 725.0,
+      "status": "exact"
+    },
+    "850": {
+      "source_band_index": 4,
+      "source_wavelength": 850.0,
+      "status": "exact"
+    },
+    "940": {
+      "source_band_index": 5,
+      "source_wavelength": 940.0,
+      "status": "exact"
+    }
+  },
+  "index_availability": {
+    "available": 4,
+    "available_count": 4,
+    "available_indices": [
+      "NDVI",
+      "NDRE",
+      "GNDVI",
+      "WATER_PROXY"
+    ],
+    "by_index": {
+      "GNDVI": "available",
+      "NDRE": "available",
+      "NDVI": "available",
+      "WATER_PROXY": "available"
+    },
+    "total": 4,
+    "unavailable": 0,
+    "unavailable_count": 0,
+    "unavailable_indices": [],
+    "unavailable_reasons": {}
+  },
+  "indices": {
+    "CI_RE": {
+      "bands_used": {
+        "NIR": 850,
+        "RED_EDGE": 725
+      },
+      "components": {
+        "NIR": 0.216421,
+        "RED_EDGE": 0.233318,
+        "denominator": 0.233318,
+        "numerator": 0.216421
+      },
+      "formula": "(NIR / RED_EDGE) - 1",
+      "value": -0.072417
+    },
+    "GNDVI": {
+      "approximate": true,
+      "available": true,
+      "bands_used": {
+        "GREEN": 556,
+        "NIR": 850
+      },
+      "components": {
+        "GREEN": 0.07396,
+        "NIR": 0.216421,
+        "NIR_minus_GREEN": 0.142461,
+        "NIR_plus_GREEN": 0.290381,
+        "denominator": 0.290381,
+        "numerator": 0.142461
+      },
+      "formula": "(NIR - GREEN) / (NIR + GREEN)",
+      "label": "GNDVI (green + NIR)",
+      "missing_roles": [],
+      "reason": "",
+      "reasons": [],
+      "required_roles": [
+        "NIR",
+        "GREEN"
+      ],
+      "source_note": "Exact or near-exact source match at 850 nm.; Exact or near-exact source match at 556 nm. GREEN uses an approximate RGB/display-channel label; not a calibrated narrowband green measurement.",
+      "source_notes": [
+        "Exact or near-exact source match at 850 nm.",
+        "Exact or near-exact source match at 556 nm. GREEN uses an approximate RGB/display-channel label; not a calibrated narrowband green measurement."
+      ],
+      "status": "available",
+      "value": 0.490601,
+      "wavelengths_nm": {
+        "GREEN": 556.0,
+        "NIR": 850.0
+      }
+    },
+    "GRI": {
+      "bands_used": {
+        "GREEN": 556,
+        "NIR": 850
+      },
+      "components": {
+        "GREEN": 0.07396,
+        "NIR": 0.216421,
+        "denominator": 0.07396,
+        "numerator": 0.216421
+      },
+      "formula": "NIR / GREEN",
+      "value": 2.926197
+    },
+    "GRND": {
+      "bands_used": {
+        "GREEN": 556,
+        "RED": 680
+      },
+      "components": {
+        "GREEN": 0.07396,
+        "GREEN_minus_RED": -0.101422,
+        "GREEN_plus_RED": 0.249341,
+        "RED": 0.175382,
+        "denominator": 0.249341,
+        "numerator": -0.101422
+      },
+      "formula": "(GREEN - RED) / (GREEN + RED)",
+      "value": -0.406758
+    },
+    "NDRE": {
+      "approximate": false,
+      "available": true,
+      "bands_used": {
+        "NIR": 850,
+        "RED_EDGE": 725
+      },
+      "components": {
+        "NIR": 0.216421,
+        "NIR_minus_RED_EDGE": -0.016896,
+        "NIR_plus_RED_EDGE": 0.449739,
+        "RED_EDGE": 0.233318,
+        "denominator": 0.449739,
+        "numerator": -0.016896
+      },
+      "formula": "(NIR - RED_EDGE) / (NIR + RED_EDGE)",
+      "label": "NDRE (red-edge + NIR)",
+      "missing_roles": [],
+      "reason": "",
+      "reasons": [],
+      "required_roles": [
+        "NIR",
+        "RED_EDGE"
+      ],
+      "source_note": "Exact or near-exact source match at 850 nm.; Exact or near-exact source match at 725 nm.",
+      "source_notes": [
+        "Exact or near-exact source match at 850 nm.",
+        "Exact or near-exact source match at 725 nm."
+      ],
+      "status": "available",
+      "value": -0.037569,
+      "wavelengths_nm": {
+        "NIR": 850.0,
+        "RED_EDGE": 725.0
+      }
+    },
+    "NDVI": {
+      "approximate": false,
+      "available": true,
+      "bands_used": {
+        "NIR": 850,
+        "RED": 680
+      },
+      "components": {
+        "NIR": 0.216421,
+        "NIR_minus_RED": 0.04104,
+        "NIR_plus_RED": 0.391803,
+        "RED": 0.175382,
+        "denominator": 0.391803,
+        "numerator": 0.04104
+      },
+      "formula": "(NIR - RED) / (NIR + RED)",
+      "label": "NDVI (proper 680 nm red + NIR)",
+      "missing_roles": [],
+      "reason": "",
+      "reasons": [],
+      "required_roles": [
+        "NIR",
+        "RED"
+      ],
+      "source_note": "Exact or near-exact source match at 850 nm.; Proper NDVI red band at 680 nm. Exact or near-exact source match at 680 nm.",
+      "source_notes": [
+        "Exact or near-exact source match at 850 nm.",
+        "Proper NDVI red band at 680 nm. Exact or near-exact source match at 680 nm."
+      ],
+      "status": "available",
+      "value": 0.104746,
+      "wavelengths_nm": {
+        "NIR": 850.0,
+        "RED": 680.0
+      }
+    },
+    "NDWI_850_940": {
+      "approximate": false,
+      "available": true,
+      "bands_used": {
+        "NIR": 850,
+        "WATER_BAND": 940
+      },
+      "components": {
+        "NIR": 0.216421,
+        "NIR_minus_WATER_BAND": 0.071069,
+        "NIR_plus_WATER_BAND": 0.361774,
+        "WATER_BAND": 0.145353,
+        "denominator": 0.361774,
+        "numerator": 0.071069
+      },
+      "formula": "(NIR - WATER_BAND) / (NIR + WATER_BAND)",
+      "label": "Water proxy (water band + NIR)",
+      "missing_roles": [],
+      "reason": "",
+      "reasons": [],
+      "required_roles": [
+        "NIR",
+        "WATER_BAND"
+      ],
+      "source_note": "Exact or near-exact source match at 850 nm.; Exact or near-exact source match at 940 nm.",
+      "source_notes": [
+        "Exact or near-exact source match at 850 nm.",
+        "Exact or near-exact source match at 940 nm."
+      ],
+      "status": "available",
+      "value": 0.196445,
+      "wavelengths_nm": {
+        "NIR": 850.0,
+        "WATER_BAND": 940.0
+      }
+    },
+    "NIR_RED_DIFF": {
+      "bands_used": {
+        "NIR": 850,
+        "RED": 680
+      },
+      "components": {
+        "NIR": 0.216421,
+        "NIR_minus_RED": 0.04104,
+        "RED": 0.175382
+      },
+      "formula": "NIR - RED",
+      "value": 0.04104
+    },
+    "NIR_RED_SUM": {
+      "bands_used": {
+        "NIR": 850,
+        "RED": 680
+      },
+      "components": {
+        "NIR": 0.216421,
+        "NIR_plus_RED": 0.391803,
+        "RED": 0.175382
+      },
+      "formula": "NIR + RED",
+      "value": 0.391803
+    },
+    "NIR_RE_DIFF": {
+      "bands_used": {
+        "NIR": 850,
+        "RED_EDGE": 725
+      },
+      "components": {
+        "NIR": 0.216421,
+        "NIR_minus_RED_EDGE": -0.016896,
+        "RED_EDGE": 0.233318
+      },
+      "formula": "NIR - RED_EDGE",
+      "value": -0.016896
+    },
+    "NIR_RE_SUM": {
+      "bands_used": {
+        "NIR": 850,
+        "RED_EDGE": 725
+      },
+      "components": {
+        "NIR": 0.216421,
+        "NIR_plus_RED_EDGE": 0.449739,
+        "RED_EDGE": 0.233318
+      },
+      "formula": "NIR + RED_EDGE",
+      "value": 0.449739
+    },
+    "RED_GREEN_RATIO": {
+      "bands_used": {
+        "GREEN": 556,
+        "RED": 680
+      },
+      "components": {
+        "GREEN": 0.07396,
+        "RED": 0.175382,
+        "denominator": 0.07396,
+        "numerator": 0.175382
+      },
+      "formula": "RED / GREEN",
+      "value": 2.371305
+    },
+    "RE_RED_DIFF": {
+      "bands_used": {
+        "RED": 680,
+        "RED_EDGE": 725
+      },
+      "components": {
+        "RED": 0.175382,
+        "RED_EDGE": 0.233318,
+        "RED_EDGE_minus_RED": 0.057936
+      },
+      "formula": "RED_EDGE - RED",
+      "value": 0.057936
+    },
+    "RE_SLOPE": {
+      "bands_used": {
+        "RED": 680,
+        "RED_EDGE": 725
+      },
+      "components": {
+        "RED": 0.175382,
+        "RED_EDGE": 0.233318,
+        "RED_EDGE_minus_RED": 0.057936,
+        "denominator": 45.0
+      },
+      "formula": "(RED_EDGE - RED) / (725 - 680)",
+      "value": 0.001287
+    },
+    "SR_RE": {
+      "bands_used": {
+        "NIR": 850,
+        "RED_EDGE": 725
+      },
+      "components": {
+        "NIR": 0.216421,
+        "RED_EDGE": 0.233318,
+        "denominator": 0.233318,
+        "numerator": 0.216421
+      },
+      "formula": "NIR / RED_EDGE",
+      "value": 0.927583
+    },
+    "SR_RED": {
+      "bands_used": {
+        "NIR": 850,
+        "RED": 680
+      },
+      "components": {
+        "NIR": 0.216421,
+        "RED": 0.175382,
+        "denominator": 0.175382,
+        "numerator": 0.216421
+      },
+      "formula": "NIR / RED",
+      "value": 1.234003
+    },
+    "WATER_RATIO": {
+      "bands_used": {
+        "NIR": 850,
+        "WATER_BAND": 940
+      },
+      "components": {
+        "NIR": 0.216421,
+        "WATER_BAND": 0.145353,
+        "denominator": 0.216421,
+        "numerator": 0.145353
+      },
+      "formula": "WATER_BAND / NIR",
+      "value": 0.671618
+    }
+  },
+  "interpretation": {
+    "caution": "Acestea sunt interpretari relative deterministe ale unor masurari de aproape. Nu reprezinta un diagnostic de boala, seceta sau deficienta de nutrienti.",
+    "conclusion": "Esantionul arata un semnal vegetal moderat spre util. Semnalul sensibil la red-edge este modest si trebuie interpretat comparativ. Semnalul legat de apa este moderat in aceasta masurare. Aceste rezultate pot reflecta variatie normala intre esantioane sau diferente fiziologice subtile si ar trebui comparate intre probe.",
+    "lines": [
+      {
+        "interpretation": "NDVI = 0.10 sugereaza un semnal vegetal general slab sau o structura foliara activa limitata.",
+        "label": "NDVI",
+        "level": "low",
+        "value": 0.104746
+      },
+      {
+        "interpretation": "GNDVI = 0.49 sugereaza un raspuns verde-NIR mai puternic si un semnal activ de frunza in raport cu aceasta configuratie de masurare.",
+        "label": "GNDVI",
+        "level": "high",
+        "value": 0.490601
+      },
+      {
+        "interpretation": "NDRE = -0.04 indica un raspuns red-edge foarte slab, care poate reflecta un semnal red-edge limitat. Acest rezultat trebuie interpretat comparativ, nu ca un diagnostic de sine statator.",
+        "label": "NDRE",
+        "level": "very_low",
+        "value": -0.037569
+      },
+      {
+        "interpretation": "CI_RE = -0.07 sugereaza un semnal red-edge legat de clorofila foarte redus. Este cel mai util pentru comparatie relativa intre esantioane.",
+        "label": "CI_RE",
+        "level": "very_low",
+        "value": -0.072417
+      },
+      {
+        "interpretation": "Proxy de apa = 0.20 Valoarea proxy pentru apa sugereaza un semnal relativ moderat legat de apa in aceasta masurare. Trataza-l ca pe un indicator aproximativ, nu ca pe o masurare directa a continutului de apa din frunza.",
+        "label": "Proxy de apa",
+        "level": "medium",
+        "value": 0.196445
+      }
+    ],
+    "overall_status": "Semnal vegetal general moderat spre puternic.",
+    "summary_title": "Interpretare"
+  },
+  "role_aware_indices": {
+    "availability_summary": {
+      "available": 4,
+      "available_count": 4,
+      "available_indices": [
+        "NDVI",
+        "NDRE",
+        "GNDVI",
+        "WATER_PROXY"
+      ],
+      "by_index": {
+        "GNDVI": "available",
+        "NDRE": "available",
+        "NDVI": "available",
+        "WATER_PROXY": "available"
+      },
+      "total": 4,
+      "unavailable": 0,
+      "unavailable_count": 0,
+      "unavailable_indices": [],
+      "unavailable_reasons": {}
+    },
+    "index_aliases": {
+      "NDWI_850_940": "WATER_PROXY"
+    },
+    "indices": {
+      "GNDVI": {
+        "approximate": true,
+        "available": true,
+        "bands_used": {
+          "GREEN": 556,
+          "NIR": 850
+        },
+        "components": {
+          "GREEN": 0.07396,
+          "NIR": 0.216421,
+          "NIR_minus_GREEN": 0.142461,
+          "NIR_plus_GREEN": 0.290381,
+          "denominator": 0.290381,
+          "numerator": 0.142461
+        },
+        "formula": "(NIR - GREEN) / (NIR + GREEN)",
+        "label": "GNDVI (green + NIR)",
+        "missing_roles": [],
+        "reason": "",
+        "reasons": [],
+        "required_roles": [
+          "NIR",
+          "GREEN"
+        ],
+        "source_note": "Exact or near-exact source match at 850 nm.; Exact or near-exact source match at 556 nm. GREEN uses an approximate RGB/display-channel label; not a calibrated narrowband green measurement.",
+        "source_notes": [
+          "Exact or near-exact source match at 850 nm.",
+          "Exact or near-exact source match at 556 nm. GREEN uses an approximate RGB/display-channel label; not a calibrated narrowband green measurement."
+        ],
+        "status": "available",
+        "value": 0.490601,
+        "wavelengths_nm": {
+          "GREEN": 556.0,
+          "NIR": 850.0
+        }
+      },
+      "NDRE": {
+        "approximate": false,
+        "available": true,
+        "bands_used": {
+          "NIR": 850,
+          "RED_EDGE": 725
+        },
+        "components": {
+          "NIR": 0.216421,
+          "NIR_minus_RED_EDGE": -0.016896,
+          "NIR_plus_RED_EDGE": 0.449739,
+          "RED_EDGE": 0.233318,
+          "denominator": 0.449739,
+          "numerator": -0.016896
+        },
+        "formula": "(NIR - RED_EDGE) / (NIR + RED_EDGE)",
+        "label": "NDRE (red-edge + NIR)",
+        "missing_roles": [],
+        "reason": "",
+        "reasons": [],
+        "required_roles": [
+          "NIR",
+          "RED_EDGE"
+        ],
+        "source_note": "Exact or near-exact source match at 850 nm.; Exact or near-exact source match at 725 nm.",
+        "source_notes": [
+          "Exact or near-exact source match at 850 nm.",
+          "Exact or near-exact source match at 725 nm."
+        ],
+        "status": "available",
+        "value": -0.037569,
+        "wavelengths_nm": {
+          "NIR": 850.0,
+          "RED_EDGE": 725.0
+        }
+      },
+      "NDVI": {
+        "approximate": false,
+        "available": true,
+        "bands_used": {
+          "NIR": 850,
+          "RED": 680
+        },
+        "components": {
+          "NIR": 0.216421,
+          "NIR_minus_RED": 0.04104,
+          "NIR_plus_RED": 0.391803,
+          "RED": 0.175382,
+          "denominator": 0.391803,
+          "numerator": 0.04104
+        },
+        "formula": "(NIR - RED) / (NIR + RED)",
+        "label": "NDVI (proper 680 nm red + NIR)",
+        "missing_roles": [],
+        "reason": "",
+        "reasons": [],
+        "required_roles": [
+          "NIR",
+          "RED"
+        ],
+        "source_note": "Exact or near-exact source match at 850 nm.; Proper NDVI red band at 680 nm. Exact or near-exact source match at 680 nm.",
+        "source_notes": [
+          "Exact or near-exact source match at 850 nm.",
+          "Proper NDVI red band at 680 nm. Exact or near-exact source match at 680 nm."
+        ],
+        "status": "available",
+        "value": 0.104746,
+        "wavelengths_nm": {
+          "NIR": 850.0,
+          "RED": 680.0
+        }
+      },
+      "WATER_PROXY": {
+        "approximate": false,
+        "available": true,
+        "bands_used": {
+          "NIR": 850,
+          "WATER_BAND": 940
+        },
+        "components": {
+          "NIR": 0.216421,
+          "NIR_minus_WATER_BAND": 0.071069,
+          "NIR_plus_WATER_BAND": 0.361774,
+          "WATER_BAND": 0.145353,
+          "denominator": 0.361774,
+          "numerator": 0.071069
+        },
+        "formula": "(NIR - WATER_BAND) / (NIR + WATER_BAND)",
+        "label": "Water proxy (water band + NIR)",
+        "missing_roles": [],
+        "reason": "",
+        "reasons": [],
+        "required_roles": [
+          "NIR",
+          "WATER_BAND"
+        ],
+        "source_note": "Exact or near-exact source match at 850 nm.; Exact or near-exact source match at 940 nm.",
+        "source_notes": [
+          "Exact or near-exact source match at 850 nm.",
+          "Exact or near-exact source match at 940 nm."
+        ],
+        "status": "available",
+        "value": 0.196445,
+        "wavelengths_nm": {
+          "NIR": 850.0,
+          "WATER_BAND": 940.0
+        }
+      }
+    },
+    "roles": {
+      "GREEN": {
+        "approximate_source": true,
+        "band_key": "556",
+        "reason": "",
+        "role": "GREEN",
+        "source_note": "Exact or near-exact source match at 556 nm. GREEN uses an approximate RGB/display-channel label; not a calibrated narrowband green measurement.",
+        "status": "available",
+        "value": 0.07396,
+        "wavelength_nm": 556.0
+      },
+      "NIR": {
+        "approximate_source": false,
+        "band_key": "850",
+        "reason": "",
+        "role": "NIR",
+        "source_note": "Exact or near-exact source match at 850 nm.",
+        "status": "available",
+        "value": 0.216421,
+        "wavelength_nm": 850.0
+      },
+      "RED": {
+        "approximate_source": false,
+        "band_key": "680",
+        "reason": "",
+        "role": "RED",
+        "source_note": "Exact or near-exact source match at 680 nm.",
+        "status": "available",
+        "value": 0.175382,
+        "wavelength_nm": 680.0
+      },
+      "RED_EDGE": {
+        "approximate_source": false,
+        "band_key": "725",
+        "reason": "",
+        "role": "RED_EDGE",
+        "source_note": "Exact or near-exact source match at 725 nm.",
+        "status": "available",
+        "value": 0.233318,
+        "wavelength_nm": 725.0
+      },
+      "WATER_BAND": {
+        "approximate_source": false,
+        "band_key": "940",
+        "reason": "",
+        "role": "WATER_BAND",
+        "source_note": "Exact or near-exact source match at 940 nm.",
+        "status": "available",
+        "value": 0.145353,
+        "wavelength_nm": 940.0
+      }
+    }
+  },
+  "source": {
+    "cube_shape": [
+      1080,
+      1920,
+      6
+    ],
+    "sample_id": "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\spectraleaf_desktop_sessions\\offline_smoke_20260613_164829\\mixed_import_spec.json",
+    "source_type": "mixed_image_data",
+    "vegetation_pixels": 103723
+  }
+}

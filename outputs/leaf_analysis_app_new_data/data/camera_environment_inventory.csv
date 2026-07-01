@@ -1,0 +1,6 @@
+environment,condition,image_count
+in cutie,dark_reference,1
+in cutie,healthy,14
+in cutie,healthy_yellow,7
+in cutie,unhealthy,14
+in cutie,white_reference,7

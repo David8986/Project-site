@@ -1,0 +1,23 @@
+{
+  "input_camera_values": "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\camera_image_leaf_values\\image_leaf_values.csv",
+  "input_spectrometer_10nm_bins": "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\spectrometer_camera_no_afara_graphs\\spectrometer_10nm_binned_indoor_only.csv",
+  "method": "camera median brightness on the detected leaf mask compared with spectrometer median intensity in the matching 10 nm wavelength bin",
+  "graphs": [
+    "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\camera_brightness_vs_spectrometer_10nm_medians\\graphs\\01_per_sample_camera_brightness_vs_spectrometer_10nm_medians.png",
+    "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\camera_brightness_vs_spectrometer_10nm_medians\\graphs\\02_scatter_camera_brightness_vs_spectrometer_medians.png",
+    "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\camera_brightness_vs_spectrometer_10nm_medians\\graphs\\03_correlation_by_sample_camera_vs_spectrometer.png",
+    "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\camera_brightness_vs_spectrometer_10nm_medians\\graphs\\04_difference_heatmap_camera_vs_spectrometer.png",
+    "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\camera_brightness_vs_spectrometer_10nm_medians\\graphs\\05_average_by_filter_camera_vs_spectrometer.png"
+  ],
+  "gallery": "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\camera_brightness_vs_spectrometer_10nm_medians\\camera_brightness_spectrometer_graph_gallery.jpg",
+  "results": {
+    "matched_pairs": 30,
+    "overall_raw_camera_brightness_vs_spectrometer_median_r": 0.309677,
+    "overall_white_normalized_shape_r": 0.26811,
+    "median_per_sample_white_normalized_shape_r": 0.323473,
+    "mean_per_sample_white_normalized_shape_r": 0.265084,
+    "best_per_sample_r": 0.494224,
+    "worst_per_sample_r": -0.103703,
+    "judgement": "The spectrometer is better for precise measurement because it gives the actual spectral intensity curve and stable 10 nm median values. The camera is useful as a practical proxy after leaf masking and white-reference normalization, but in this dataset it only follows the spectrometer moderately. It is good enough for a calibrated prototype/trend detector, not better than the spectrometer as a measurement instrument."
+  }
+}

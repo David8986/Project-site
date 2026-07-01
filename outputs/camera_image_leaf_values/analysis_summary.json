@@ -1,0 +1,15 @@
+{
+  "data_root": "C:\\Users\\david\\OneDrive\\Desktop\\data analisys",
+  "output_dir": "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\camera_image_leaf_values",
+  "image_count": 43,
+  "leaf_sample_count": 5,
+  "reference_image_count": 8,
+  "mask_contact_sheet": "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\camera_image_leaf_values\\leaf_mask_contact_sheet.jpg",
+  "workbook": "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\camera_image_leaf_values\\camera_leaf_image_values.xlsx",
+  "csv_files": {
+    "image_leaf_values": "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\camera_image_leaf_values\\image_leaf_values.csv",
+    "sample_summary": "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\camera_image_leaf_values\\sample_summary.csv",
+    "reference_values": "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\camera_image_leaf_values\\reference_values.csv",
+    "mask_quality": "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\camera_image_leaf_values\\mask_quality.csv"
+  }
+}

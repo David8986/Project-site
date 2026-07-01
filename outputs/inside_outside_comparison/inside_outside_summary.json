@@ -1,0 +1,38 @@
+{
+  "matched_inside_outside_spectrum_pairs": 27,
+  "overall_median_shape_similarity_r": 0.564121,
+  "overall_mean_shape_similarity_r": 0.458978,
+  "overall_median_outside_to_inside_area_ratio": 137.754097,
+  "by_condition": {
+    "healthy": {
+      "matched_pairs": 14,
+      "median_shape_similarity_r": 0.56904,
+      "mean_shape_similarity_r": 0.458969,
+      "median_outside_to_inside_area_ratio": 140.21713
+    },
+    "unhealthy": {
+      "matched_pairs": 13,
+      "median_shape_similarity_r": 0.532888,
+      "mean_shape_similarity_r": 0.458988,
+      "median_outside_to_inside_area_ratio": 132.953538
+    }
+  },
+  "environment_spectrum_summary": {
+    "afara": {
+      "sample_spectra": 14,
+      "median_noise_index": 0.072319,
+      "median_roughness_index": 0.006519,
+      "median_full_area": 12966632.843335
+    },
+    "in cutie": {
+      "sample_spectra": 28,
+      "median_noise_index": 0.125507,
+      "median_roughness_index": 0.053467,
+      "median_full_area": 93041.100048
+    }
+  },
+  "camera_image_counts_by_environment": {
+    "in cutie": 43
+  },
+  "note": "No outside camera JPG files were found in the current data folder, so image similarity could only be counted, not compared."
+}

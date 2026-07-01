@@ -1,0 +1,3 @@
+photo_group,photo_count,avg_mean_r,std_mean_r,avg_mean_g,std_mean_g,avg_mean_b,std_mean_b,avg_mean_saturation,std_mean_saturation,avg_mean_value_brightness,std_mean_value_brightness,avg_gcc,std_gcc,avg_exg,std_exg,avg_vari,std_vari
+Poze normale frunza 1,7,0.349988,0.247705,0.34998,0.247713,0.34999,0.247703,0.000127,0.000336,0.349994,0.247699,0.333223,0.000245,-1.7e-05,4.5e-05,-6.8e-05,0.000179
+Poze normale frunza 2,7,0.482977,0.224537,0.450525,0.208873,0.433242,0.245764,0.216174,0.167296,0.50185,0.211244,0.347846,0.062655,-0.015168,0.081293,0.624965,1.888355

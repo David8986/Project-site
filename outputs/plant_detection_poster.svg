@@ -1,0 +1,264 @@
+<svg width="1400" height="2000" viewBox="0 0 1400 2000" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#07110d"/>
+      <stop offset="55%" stop-color="#0b1912"/>
+      <stop offset="100%" stop-color="#12241a"/>
+    </linearGradient>
+    <linearGradient id="panelGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#102218"/>
+      <stop offset="100%" stop-color="#152d21"/>
+    </linearGradient>
+    <linearGradient id="leafGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1f5c3d"/>
+      <stop offset="45%" stop-color="#3da56b"/>
+      <stop offset="100%" stop-color="#91ffbc"/>
+    </linearGradient>
+    <linearGradient id="limeGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#78f0ac"/>
+      <stop offset="100%" stop-color="#d7ff57"/>
+    </linearGradient>
+    <linearGradient id="orbGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#173b28"/>
+      <stop offset="100%" stop-color="#6de39e"/>
+    </linearGradient>
+    <radialGradient id="glowGrad" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#5ff2a4" stop-opacity="0.42"/>
+      <stop offset="100%" stop-color="#5ff2a4" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="microGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#91b8a0" stroke-opacity="0.14" stroke-width="1"/>
+      <circle cx="0" cy="0" r="1" fill="#d6ffe6" fill-opacity="0.18"/>
+    </pattern>
+    <clipPath id="leafClip">
+      <path d="M470 430C430 380 360 350 320 390C300 340 250 330 220 380C190 430 215 500 260 530C210 560 200 620 240 670C280 720 350 720 390 690C395 760 450 810 510 780C540 860 630 880 690 820C760 820 810 770 800 710C860 720 930 690 950 620C970 550 930 490 880 470C920 410 905 340 850 320C800 300 740 325 705 365C690 300 635 255 570 265C520 275 485 320 470 370C455 350 430 325 400 320C420 355 435 390 470 430Z"/>
+    </clipPath>
+  </defs>
+
+  <rect width="1400" height="2000" fill="url(#bgGrad)"/>
+  <rect width="1400" height="2000" fill="url(#microGrid)" opacity="0.22"/>
+  <circle cx="280" cy="260" r="320" fill="url(#glowGrad)"/>
+  <circle cx="1160" cy="1750" r="360" fill="url(#glowGrad)" opacity="0.75"/>
+  <circle cx="1210" cy="260" r="120" fill="#0f2b1d" opacity="0.82"/>
+  <circle cx="1210" cy="260" r="122" fill="none" stroke="#8cffbe" stroke-opacity="0.38" stroke-width="2"/>
+
+  <text x="84" y="1060" transform="rotate(-90 84 1060)" fill="#7ca18a" fill-opacity="0.82" font-family="'Aptos','Segoe UI',sans-serif" font-size="22" letter-spacing="5">MULTISPECTRAL VISION / SEGMENTATION / SPECTRUM / STRESS SIGNALS</text>
+
+  <text x="110" y="116" fill="#7ce8a8" font-family="'Aptos','Segoe UI',sans-serif" font-size="24" font-weight="700" letter-spacing="6">PLANT HEALTH MVP</text>
+  <text x="110" y="230" fill="#f3f7ef" font-family="'Bahnschrift','Arial Narrow',sans-serif" font-size="118" font-weight="700" letter-spacing="2">PLANT</text>
+  <text x="110" y="332" fill="#f3f7ef" font-family="'Bahnschrift','Arial Narrow',sans-serif" font-size="118" font-weight="700" letter-spacing="2">DETECTION</text>
+
+  <text x="116" y="394" fill="#dceadf" font-family="'Aptos','Segoe UI',sans-serif" font-size="34" font-weight="600">Multispectral pipeline for vegetation masking, wavelength mapping,</text>
+  <text x="116" y="438" fill="#dceadf" font-family="'Aptos','Segoe UI',sans-serif" font-size="34" font-weight="600">and interpretable leaf health analysis.</text>
+
+  <text x="116" y="508" fill="#98b6a1" font-family="'Aptos','Segoe UI',sans-serif" font-size="24">Segment the leaf. Read the spectrum. Export explainable plant signals.</text>
+
+  <rect x="116" y="548" width="178" height="46" rx="23" fill="#173325" stroke="#4ad38c" stroke-opacity="0.55"/>
+  <text x="205" y="579" text-anchor="middle" fill="#dfffea" font-family="'Aptos','Segoe UI',sans-serif" font-size="19" font-weight="700" letter-spacing="1">VEGETATION MASK</text>
+  <rect x="308" y="548" width="170" height="46" rx="23" fill="#173325" stroke="#4ad38c" stroke-opacity="0.55"/>
+  <text x="393" y="579" text-anchor="middle" fill="#dfffea" font-family="'Aptos','Segoe UI',sans-serif" font-size="19" font-weight="700" letter-spacing="1">RED EDGE</text>
+  <rect x="492" y="548" width="190" height="46" rx="23" fill="#173325" stroke="#4ad38c" stroke-opacity="0.55"/>
+  <text x="587" y="579" text-anchor="middle" fill="#dfffea" font-family="'Aptos','Segoe UI',sans-serif" font-size="19" font-weight="700" letter-spacing="1">EXPORTABLE REPORTS</text>
+
+  <circle cx="1118" cy="164" r="126" fill="url(#orbGrad)"/>
+  <circle cx="1118" cy="164" r="126" fill="none" stroke="#d7ff57" stroke-opacity="0.34" stroke-width="2"/>
+  <text x="1118" y="132" text-anchor="middle" fill="#eafff1" font-family="'Aptos','Segoe UI',sans-serif" font-size="22" font-weight="700" letter-spacing="4">CURRENT RUN</text>
+  <text x="1118" y="196" text-anchor="middle" fill="#ffffff" font-family="'Bahnschrift','Arial Narrow',sans-serif" font-size="56" font-weight="700">NDVI 0.690</text>
+  <text x="1118" y="236" text-anchor="middle" fill="#f4ffe5" font-family="'Aptos','Segoe UI',sans-serif" font-size="26" font-weight="700">NDRE 0.270</text>
+  <circle cx="1240" cy="270" r="62" fill="#08110d" fill-opacity="0.86" stroke="#78f0ac" stroke-opacity="0.62" stroke-width="2"/>
+  <text x="1240" y="258" text-anchor="middle" fill="#dfffea" font-family="'Bahnschrift','Arial Narrow',sans-serif" font-size="34" font-weight="700">4</text>
+  <text x="1240" y="286" text-anchor="middle" fill="#a4d8b4" font-family="'Aptos','Segoe UI',sans-serif" font-size="16" font-weight="700" letter-spacing="2">ALIGNED</text>
+  <text x="1240" y="306" text-anchor="middle" fill="#a4d8b4" font-family="'Aptos','Segoe UI',sans-serif" font-size="16" font-weight="700" letter-spacing="2">BANDS</text>
+
+  <rect x="90" y="640" width="1220" height="610" rx="42" fill="url(#panelGrad)" stroke="#2e5f43" stroke-width="2"/>
+  <rect x="90" y="640" width="1220" height="610" rx="42" fill="url(#microGrid)" opacity="0.14"/>
+
+  <circle cx="530" cy="938" r="250" fill="#0f2017"/>
+  <circle cx="530" cy="938" r="248" fill="none" stroke="#86ffbf" stroke-opacity="0.14" stroke-width="2"/>
+  <circle cx="530" cy="938" r="180" fill="none" stroke="#d7ff57" stroke-opacity="0.14" stroke-width="2" stroke-dasharray="8 10"/>
+  <circle cx="530" cy="938" r="112" fill="none" stroke="#78f0ac" stroke-opacity="0.18" stroke-width="2" stroke-dasharray="6 8"/>
+
+  <g transform="translate(52 432) scale(0.82)">
+    <path d="M470 430C430 380 360 350 320 390C300 340 250 330 220 380C190 430 215 500 260 530C210 560 200 620 240 670C280 720 350 720 390 690C395 760 450 810 510 780C540 860 630 880 690 820C760 820 810 770 800 710C860 720 930 690 950 620C970 550 930 490 880 470C920 410 905 340 850 320C800 300 740 325 705 365C690 300 635 255 570 265C520 275 485 320 470 370C455 350 430 325 400 320C420 355 435 390 470 430Z" fill="#113222"/>
+    <g clip-path="url(#leafClip)">
+      <rect x="170" y="250" width="860" height="700" fill="url(#leafGrad)" opacity="0.25"/>
+      <rect x="180" y="250" width="90" height="700" fill="#d7ff57" opacity="0.16"/>
+      <rect x="320" y="250" width="80" height="700" fill="#80ffd4" opacity="0.14"/>
+      <rect x="455" y="250" width="95" height="700" fill="#56aaff" opacity="0.14"/>
+      <rect x="605" y="250" width="90" height="700" fill="#f7d95f" opacity="0.14"/>
+      <rect x="760" y="250" width="90" height="700" fill="#ff9d68" opacity="0.11"/>
+      <rect x="175" y="250" width="865" height="700" fill="url(#microGrid)" opacity="0.28"/>
+      <circle cx="545" cy="590" r="205" fill="#ffffff" opacity="0.06"/>
+      <path d="M470 430C430 380 360 350 320 390C300 340 250 330 220 380C190 430 215 500 260 530C210 560 200 620 240 670C280 720 350 720 390 690C395 760 450 810 510 780C540 860 630 880 690 820C760 820 810 770 800 710C860 720 930 690 950 620C970 550 930 490 880 470C920 410 905 340 850 320C800 300 740 325 705 365C690 300 635 255 570 265C520 275 485 320 470 370C455 350 430 325 400 320C420 355 435 390 470 430Z" fill="none" stroke="#aaffcf" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+      <path d="M545 380L555 785" fill="none" stroke="#d5ffe4" stroke-opacity="0.72" stroke-width="5" stroke-linecap="round"/>
+      <path d="M555 480L345 410" fill="none" stroke="#d5ffe4" stroke-opacity="0.66" stroke-width="4" stroke-linecap="round"/>
+      <path d="M555 520L292 520" fill="none" stroke="#d5ffe4" stroke-opacity="0.62" stroke-width="4" stroke-linecap="round"/>
+      <path d="M555 580L300 650" fill="none" stroke="#d5ffe4" stroke-opacity="0.62" stroke-width="4" stroke-linecap="round"/>
+      <path d="M555 500L775 405" fill="none" stroke="#d5ffe4" stroke-opacity="0.66" stroke-width="4" stroke-linecap="round"/>
+      <path d="M555 560L820 530" fill="none" stroke="#d5ffe4" stroke-opacity="0.6" stroke-width="4" stroke-linecap="round"/>
+      <path d="M555 630L760 705" fill="none" stroke="#d5ffe4" stroke-opacity="0.6" stroke-width="4" stroke-linecap="round"/>
+    </g>
+    <path d="M470 430C430 380 360 350 320 390C300 340 250 330 220 380C190 430 215 500 260 530C210 560 200 620 240 670C280 720 350 720 390 690C395 760 450 810 510 780C540 860 630 880 690 820C760 820 810 770 800 710C860 720 930 690 950 620C970 550 930 490 880 470C920 410 905 340 850 320C800 300 740 325 705 365C690 300 635 255 570 265C520 275 485 320 470 370C455 350 430 325 400 320C420 355 435 390 470 430Z" fill="none" stroke="#91ffbc" stroke-width="4" stroke-opacity="0.75"/>
+  </g>
+
+  <rect x="332" y="866" width="166" height="116" rx="22" fill="#08110d" fill-opacity="0.78" stroke="#5ff2a4" stroke-width="2"/>
+  <text x="356" y="909" fill="#dfffea" font-family="'Aptos','Segoe UI',sans-serif" font-size="19" font-weight="700" letter-spacing="2">LEAF MASK</text>
+  <text x="356" y="940" fill="#8db49a" font-family="'Aptos','Segoe UI',sans-serif" font-size="17">Isolates vegetation pixels</text>
+  <text x="356" y="968" fill="#8db49a" font-family="'Aptos','Segoe UI',sans-serif" font-size="17">before spectra and indices.</text>
+  <path d="M498 922L575 892" fill="none" stroke="#78f0ac" stroke-width="2" stroke-dasharray="6 6"/>
+
+  <rect x="650" y="740" width="176" height="116" rx="22" fill="#08110d" fill-opacity="0.78" stroke="#d7ff57" stroke-width="2"/>
+  <text x="674" y="783" fill="#f7ffe6" font-family="'Aptos','Segoe UI',sans-serif" font-size="19" font-weight="700" letter-spacing="2">RED-EDGE</text>
+  <text x="674" y="814" fill="#a6c28d" font-family="'Aptos','Segoe UI',sans-serif" font-size="17">725 nm captures</text>
+  <text x="674" y="842" fill="#a6c28d" font-family="'Aptos','Segoe UI',sans-serif" font-size="17">chlorophyll-sensitive change.</text>
+  <path d="M650 798L612 824" fill="none" stroke="#d7ff57" stroke-width="2" stroke-dasharray="6 6"/>
+
+  <rect x="610" y="1030" width="196" height="118" rx="22" fill="#08110d" fill-opacity="0.78" stroke="#6ec3ff" stroke-width="2"/>
+  <text x="636" y="1074" fill="#e9f7ff" font-family="'Aptos','Segoe UI',sans-serif" font-size="19" font-weight="700" letter-spacing="2">STRESS MAP</text>
+  <text x="636" y="1104" fill="#9ac8de" font-family="'Aptos','Segoe UI',sans-serif" font-size="17">Heatmaps, overlays, and</text>
+  <text x="636" y="1132" fill="#9ac8de" font-family="'Aptos','Segoe UI',sans-serif" font-size="17">CSV / JSON outputs.</text>
+  <path d="M610 1084L560 1048" fill="none" stroke="#6ec3ff" stroke-width="2" stroke-dasharray="6 6"/>
+
+  <rect x="900" y="676" width="330" height="258" rx="28" fill="#0b1510" fill-opacity="0.92" stroke="#335c44" stroke-width="2"/>
+  <text x="930" y="718" fill="#f3f7ef" font-family="'Aptos','Segoe UI',sans-serif" font-size="24" font-weight="700">Band-role coverage</text>
+  <text x="930" y="748" fill="#90ad98" font-family="'Aptos','Segoe UI',sans-serif" font-size="17">Current aligned sample and mapped roles</text>
+  <rect x="930" y="780" width="126" height="34" rx="17" fill="#2c2613"/>
+  <text x="993" y="803" text-anchor="middle" fill="#ffcf9f" font-family="'Aptos','Segoe UI',sans-serif" font-size="16" font-weight="700">RED 680 nm</text>
+  <rect x="1068" y="780" width="132" height="34" rx="17" fill="#263213"/>
+  <text x="1134" y="803" text-anchor="middle" fill="#e6ff8e" font-family="'Aptos','Segoe UI',sans-serif" font-size="16" font-weight="700">EDGE 725 nm</text>
+  <rect x="930" y="826" width="126" height="34" rx="17" fill="#143226"/>
+  <text x="993" y="849" text-anchor="middle" fill="#a7ffd0" font-family="'Aptos','Segoe UI',sans-serif" font-size="16" font-weight="700">NIR 850 nm</text>
+  <rect x="1068" y="826" width="136" height="34" rx="17" fill="#142b37"/>
+  <text x="1136" y="849" text-anchor="middle" fill="#a7ddff" font-family="'Aptos','Segoe UI',sans-serif" font-size="16" font-weight="700">WATER 940 nm</text>
+  <text x="930" y="898" fill="#dfffea" font-family="'Aptos','Segoe UI',sans-serif" font-size="18" font-weight="700">Missing in this capture:</text>
+  <text x="930" y="924" fill="#8fb09a" font-family="'Aptos','Segoe UI',sans-serif" font-size="17">532 / 556 / 650 nm</text>
+
+  <line x1="956" y1="585" x2="1238" y2="585" stroke="#63806d" stroke-opacity="0.5"/>
+  <line x1="956" y1="548" x2="1238" y2="548" stroke="#63806d" stroke-opacity="0.22"/>
+  <line x1="956" y1="511" x2="1238" y2="511" stroke="#63806d" stroke-opacity="0.22"/>
+  <line x1="956" y1="474" x2="1238" y2="474" stroke="#63806d" stroke-opacity="0.22"/>
+  <line x1="956" y1="437" x2="1238" y2="437" stroke="#63806d" stroke-opacity="0.22"/>
+  <line x1="956" y1="400" x2="1238" y2="400" stroke="#63806d" stroke-opacity="0.22"/>
+  <line x1="956" y1="402" x2="956" y2="585" stroke="#63806d" stroke-opacity="0.5"/>
+  <text x="932" y="588" text-anchor="end" fill="#84a18d" font-family="'Aptos','Segoe UI',sans-serif" font-size="14">0.00</text>
+  <text x="932" y="551" text-anchor="end" fill="#84a18d" font-family="'Aptos','Segoe UI',sans-serif" font-size="14">0.04</text>
+  <text x="932" y="514" text-anchor="end" fill="#84a18d" font-family="'Aptos','Segoe UI',sans-serif" font-size="14">0.08</text>
+  <text x="932" y="477" text-anchor="end" fill="#84a18d" font-family="'Aptos','Segoe UI',sans-serif" font-size="14">0.12</text>
+  <text x="932" y="440" text-anchor="end" fill="#84a18d" font-family="'Aptos','Segoe UI',sans-serif" font-size="14">0.16</text>
+  <path d="M970 555L1060 491L1150 452L1240 446" fill="none" stroke="url(#limeGrad)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="970" cy="555" r="7" fill="#ff9d68"/>
+  <circle cx="1060" cy="491" r="7" fill="#d7ff57"/>
+  <circle cx="1150" cy="452" r="7" fill="#78f0ac"/>
+  <circle cx="1240" cy="446" r="7" fill="#6ec3ff"/>
+  <text x="970" y="618" text-anchor="middle" fill="#d8e9dc" font-family="'Aptos','Segoe UI',sans-serif" font-size="16" font-weight="700">680</text>
+  <text x="1060" y="618" text-anchor="middle" fill="#d8e9dc" font-family="'Aptos','Segoe UI',sans-serif" font-size="16" font-weight="700">725</text>
+  <text x="1150" y="618" text-anchor="middle" fill="#d8e9dc" font-family="'Aptos','Segoe UI',sans-serif" font-size="16" font-weight="700">850</text>
+  <text x="1240" y="618" text-anchor="middle" fill="#d8e9dc" font-family="'Aptos','Segoe UI',sans-serif" font-size="16" font-weight="700">940</text>
+  <text x="1110" y="640" text-anchor="middle" fill="#86a391" font-family="'Aptos','Segoe UI',sans-serif" font-size="15">wavelength (nm)</text>
+
+  <rect x="900" y="958" width="330" height="244" rx="28" fill="#0b1510" fill-opacity="0.92" stroke="#335c44" stroke-width="2"/>
+  <text x="930" y="1000" fill="#f3f7ef" font-family="'Aptos','Segoe UI',sans-serif" font-size="24" font-weight="700">Current sample snapshot</text>
+  <text x="930" y="1030" fill="#90ad98" font-family="'Aptos','Segoe UI',sans-serif" font-size="17">automatic_phase_ecc alignment, affine transform</text>
+  <text x="930" y="1095" fill="#ffffff" font-family="'Bahnschrift','Arial Narrow',sans-serif" font-size="56" font-weight="700">44,822</text>
+  <text x="930" y="1130" fill="#90ad98" font-family="'Aptos','Segoe UI',sans-serif" font-size="21" font-weight="700">vegetation pixels retained</text>
+  <rect x="930" y="1156" width="120" height="34" rx="17" fill="#173325"/>
+  <text x="990" y="1179" text-anchor="middle" fill="#dfffea" font-family="'Aptos','Segoe UI',sans-serif" font-size="16" font-weight="700">ALIGNED</text>
+  <rect x="1062" y="1156" width="138" height="34" rx="17" fill="#173325"/>
+  <text x="1131" y="1179" text-anchor="middle" fill="#dfffea" font-family="'Aptos','Segoe UI',sans-serif" font-size="16" font-weight="700">0 REGIONS FLAGGED</text>
+
+  <rect x="90" y="1286" width="1220" height="82" rx="28" fill="#112116" stroke="#2e5f43" stroke-width="2"/>
+  <text x="120" y="1318" fill="#f3f7ef" font-family="'Aptos','Segoe UI',sans-serif" font-size="22" font-weight="700">Target band set</text>
+  <text x="120" y="1348" fill="#8fb09a" font-family="'Aptos','Segoe UI',sans-serif" font-size="17">The full pipeline targets 532 / 556 / 650 / 680 / 725 / 850 / 940 nm.</text>
+  <line x1="560" y1="1329" x2="1200" y2="1329" stroke="#5b7c67" stroke-width="2"/>
+  <circle cx="610" cy="1329" r="10" fill="#112116" stroke="#6a8f78" stroke-width="2"/>
+  <circle cx="690" cy="1329" r="10" fill="#112116" stroke="#6a8f78" stroke-width="2"/>
+  <circle cx="770" cy="1329" r="10" fill="#112116" stroke="#6a8f78" stroke-width="2"/>
+  <circle cx="850" cy="1329" r="10" fill="#ff9d68"/>
+  <circle cx="930" cy="1329" r="10" fill="#d7ff57"/>
+  <circle cx="1010" cy="1329" r="10" fill="#78f0ac"/>
+  <circle cx="1090" cy="1329" r="10" fill="#6ec3ff"/>
+  <text x="610" y="1358" text-anchor="middle" fill="#93b6a0" font-family="'Aptos','Segoe UI',sans-serif" font-size="13">532</text>
+  <text x="690" y="1358" text-anchor="middle" fill="#93b6a0" font-family="'Aptos','Segoe UI',sans-serif" font-size="13">556</text>
+  <text x="770" y="1358" text-anchor="middle" fill="#93b6a0" font-family="'Aptos','Segoe UI',sans-serif" font-size="13">650</text>
+  <text x="850" y="1358" text-anchor="middle" fill="#93b6a0" font-family="'Aptos','Segoe UI',sans-serif" font-size="13">680</text>
+  <text x="930" y="1358" text-anchor="middle" fill="#93b6a0" font-family="'Aptos','Segoe UI',sans-serif" font-size="13">725</text>
+  <text x="1010" y="1358" text-anchor="middle" fill="#93b6a0" font-family="'Aptos','Segoe UI',sans-serif" font-size="13">850</text>
+  <text x="1090" y="1358" text-anchor="middle" fill="#93b6a0" font-family="'Aptos','Segoe UI',sans-serif" font-size="13">940</text>
+  <text x="1228" y="1318" text-anchor="end" fill="#dfffea" font-family="'Aptos','Segoe UI',sans-serif" font-size="17" font-weight="700">current aligned capture highlighted</text>
+
+  <rect x="90" y="1418" width="380" height="438" rx="30" fill="url(#panelGrad)" stroke="#2e5f43" stroke-width="2"/>
+  <text x="120" y="1460" fill="#f3f7ef" font-family="'Aptos','Segoe UI',sans-serif" font-size="30" font-weight="700">Project Focus</text>
+  <text x="120" y="1500" fill="#dfffea" font-family="'Bahnschrift','Arial Narrow',sans-serif" font-size="34" font-weight="700">Explainable plant</text>
+  <text x="120" y="1536" fill="#dfffea" font-family="'Bahnschrift','Arial Narrow',sans-serif" font-size="34" font-weight="700">signals</text>
+  <text x="120" y="1576" fill="#8fb09a" font-family="'Aptos','Segoe UI',sans-serif" font-size="18">Built for close-range crop monitoring,</text>
+  <text x="120" y="1600" fill="#8fb09a" font-family="'Aptos','Segoe UI',sans-serif" font-size="18">healthy-leaf segmentation, and</text>
+  <text x="120" y="1624" fill="#8fb09a" font-family="'Aptos','Segoe UI',sans-serif" font-size="18">comparative stress interpretation.</text>
+
+  <rect x="120" y="1652" width="320" height="72" rx="22" fill="#0b1510" stroke="#31573f"/>
+  <text x="146" y="1686" fill="#dfffea" font-family="'Aptos','Segoe UI',sans-serif" font-size="20" font-weight="700">1. Segment the usable leaf area</text>
+  <text x="146" y="1711" fill="#8fb09a" font-family="'Aptos','Segoe UI',sans-serif" font-size="16">Masking removes background before analysis.</text>
+
+  <rect x="120" y="1738" width="320" height="72" rx="22" fill="#0b1510" stroke="#31573f"/>
+  <text x="146" y="1772" fill="#dfffea" font-family="'Aptos','Segoe UI',sans-serif" font-size="20" font-weight="700">2. Preserve interpretability</text>
+  <text x="146" y="1797" fill="#8fb09a" font-family="'Aptos','Segoe UI',sans-serif" font-size="16">Indices and overlays stay human-readable.</text>
+
+  <rect x="120" y="1824" width="320" height="32" rx="16" fill="#173325"/>
+  <text x="280" y="1846" text-anchor="middle" fill="#eafff1" font-family="'Aptos','Segoe UI',sans-serif" font-size="13" font-weight="700">Not a diagnosis. A comparative signal workflow.</text>
+
+  <rect x="510" y="1418" width="380" height="438" rx="30" fill="url(#panelGrad)" stroke="#2e5f43" stroke-width="2"/>
+  <text x="540" y="1460" fill="#f3f7ef" font-family="'Aptos','Segoe UI',sans-serif" font-size="30" font-weight="700">Pipeline</text>
+  <line x1="582" y1="1518" x2="582" y2="1776" stroke="#4c8765" stroke-width="3" stroke-linecap="round"/>
+
+  <circle cx="582" cy="1536" r="20" fill="#d7ff57"/><text x="582" y="1543" text-anchor="middle" fill="#07110d" font-family="'Bahnschrift','Arial Narrow',sans-serif" font-size="22" font-weight="700">1</text>
+  <text x="622" y="1528" fill="#dfffea" font-family="'Aptos','Segoe UI',sans-serif" font-size="18" font-weight="700">Load aligned imagery</text>
+  <text x="622" y="1550" fill="#8fb09a" font-family="'Aptos','Segoe UI',sans-serif" font-size="13">RGB + NIR pairs, mixed-image bundles, or full cubes.</text>
+
+  <circle cx="582" cy="1608" r="20" fill="#78f0ac"/><text x="582" y="1615" text-anchor="middle" fill="#07110d" font-family="'Bahnschrift','Arial Narrow',sans-serif" font-size="22" font-weight="700">2</text>
+  <text x="622" y="1600" fill="#dfffea" font-family="'Aptos','Segoe UI',sans-serif" font-size="18" font-weight="700">Map wavelengths to targets</text>
+  <text x="622" y="1622" fill="#8fb09a" font-family="'Aptos','Segoe UI',sans-serif" font-size="13">Exact, nearest, or interpolated band selection.</text>
+
+  <circle cx="582" cy="1680" r="20" fill="#6ec3ff"/><text x="582" y="1687" text-anchor="middle" fill="#07110d" font-family="'Bahnschrift','Arial Narrow',sans-serif" font-size="22" font-weight="700">3</text>
+  <text x="622" y="1672" fill="#dfffea" font-family="'Aptos','Segoe UI',sans-serif" font-size="18" font-weight="700">Compute spectra and indices</text>
+  <text x="622" y="1694" fill="#8fb09a" font-family="'Aptos','Segoe UI',sans-serif" font-size="13">NDVI, NDRE, CI_RE, water proxy, and spot scores.</text>
+
+  <circle cx="582" cy="1752" r="20" fill="#ff9d68"/><text x="582" y="1759" text-anchor="middle" fill="#07110d" font-family="'Bahnschrift','Arial Narrow',sans-serif" font-size="22" font-weight="700">4</text>
+  <text x="622" y="1744" fill="#dfffea" font-family="'Aptos','Segoe UI',sans-serif" font-size="18" font-weight="700">Export analysis outputs</text>
+  <text x="622" y="1766" fill="#8fb09a" font-family="'Aptos','Segoe UI',sans-serif" font-size="13">Heatmaps, overlays, spectra, CSV tables, and JSON.</text>
+
+  <rect x="540" y="1800" width="92" height="32" rx="16" fill="#173325"/>
+  <text x="586" y="1822" text-anchor="middle" fill="#dfffea" font-family="'Aptos','Segoe UI',sans-serif" font-size="15" font-weight="700">VIEWER APP</text>
+  <rect x="644" y="1800" width="118" height="32" rx="16" fill="#173325"/>
+  <text x="703" y="1822" text-anchor="middle" fill="#dfffea" font-family="'Aptos','Segoe UI',sans-serif" font-size="15" font-weight="700">ANALYSIS APP</text>
+  <rect x="774" y="1800" width="86" height="32" rx="16" fill="#173325"/>
+  <text x="817" y="1822" text-anchor="middle" fill="#dfffea" font-family="'Aptos','Segoe UI',sans-serif" font-size="15" font-weight="700">BATCH</text>
+
+  <rect x="930" y="1418" width="380" height="438" rx="30" fill="url(#panelGrad)" stroke="#2e5f43" stroke-width="2"/>
+  <text x="960" y="1460" fill="#f3f7ef" font-family="'Aptos','Segoe UI',sans-serif" font-size="30" font-weight="700">Current Signals</text>
+
+  <text x="960" y="1510" fill="#dfffea" font-family="'Aptos','Segoe UI',sans-serif" font-size="18" font-weight="700">Indices</text>
+  <text x="960" y="1550" fill="#ffffff" font-family="'Bahnschrift','Arial Narrow',sans-serif" font-size="46" font-weight="700">0.690</text>
+  <text x="1068" y="1550" fill="#dfffea" font-family="'Aptos','Segoe UI',sans-serif" font-size="20" font-weight="700">NDVI</text>
+  <text x="1160" y="1550" fill="#ffffff" font-family="'Bahnschrift','Arial Narrow',sans-serif" font-size="46" font-weight="700">0.270</text>
+  <text x="1268" y="1550" fill="#dfffea" font-family="'Aptos','Segoe UI',sans-serif" font-size="20" font-weight="700">NDRE</text>
+  <text x="960" y="1600" fill="#ffffff" font-family="'Bahnschrift','Arial Narrow',sans-serif" font-size="34" font-weight="700">0.739</text>
+  <text x="1046" y="1600" fill="#dfffea" font-family="'Aptos','Segoe UI',sans-serif" font-size="18" font-weight="700">CI_RE</text>
+  <text x="1148" y="1600" fill="#ffffff" font-family="'Bahnschrift','Arial Narrow',sans-serif" font-size="34" font-weight="700">-0.022</text>
+  <text x="1260" y="1600" fill="#dfffea" font-family="'Aptos','Segoe UI',sans-serif" font-size="18" font-weight="700">WATER</text>
+
+  <text x="960" y="1654" fill="#dfffea" font-family="'Aptos','Segoe UI',sans-serif" font-size="18" font-weight="700">Average vegetation values</text>
+  <rect x="960" y="1682" width="60" height="18" rx="9" fill="#ff9d68"/>
+  <rect x="960" y="1718" width="112" height="18" rx="9" fill="#d7ff57"/>
+  <rect x="960" y="1754" width="194" height="18" rx="9" fill="#78f0ac"/>
+  <rect x="960" y="1790" width="204" height="18" rx="9" fill="#6ec3ff"/>
+  <text x="1188" y="1696" fill="#d8e9dc" font-family="'Aptos','Segoe UI',sans-serif" font-size="16">680 nm 0.026</text>
+  <text x="1188" y="1732" fill="#d8e9dc" font-family="'Aptos','Segoe UI',sans-serif" font-size="16">725 nm 0.082</text>
+  <text x="1188" y="1768" fill="#d8e9dc" font-family="'Aptos','Segoe UI',sans-serif" font-size="16">850 nm 0.143</text>
+  <text x="1188" y="1804" fill="#d8e9dc" font-family="'Aptos','Segoe UI',sans-serif" font-size="16">940 nm 0.149</text>
+
+  <text x="960" y="1838" fill="#8fb09a" font-family="'Aptos','Segoe UI',sans-serif" font-size="15">Moderate to strong vegetation signal</text>
+  <text x="960" y="1858" fill="#8fb09a" font-family="'Aptos','Segoe UI',sans-serif" font-size="15">in this validation sample.</text>
+
+  <line x1="90" y1="1912" x2="1310" y2="1912" stroke="#31573f" stroke-width="2"/>
+  <text x="90" y="1952" fill="#dfffea" font-family="'Aptos','Segoe UI',sans-serif" font-size="20" font-weight="700">PLANT HEALTH MVP</text>
+  <text x="1310" y="1952" text-anchor="end" fill="#8fb09a" font-family="'Aptos','Segoe UI',sans-serif" font-size="18">Multispectral plant detection and interpretable health analysis</text>
+</svg>

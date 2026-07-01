@@ -1,0 +1,13 @@
+spectrum,file,integration_time_sec,band_nm,nearest_nm,nearest_intensity,median_pm10_intensity,mean_pm10_intensity,max_pm10_intensity,peak_nm,peak_intensity,median_percent_of_peak,median_ratio_vs_850
+box_source,C:\Users\david\OneDrive\Desktop\data analisys\in cutie\spectru sursa.txt,1.000000E-1,532,532.137,29309.27,29505.87,29726.183,32636.43,611.727,46325.68,63.692,2.3382
+box_source,C:\Users\david\OneDrive\Desktop\data analisys\in cutie\spectru sursa.txt,1.000000E-1,556,556.031,34826.81,35225.06,35599.878,39426.86,611.727,46325.68,76.038,2.7914
+box_source,C:\Users\david\OneDrive\Desktop\data analisys\in cutie\spectru sursa.txt,1.000000E-1,680,680.085,37821.26,37654.9,37596.977,38675.73,611.727,46325.68,81.283,2.9839
+box_source,C:\Users\david\OneDrive\Desktop\data analisys\in cutie\spectru sursa.txt,1.000000E-1,725,724.859,31666.01,31891.6,32144.767,34239.52,611.727,46325.68,68.842,2.5272
+box_source,C:\Users\david\OneDrive\Desktop\data analisys\in cutie\spectru sursa.txt,1.000000E-1,850,849.817,12665.9,12619.27,12644.668,14216.05,611.727,46325.68,27.24,1.0
+box_source,C:\Users\david\OneDrive\Desktop\data analisys\in cutie\spectru sursa.txt,1.000000E-1,940,939.833,2946.55,2925.13,3236.468,4912.6,611.727,46325.68,6.314,0.2318
+sun,C:\Users\david\OneDrive\Desktop\data analisys\afara\soare.txt,1.000000E-1,532,532.137,52672.5,52604.44,52481.094,54479.75,535.133,54479.75,96.558,13.2634
+sun,C:\Users\david\OneDrive\Desktop\data analisys\afara\soare.txt,1.000000E-1,556,556.031,50708.97,50656.03,50604.551,52627.13,535.133,54479.75,92.981,12.7722
+sun,C:\Users\david\OneDrive\Desktop\data analisys\afara\soare.txt,1.000000E-1,680,680.085,19131.18,19045.48,18371.971,21361.89,535.133,54479.75,34.959,4.802
+sun,C:\Users\david\OneDrive\Desktop\data analisys\afara\soare.txt,1.000000E-1,725,724.859,10525.93,10955.685,11338.209,14652.11,535.133,54479.75,20.11,2.7623
+sun,C:\Users\david\OneDrive\Desktop\data analisys\afara\soare.txt,1.000000E-1,850,849.817,3876.65,3966.125,4045.962,4577.37,535.133,54479.75,7.28,1.0
+sun,C:\Users\david\OneDrive\Desktop\data analisys\afara\soare.txt,1.000000E-1,940,939.833,622.58,499.07,529.787,821.71,535.133,54479.75,0.916,0.1258

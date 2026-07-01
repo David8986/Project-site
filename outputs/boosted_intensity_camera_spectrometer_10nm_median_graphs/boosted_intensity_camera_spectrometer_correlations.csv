@@ -1,0 +1,6 @@
+﻿sample_id,condition,matched_filter_count,pearson_display_camera_vs_boosted_spectrometer_intensity,missing_filters
+in cutie\Set frunze 1\frunza nesanatoasa,unhealthy,6,0.717489,
+in cutie\Set frunze 1\frunza verde,healthy,6,0.486061,
+in cutie\Set frunze 2\nesanatoasa,unhealthy,6,0.284496,
+in cutie\Set frunze 2\sanatoasa,healthy,6,0.781357,
+in cutie\frunza sanatoasa dar galbena,healthy_yellow,6,0.291956,

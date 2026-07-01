@@ -1,2 +1,4 @@
 full-site-screenshot.png
 updated-site-screenshot.png
+__pycache__/
+*.pyc

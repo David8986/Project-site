@@ -1,0 +1,21 @@
+field,value
+source_type,mixed_image_bundle
+source_data_kind,mixed_image_data
+analysis_data_kind,mixed_image_intensity
+adapter_used,mixed_image_bundle_loader
+calibration_applied,False
+used_real_sample_data,True
+used_mock_synthetic_data,False
+sample_id,mixed_import_spec
+input_path,C:\Users\david\OneDrive\Desktop\Archive\Projects\CodeX\outputs\spectraleaf_desktop_sessions\offline_smoke_20260613_164829\mixed_import_spec.json
+imported_files,"[{""path"": ""C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\spectraleaf_desktop_sessions\\offline_smoke_20260613_164829\\532.png"", ""input_path"": ""C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\spectraleaf_desktop_sessions\\offline_smoke_20260613_164829\\532.png"", ""entry_index"": 0, ""image_id"": ""band_532"", ""type"": ""grayscale"", ""image_mode"": ""L"", ""image_size"": [96, 96], ""bands"": [""BLUE_532""]}, {""path"": ""C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\spectraleaf_desktop_sessions\\offline_smoke_20260613_164829\\556.png"", ""input_path"": ""C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\spectraleaf_desktop_sessions\\offline_smoke_20260613_164829\\556.png"", ""entry_index"": 1, ""image_id"": ""band_556"", ""type"": ""grayscale"", ""image_mode"": ""L"", ""image_size"": [1920, 1080], ""bands"": [""GREEN_556""]}, {""path"": ""C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\spectraleaf_desktop_sessions\\offline_smoke_20260613_164829\\680.png"", ""input_path"": ""C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\spectraleaf_desktop_sessions\\offline_smoke_20260613_164829\\680.png"", ""entry_index"": 2, ""image_id"": ""band_680"", ""type"": ""grayscale"", ""image_mode"": ""L"", ""image_size"": [1920, 1080], ""bands"": [""RED_680""]}, {""path"": ""C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\spectraleaf_desktop_sessions\\offline_smoke_20260613_164829\\725.png"", ""input_path"": ""C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\spectraleaf_desktop_sessions\\offline_smoke_20260613_164829\\725.png"", ""entry_index"": 3, ""image_id"": ""band_725"", ""type"": ""grayscale"", ""image_mode"": ""L"", ""image_size"": [1920, 1080], ""bands"": [""RED_EDGE_725""]}, {""path"": ""C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\spectraleaf_desktop_sessions\\offline_smoke_20260613_164829\\850.png"", ""input_path"": ""C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\spectraleaf_desktop_sessions\\offline_smoke_20260613_164829\\850.png"", ""entry_index"": 4, ""image_id"": ""band_850"", ""type"": ""grayscale"", ""image_mode"": ""L"", ""image_size"": [1920, 1080], ""bands"": [""NIR_850""]}, {""path"": ""C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\spectraleaf_desktop_sessions\\offline_smoke_20260613_164829\\940.png"", ""input_path"": ""C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\spectraleaf_desktop_sessions\\offline_smoke_20260613_164829\\940.png"", ""entry_index"": 5, ""image_id"": ""band_940"", ""type"": ""grayscale"", ""image_mode"": ""L"", ""image_size"": [1920, 1080], ""bands"": [""WATER_BAND_940""]}]"
+assigned_roles,"{""BLUE_532"": ""BLUE"", ""GREEN_556"": ""GREEN"", ""NIR_850"": ""NIR"", ""RED_680"": ""RED"", ""RED_EDGE_725"": ""RED_EDGE"", ""WATER_BAND_940"": ""WATER_BAND""}"
+alignment_status,resized
+cube_shape,"[1080, 1920, 6]"
+height,1080
+width,1920
+bands,6
+vegetation_pixel_count,103723
+mask_method,filtered_camera_foreground
+suspicious_region_count,2
+sensor_type,

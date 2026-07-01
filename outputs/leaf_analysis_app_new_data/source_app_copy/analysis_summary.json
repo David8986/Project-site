@@ -1,0 +1,20 @@
+{
+  "data_root": "C:\\Users\\david\\OneDrive\\Desktop\\data analisys",
+  "spectra_count": 62,
+  "camera_count": 43,
+  "paired_camera_spectrum_rows": 28,
+  "reflectance_ok_count": 49,
+  "conditions": [
+    "healthy",
+    "healthy_yellow",
+    "unhealthy"
+  ],
+  "target_wavelengths": [
+    532,
+    556,
+    680,
+    725,
+    850,
+    940
+  ]
+}

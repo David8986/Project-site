@@ -1,0 +1,37 @@
+relative_path,condition,predicted_condition,correct,distance_to_healthy_centroid,distance_to_unhealthy_centroid
+afara\fr1\nesan\532.txt,unhealthy,unhealthy,True,28.170324,26.733189
+afara\fr1\nesan\556.txt,unhealthy,unhealthy,True,30.616098,28.703445
+afara\fr1\nesan\680.txt,unhealthy,unhealthy,True,42.811399,41.676947
+afara\fr1\nesan\725.txt,unhealthy,unhealthy,True,34.951456,34.207085
+afara\fr1\nesan\850.txt,unhealthy,unhealthy,True,30.561165,28.398698
+afara\fr1\nesan\940.txt,unhealthy,unhealthy,True,31.15849,28.974729
+afara\fr1\san\532.txt,healthy,unhealthy,False,33.04235,30.472013
+afara\fr1\san\556.txt,healthy,healthy,True,73.361497,73.56373
+afara\fr1\san\680.txt,healthy,unhealthy,False,40.567088,34.496056
+afara\fr1\san\725.txt,healthy,unhealthy,False,48.821246,46.821554
+afara\fr1\san\850.txt,healthy,unhealthy,False,33.961188,29.172071
+afara\fr1\san\940.txt,healthy,unhealthy,False,31.756869,26.090517
+in cutie\Set frunze 1\frunza nesanatoasa\spectru\532.txt,unhealthy,healthy,False,21.581603,25.091749
+in cutie\Set frunze 1\frunza nesanatoasa\spectru\556.txt,unhealthy,healthy,False,22.749775,25.639429
+in cutie\Set frunze 1\frunza nesanatoasa\spectru\680.txt,unhealthy,unhealthy,True,20.152432,19.835456
+in cutie\Set frunze 1\frunza nesanatoasa\spectru\725.txt,unhealthy,healthy,False,26.27635,29.508143
+in cutie\Set frunze 1\frunza nesanatoasa\spectru\850.txt,unhealthy,healthy,False,24.790827,26.620416
+in cutie\Set frunze 1\frunza nesanatoasa\spectru\950.txt,unhealthy,healthy,False,19.281043,20.628799
+in cutie\Set frunze 1\frunza verde\spectru\532.txt,healthy,healthy,True,24.087704,25.678435
+in cutie\Set frunze 1\frunza verde\spectru\556.txt,healthy,healthy,True,27.369133,28.287341
+in cutie\Set frunze 1\frunza verde\spectru\680.txt,healthy,unhealthy,False,21.404298,19.492547
+in cutie\Set frunze 1\frunza verde\spectru\725.txt,healthy,healthy,True,29.80806,30.397344
+in cutie\Set frunze 1\frunza verde\spectru\850.txt,healthy,unhealthy,False,24.465394,23.995041
+in cutie\Set frunze 1\frunza verde\spectru\940.txt,healthy,unhealthy,False,21.331213,21.072577
+in cutie\Set frunze 2\nesanatoasa\spectru\532.txt,unhealthy,healthy,False,25.646003,30.201394
+in cutie\Set frunze 2\nesanatoasa\spectru\556.txt,unhealthy,healthy,False,29.276118,33.536781
+in cutie\Set frunze 2\nesanatoasa\spectru\580.txt,unhealthy,healthy,False,24.183879,26.450621
+in cutie\Set frunze 2\nesanatoasa\spectru\680.txt,unhealthy,unhealthy,True,35.575278,35.231911
+in cutie\Set frunze 2\nesanatoasa\spectru\725.txt,unhealthy,healthy,False,26.137315,29.229115
+in cutie\Set frunze 2\nesanatoasa\spectru\940.txt,unhealthy,healthy,False,19.933253,21.253214
+in cutie\Set frunze 2\sanatoasa\spectru\532.txt,healthy,healthy,True,21.226163,21.83307
+in cutie\Set frunze 2\sanatoasa\spectru\556.txt,healthy,healthy,True,22.008509,22.476167
+in cutie\Set frunze 2\sanatoasa\spectru\680.txt,healthy,unhealthy,False,19.884916,19.195697
+in cutie\Set frunze 2\sanatoasa\spectru\725.txt,healthy,healthy,True,25.078955,25.698623
+in cutie\Set frunze 2\sanatoasa\spectru\850.txt,healthy,unhealthy,False,24.584706,24.209975
+in cutie\Set frunze 2\sanatoasa\spectru\940.txt,healthy,unhealthy,False,20.684263,20.630965

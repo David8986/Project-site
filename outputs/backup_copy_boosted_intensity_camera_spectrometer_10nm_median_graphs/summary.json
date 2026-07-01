@@ -1,0 +1,56 @@
+{
+  "method": "No normalization. This graph set is display-adjusted: spectrometer intensity is kept on its original scale, and camera brightness gets a small visual lift at the high-wavelength end. Spectrometer curves are displayed only from 300 nm upward, with the spectrometer y-axis starting at 300 to hide the low-end noisy baseline. Each filter-specific spectrometer curve is aligned by its own local peak: for example, the camera 850 nm value is compared with the peak of the 850 nm spectrometer file, not with the exact 850 nm bin. Spectrometer lines are smoothed only for display, while the exported values remain the raw 10 nm medians/local peaks. Green camera bands mark spectrometer peaks that land close to the camera/filter wavelength, and red bands mark peaks shifted farther away. Spectrometer curves still use median intensity inside every 10 nm bin. Raw camera and spectrometer values are preserved in the CSV beside the boosted display values.",
+  "matched_pairs": 30,
+  "overall_boosted_display_pearson_r": 0.52871,
+  "spectrometer_boost_points": [
+    [
+      725.0,
+      1.0
+    ],
+    [
+      850.0,
+      1.0
+    ],
+    [
+      940.0,
+      1.0
+    ],
+    [
+      1040.0,
+      1.0
+    ]
+  ],
+  "camera_boost_points": [
+    [
+      725.0,
+      1.0
+    ],
+    [
+      850.0,
+      1.04
+    ],
+    [
+      940.0,
+      1.08
+    ]
+  ],
+  "peak_search_half_window_nm": 90.0,
+  "max_peak_alignment_shift_nm": 60.0,
+  "spectrometer_display_smooth_sigma_nm": 15.0,
+  "peak_alignment_tolerance_nm": 25.0,
+  "graphs": [
+    "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\backup_copy_boosted_intensity_camera_spectrometer_10nm_median_graphs\\graphs\\boosted_intensity_in_cutie_Set_frunze_1_frunza_nesanatoasa.png",
+    "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\backup_copy_boosted_intensity_camera_spectrometer_10nm_median_graphs\\graphs\\boosted_intensity_in_cutie_Set_frunze_1_frunza_verde.png",
+    "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\backup_copy_boosted_intensity_camera_spectrometer_10nm_median_graphs\\graphs\\boosted_intensity_in_cutie_Set_frunze_2_nesanatoasa.png",
+    "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\backup_copy_boosted_intensity_camera_spectrometer_10nm_median_graphs\\graphs\\boosted_intensity_in_cutie_Set_frunze_2_sanatoasa.png",
+    "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\backup_copy_boosted_intensity_camera_spectrometer_10nm_median_graphs\\graphs\\boosted_intensity_in_cutie_frunza_sanatoasa_dar_galbena.png",
+    "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\backup_copy_boosted_intensity_camera_spectrometer_10nm_median_graphs\\graphs\\matched_filter_boosted_intensity_dual_axis.png",
+    "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\backup_copy_boosted_intensity_camera_spectrometer_10nm_median_graphs\\graphs\\boosted_intensity_scatter_camera_vs_spectrometer.png"
+  ],
+  "gallery": "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\backup_copy_boosted_intensity_camera_spectrometer_10nm_median_graphs\\boosted_intensity_graph_gallery.jpg",
+  "csv_files": {
+    "pairs": "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\backup_copy_boosted_intensity_camera_spectrometer_10nm_median_graphs\\boosted_intensity_camera_spectrometer_pairs.csv",
+    "correlations": "C:\\Users\\david\\OneDrive\\Desktop\\Archive\\Projects\\CodeX\\outputs\\backup_copy_boosted_intensity_camera_spectrometer_10nm_median_graphs\\boosted_intensity_camera_spectrometer_correlations.csv"
+  },
+  "judgement": "These boosted plots are meant for visual comparison and presentation. Use the raw value columns in the CSV for strict measurement claims, and use the boosted display columns only when explaining the compensated graph."
+}

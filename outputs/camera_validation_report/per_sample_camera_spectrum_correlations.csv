@@ -1,0 +1,6 @@
+sample_id,condition,environment,paired_filters,pearson_camera_vs_full_area,pearson_p_value,spearman_camera_vs_full_area,spearman_p_value,pearson_normalized_fingerprints,normalized_r_squared,pearson_camera_reflectance_proxy_norm,camera_reflectance_proxy_r_squared
+in cutie/Set frunze 1/frunza nesanatoasa,unhealthy,in cutie,5,0.772158,0.125996,0.8,0.104088,0.772158,0.596228,0.893635,0.798584
+in cutie/Set frunze 1/frunza verde,healthy,in cutie,6,0.62609,0.183575,0.542857,0.265703,0.62609,0.391989,-0.14853,0.022061
+in cutie/Set frunze 2/nesanatoasa,unhealthy,in cutie,5,-0.139189,0.823352,-0.3,0.623838,-0.139189,0.019374,-0.993341,0.986726
+in cutie/Set frunze 2/sanatoasa,healthy,in cutie,6,0.603095,0.205037,0.6,0.208,0.603096,0.363724,0.039428,0.001555
+in cutie/frunza sanatoasa dar galbena,healthy_yellow,in cutie,6,-0.540308,0.268405,-0.485714,0.328723,-0.540308,0.291933,0.439244,0.192935
